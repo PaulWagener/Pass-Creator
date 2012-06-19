@@ -21,10 +21,6 @@
 		D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33432158CE89900ACAA64 /* Default@2x.png */; };
 		D3D33435158CE89F00ACAA64 /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33434158CE89F00ACAA64 /* Icon~ipad.png */; };
 		D3D33437158CE8A200ACAA64 /* Icon@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33436158CE8A200ACAA64 /* Icon@2x~ipad.png */; };
-		D3D33439158CE8A800ACAA64 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33438158CE8A800ACAA64 /* Default-Portrait~ipad.png */; };
-		D3D3343B158CE8AB00ACAA64 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D3343A158CE8AB00ACAA64 /* Default-Portrait@2x~ipad.png */; };
-		D3D3343D158CE8B000ACAA64 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D3343C158CE8B000ACAA64 /* Default-Landscape~ipad.png */; };
-		D3D3343F158CE8B300ACAA64 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D3343E158CE8B300ACAA64 /* Default-Landscape@2x~ipad.png */; };
 		D3D657AD158E32350097B53A /* libtouchzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D657AC158E32350097B53A /* libtouchzipkit.a */; };
 		D3D657D2158E330A0097B53A /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D657B2158E330A0097B53A /* NSData+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3D657D3158E330A0097B53A /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D657B4158E330A0097B53A /* NSDate+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -148,10 +144,6 @@
 		D3D33432158CE89900ACAA64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3D33434158CE89F00ACAA64 /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
 		D3D33436158CE8A200ACAA64 /* Icon@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x~ipad.png"; sourceTree = "<group>"; };
-		D3D33438158CE8A800ACAA64 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		D3D3343A158CE8AB00ACAA64 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
-		D3D3343C158CE8B000ACAA64 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		D3D3343E158CE8B300ACAA64 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		D3D657AC158E32350097B53A /* libtouchzipkit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtouchzipkit.a; sourceTree = "<group>"; };
 		D3D657B1158E330A0097B53A /* NSData+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZKAdditions.h"; sourceTree = "<group>"; };
 		D3D657B2158E330A0097B53A /* NSData+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZKAdditions.m"; sourceTree = "<group>"; };
@@ -223,13 +215,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D364BB11158FBAB40031F0D4 /* Starbucks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Starbucks;
-			sourceTree = "<group>";
-		};
 		D364BB37158FD2320031F0D4 /* openssl */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,9 +344,6 @@
 				D364BB87158FD26C0031F0D4 /* openssl_test.c */,
 				D3E7997815909F18000A3E6C /* certificate.pem */,
 				D3E7997915909F18000A3E6C /* key.pem */,
-				D364BB83158FD24A0031F0D4 /* libcrypto.a */,
-				D364BB84158FD24A0031F0D4 /* libssl.a */,
-				D364BB37158FD2320031F0D4 /* openssl */,
 				D364BB33158FBF330031F0D4 /* icon.png */,
 				D364BB34158FBF330031F0D4 /* icon@2x.png */,
 				D364BB29158FBF090031F0D4 /* logo.png */,
@@ -369,14 +351,8 @@
 				D364BB2B158FBF090031F0D4 /* manifest.json */,
 				D364BB2C158FBF090031F0D4 /* pass.json */,
 				D3D657E2158E33E80097B53A /* libz.dylib */,
-				D323EFD1158E012300E6A754 /* PassKit.framework */,
-				D3D3343E158CE8B300ACAA64 /* Default-Landscape@2x~ipad.png */,
-				D3D3343C158CE8B000ACAA64 /* Default-Landscape~ipad.png */,
-				D3D3343A158CE8AB00ACAA64 /* Default-Portrait@2x~ipad.png */,
-				D3D33438158CE8A800ACAA64 /* Default-Portrait~ipad.png */,
 				D3D33436158CE8A200ACAA64 /* Icon@2x~ipad.png */,
 				D3D33434158CE89F00ACAA64 /* Icon~ipad.png */,
-				D364BB11158FBAB40031F0D4 /* Starbucks */,
 				D3D33432158CE89900ACAA64 /* Default@2x.png */,
 				D3D33430158CE88E00ACAA64 /* Default.png */,
 				D3D657AE158E330A0097B53A /* ZipKit */,
@@ -397,7 +373,11 @@
 		D3F58A3E158CD6DA00A937D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D364BB37158FD2320031F0D4 /* openssl */,
+				D364BB83158FD24A0031F0D4 /* libcrypto.a */,
+				D364BB84158FD24A0031F0D4 /* libssl.a */,
 				D3D657AC158E32350097B53A /* libtouchzipkit.a */,
+				D323EFD1158E012300E6A754 /* PassKit.framework */,
 				D3F58A3F158CD6DA00A937D9 /* UIKit.framework */,
 				D3F58A41158CD6DA00A937D9 /* Foundation.framework */,
 				D3F58A43158CD6DA00A937D9 /* CoreGraphics.framework */,
@@ -487,10 +467,6 @@
 				D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */,
 				D3D33435158CE89F00ACAA64 /* Icon~ipad.png in Resources */,
 				D3D33437158CE8A200ACAA64 /* Icon@2x~ipad.png in Resources */,
-				D3D33439158CE8A800ACAA64 /* Default-Portrait~ipad.png in Resources */,
-				D3D3343B158CE8AB00ACAA64 /* Default-Portrait@2x~ipad.png in Resources */,
-				D3D3343D158CE8B000ACAA64 /* Default-Landscape~ipad.png in Resources */,
-				D3D3343F158CE8B300ACAA64 /* Default-Landscape@2x~ipad.png in Resources */,
 				D364BB2E158FBF090031F0D4 /* logo.png in Resources */,
 				D364BB2F158FBF090031F0D4 /* logo@2x.png in Resources */,
 				D364BB30158FBF090031F0D4 /* manifest.json in Resources */,
