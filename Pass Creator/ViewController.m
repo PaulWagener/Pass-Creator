@@ -11,7 +11,7 @@
 #import "ZKDataArchive.h"
 #import <CommonCrypto/CommonCrypto.h>
 #import <Security/Security.h>
-#include "openssl_test.h"
+#import "PassBundle.h"
 @interface ViewController ()
 
 @end
@@ -45,9 +45,23 @@
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     
     [archive deflateData:data withFilename:filename andAttributes:nil];
+    [passBundle addFile:filename :data];
+}
+PassBundle *passBundle = nil;
+
+- (void) addToPassBundle:(ZKDataArchive*)archive :(NSString*)filename{
+    NSString *url = [NSString stringWithFormat:@"http://192.168.0.107/pass/Starbucks/%@",filename];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+ 
+    [passBundle addFile:filename :data];
+//    [archive deflateData:data withFilename:filename andAttributes:nil];
 }
 
+
 - (IBAction) click:(id)sender {
+    passBundle = [[PassBundle alloc] init];
+
+
     ZKDataArchive *archive = [[ZKDataArchive alloc] init];
     
     [self addToArchive:archive :@"icon.png"];
@@ -58,18 +72,18 @@
     [self addToArchive:archive :@"pass.json"];
     //[self addToArchive:archive :@"signature"];
     
-#if 1
+#if 0
     const char *key_pem = [[NSBundle mainBundle] pathForResource:@"key" ofType:@"pem"].UTF8String;
     const char *certificate_pem = [[NSBundle mainBundle] pathForResource:@"certificate" ofType:@"pem"].UTF8String;
     //const char *thing_to_sign = [[NSBundle mainBundle] pathForResource:@"manifest" ofType:@"json"].UTF8String;
     
 
     NSData *manifestdata = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://192.168.0.107/pass/Starbucks/manifest.json"]];
-    unsigned char *thing_to_sign_data = manifestdata.bytes;
+    unsigned char *thing_to_sign_data = (unsigned char*)manifestdata.bytes;
     unsigned int thing_to_sign_length = manifestdata.length;
     
-    openssl_spul(key_pem, certificate_pem, thing_to_sign_data, thing_to_sign_length);
-    NSData *data = [NSData dataWithBytes:&output_buf[0] length:output_buf_len];
+    //openssl_spul(key_pem, certificate_pem, thing_to_sign_data, thing_to_sign_length);
+    NSData *data = nil;//[NSData dataWithBytes:&output_buf[0] length:output_buf_len];
     
     [archive deflateData:data withFilename:@"signature" andAttributes:nil];
 #endif

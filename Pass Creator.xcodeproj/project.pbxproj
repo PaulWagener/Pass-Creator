@@ -16,12 +16,12 @@
 		D364BB36158FBF330031F0D4 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D364BB34158FBF330031F0D4 /* icon@2x.png */; };
 		D364BB85158FD24A0031F0D4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB83158FD24A0031F0D4 /* libcrypto.a */; };
 		D364BB86158FD24A0031F0D4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB84158FD24A0031F0D4 /* libssl.a */; };
-		D364BB88158FD26C0031F0D4 /* openssl_test.c in Sources */ = {isa = PBXBuildFile; fileRef = D364BB87158FD26C0031F0D4 /* openssl_test.c */; settings = {COMPILER_FLAGS = "-I."; }; };
+		D364BB88158FD26C0031F0D4 /* PassBundleSign.mmp in Sources */ = {isa = PBXBuildFile; fileRef = D364BB87158FD26C0031F0D4 /* PassBundleSign.mmp */; settings = {COMPILER_FLAGS = "-I."; }; };
+		D3B04E211591FAAF00836AD6 /* PassBundle.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E201591FAAF00836AD6 /* PassBundle.mm */; };
 		D3D33431158CE88E00ACAA64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33430158CE88E00ACAA64 /* Default.png */; };
 		D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33432158CE89900ACAA64 /* Default@2x.png */; };
 		D3D33435158CE89F00ACAA64 /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33434158CE89F00ACAA64 /* Icon~ipad.png */; };
 		D3D33437158CE8A200ACAA64 /* Icon@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33436158CE8A200ACAA64 /* Icon@2x~ipad.png */; };
-		D3D657AD158E32350097B53A /* libtouchzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D657AC158E32350097B53A /* libtouchzipkit.a */; };
 		D3D657D2158E330A0097B53A /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D657B2158E330A0097B53A /* NSData+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3D657D3158E330A0097B53A /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D657B4158E330A0097B53A /* NSDate+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3D657D4158E330A0097B53A /* NSDictionary+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D657B6158E330A0097B53A /* NSDictionary+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -138,13 +138,14 @@
 		D364BB82158FD2320031F0D4 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
 		D364BB83158FD24A0031F0D4 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		D364BB84158FD24A0031F0D4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		D364BB87158FD26C0031F0D4 /* openssl_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = openssl_test.c; sourceTree = "<group>"; };
-		D364BB89158FD33F0031F0D4 /* openssl_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = openssl_test.h; sourceTree = "<group>"; };
+		D364BB87158FD26C0031F0D4 /* PassBundleSign.mmp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PassBundleSign.mmp; path = ../PassBundleSign.mmp; sourceTree = "<group>"; };
+		D364BB89158FD33F0031F0D4 /* PassBundleSign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PassBundleSign.h; path = ../PassBundleSign.h; sourceTree = "<group>"; };
+		D3B04E1F1591FAAF00836AD6 /* PassBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PassBundle.h; path = ../PassBundle.h; sourceTree = "<group>"; };
+		D3B04E201591FAAF00836AD6 /* PassBundle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PassBundle.mm; path = ../PassBundle.mm; sourceTree = "<group>"; };
 		D3D33430158CE88E00ACAA64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D3D33432158CE89900ACAA64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3D33434158CE89F00ACAA64 /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
 		D3D33436158CE8A200ACAA64 /* Icon@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x~ipad.png"; sourceTree = "<group>"; };
-		D3D657AC158E32350097B53A /* libtouchzipkit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtouchzipkit.a; sourceTree = "<group>"; };
 		D3D657B1158E330A0097B53A /* NSData+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZKAdditions.h"; sourceTree = "<group>"; };
 		D3D657B2158E330A0097B53A /* NSData+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZKAdditions.m"; sourceTree = "<group>"; };
 		D3D657B3158E330A0097B53A /* NSDate+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZKAdditions.h"; sourceTree = "<group>"; };
@@ -208,7 +209,6 @@
 				D3F58A40158CD6DA00A937D9 /* UIKit.framework in Frameworks */,
 				D3F58A42158CD6DA00A937D9 /* Foundation.framework in Frameworks */,
 				D3F58A44158CD6DA00A937D9 /* CoreGraphics.framework in Frameworks */,
-				D3D657AD158E32350097B53A /* libtouchzipkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,8 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				D3E7997F1590BE4B000A3E6C /* Starbucks.pkpass */,
-				D364BB89158FD33F0031F0D4 /* openssl_test.h */,
-				D364BB87158FD26C0031F0D4 /* openssl_test.c */,
 				D3E7997815909F18000A3E6C /* certificate.pem */,
 				D3E7997915909F18000A3E6C /* key.pem */,
 				D364BB33158FBF330031F0D4 /* icon.png */,
@@ -376,7 +374,6 @@
 				D364BB37158FD2320031F0D4 /* openssl */,
 				D364BB83158FD24A0031F0D4 /* libcrypto.a */,
 				D364BB84158FD24A0031F0D4 /* libssl.a */,
-				D3D657AC158E32350097B53A /* libtouchzipkit.a */,
 				D323EFD1158E012300E6A754 /* PassKit.framework */,
 				D3F58A3F158CD6DA00A937D9 /* UIKit.framework */,
 				D3F58A41158CD6DA00A937D9 /* Foundation.framework */,
@@ -388,6 +385,10 @@
 		D3F58A45158CD6DA00A937D9 /* Pass Creator */ = {
 			isa = PBXGroup;
 			children = (
+				D364BB89158FD33F0031F0D4 /* PassBundleSign.h */,
+				D364BB87158FD26C0031F0D4 /* PassBundleSign.mmp */,
+				D3B04E1F1591FAAF00836AD6 /* PassBundle.h */,
+				D3B04E201591FAAF00836AD6 /* PassBundle.mm */,
 				D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */,
 				D3F58A4E158CD6DA00A937D9 /* AppDelegate.h */,
 				D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */,
@@ -505,7 +506,8 @@
 				D3D657DF158E330A0097B53A /* ZKFileArchive.m in Sources */,
 				D3D657E0158E330A0097B53A /* ZKLFHeader.m in Sources */,
 				D3D657E1158E330A0097B53A /* ZKLog.m in Sources */,
-				D364BB88158FD26C0031F0D4 /* openssl_test.c in Sources */,
+				D364BB88158FD26C0031F0D4 /* PassBundleSign.mmp in Sources */,
+				D3B04E211591FAAF00836AD6 /* PassBundle.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
