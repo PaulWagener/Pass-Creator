@@ -5,15 +5,13 @@
 #include "openssl/pkcs7.h"
 #include "openssl/err.h"
 
-
-unsigned char output_buf[5000];
-int output_buf_len;
+#include "PassBundleSign.h"
 
 
 X509 *scert;
 EVP_PKEY *skey;
 
-void signature_init(const char *key_pem, const char *certificate_pem) {
+PassBundleSign::PassBundleSign(const char *key_pem, const char *certificate_pem) {
     OpenSSL_add_all_algorithms();
 	ERR_load_crypto_strings();
     
@@ -22,33 +20,37 @@ void signature_init(const char *key_pem, const char *certificate_pem) {
     BIO *key_pem_io = BIO_new_file(key_pem, "r");
     
 	scert = PEM_read_bio_X509(certificate_pem_bio, NULL, 0, NULL);
-    skey = PEM_read_bio_PrivateKey(key_pem_io, NULL, 0, "HPYEj7xS");
+    skey = PEM_read_bio_PrivateKey(key_pem_io, NULL, 0, (void*)"HPYEj7xS");
 }
 
-void signature_free() {
-        
-}
-
-void signature_sign() {
+PassBundleSign::~PassBundleSign() {
     
 }
 
-int openssl_spul(const char *key_pem, const char *certificate_pem, unsigned char *thing_to_sign_data, unsigned int thing_to_sign_length)
-{
+std::vector<unsigned char> PassBundleSign::signature(unsigned char* data, int data_length) {
+    
 	const int flags = PKCS7_DETACHED | PKCS7_BINARY;
     
-	OpenSSL_add_all_algorithms();
-	ERR_load_crypto_strings();
-    BIO *in = BIO_new_mem_buf(thing_to_sign_data, thing_to_sign_length);
-    /* Sign content */
+    BIO *in = BIO_new_mem_buf(data, data_length);
 	PKCS7 *p7 = PKCS7_sign(scert, skey, NULL, in, flags);
     
-	BIO *out = BIO_new(BIO_s_mem());
+	//BIO *out = BIO_new(BIO_s_mem());
+
+
     
+    int signature_size = i2d_PKCS7(p7, NULL);
+    std::vector<unsigned char> signature(signature_size);
+    
+    unsigned char *data_pointer = &signature[0];
+    i2d_PKCS7(p7, &data_pointer);
+    
+    return signature;
+    
+    /*
     //int f = BIO_reset(in);
     
-    unsigned char *g = &output_buf[0];
-    output_buf_len = i2d_PKCS7(p7, &g);
+    //unsigned char *g = &output_buf[0];
+    //output_buf_len = i2d_PKCS7(p7, &g);
 
 	int ret = 0;
     
@@ -71,8 +73,9 @@ err:
 		BIO_free(in);
 	if (out)
 		BIO_free(out);
-	if (certificate_pem_bio)
-		BIO_free(certificate_pem_bio);
+//	if (certificate_pem_bio)
+//		BIO_free(certificate_pem_bio);
     
     return 0;
+     */
 }

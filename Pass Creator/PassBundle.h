@@ -15,6 +15,6 @@
 
 - (id) init;
 - (void) addFile:(NSString*)filename :(NSData*)data;
-
+- (NSData*) data;
 
 @end
