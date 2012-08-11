@@ -15,6 +15,9 @@
 		D364BB36158FBF330031F0D4 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D364BB34158FBF330031F0D4 /* icon@2x.png */; };
 		D364BB85158FD24A0031F0D4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB83158FD24A0031F0D4 /* libcrypto.a */; };
 		D364BB86158FD24A0031F0D4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB84158FD24A0031F0D4 /* libssl.a */; };
+		D37D992715D6AAD50086E0EC /* pasfoto.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D992615D6AAD50086E0EC /* pasfoto.png */; };
+		D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */; };
+		D37D992D15D6B0E20086E0EC /* ScrollViewContainingDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */; };
 		D3B04E2B1592033A00836AD6 /* PassBundle.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E281592033A00836AD6 /* PassBundle.mm */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E2C1592033A00836AD6 /* PassBundleSign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E291592033A00836AD6 /* PassBundleSign.cpp */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E511592038100836AD6 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E311592038100836AD6 /* NSData+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -37,6 +40,12 @@
 		D3D33431158CE88E00ACAA64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33430158CE88E00ACAA64 /* Default.png */; };
 		D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33432158CE89900ACAA64 /* Default@2x.png */; };
 		D3D657E3158E33E80097B53A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D657E2158E33E80097B53A /* libz.dylib */; };
+		D3E04A4115D685F500B4A959 /* seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A4015D685F500B4A959 /* seperator.png */; };
+		D3E04A4415D68A5C00B4A959 /* PassController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E04A4315D68A5C00B4A959 /* PassController.m */; };
+		D3E04A4C15D6952D00B4A959 /* ColorPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */; };
+		D3E04A4E15D6A18E00B4A959 /* ColorPickerCircle.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */; };
+		D3E04A5015D6A23C00B4A959 /* ColorPicker.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A4F15D6A23C00B4A959 /* ColorPicker.png */; };
+		D3E04A5215D6A2ED00B4A959 /* ColorPickerTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A5115D6A2ED00B4A959 /* ColorPickerTarget.png */; };
 		D3E7997A15909F18000A3E6C /* certificate.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997815909F18000A3E6C /* certificate.pem */; };
 		D3E7997B15909F18000A3E6C /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997915909F18000A3E6C /* key.pem */; };
 		D3E799801590BE4B000A3E6C /* Starbucks.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997F1590BE4B000A3E6C /* Starbucks.pkpass */; };
@@ -135,6 +144,11 @@
 		D364BB82158FD2320031F0D4 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
 		D364BB83158FD24A0031F0D4 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		D364BB84158FD24A0031F0D4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		D37D992615D6AAD50086E0EC /* pasfoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pasfoto.png; sourceTree = "<group>"; };
+		D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerCircle.h; sourceTree = "<group>"; };
+		D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerCircle.m; sourceTree = "<group>"; };
+		D37D992B15D6B0E20086E0EC /* ScrollViewContainingDraggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewContainingDraggable.h; sourceTree = "<group>"; };
+		D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewContainingDraggable.m; sourceTree = "<group>"; };
 		D3B04E271592033A00836AD6 /* PassBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassBundle.h; sourceTree = "<group>"; };
 		D3B04E281592033A00836AD6 /* PassBundle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PassBundle.mm; sourceTree = "<group>"; };
 		D3B04E291592033A00836AD6 /* PassBundleSign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassBundleSign.cpp; sourceTree = "<group>"; };
@@ -177,6 +191,14 @@
 		D3D33430158CE88E00ACAA64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D3D33432158CE89900ACAA64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3D657E2158E33E80097B53A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D3E04A4015D685F500B4A959 /* seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seperator.png; sourceTree = "<group>"; };
+		D3E04A4215D68A5C00B4A959 /* PassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassController.h; sourceTree = "<group>"; };
+		D3E04A4315D68A5C00B4A959 /* PassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassController.m; sourceTree = "<group>"; };
+		D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerButton.h; sourceTree = "<group>"; };
+		D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerButton.m; sourceTree = "<group>"; };
+		D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerCircle.xib; sourceTree = "<group>"; };
+		D3E04A4F15D6A23C00B4A959 /* ColorPicker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker.png; sourceTree = "<group>"; };
+		D3E04A5115D6A2ED00B4A959 /* ColorPickerTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPickerTarget.png; sourceTree = "<group>"; };
 		D3E7997815909F18000A3E6C /* certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certificate.pem; sourceTree = "<group>"; };
 		D3E7997915909F18000A3E6C /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
 		D3E7997F1590BE4B000A3E6C /* Starbucks.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starbucks.pkpass; sourceTree = "<group>"; };
@@ -339,6 +361,10 @@
 		D3F58A30158CD6DA00A937D9 = {
 			isa = PBXGroup;
 			children = (
+				D37D992615D6AAD50086E0EC /* pasfoto.png */,
+				D3E04A5115D6A2ED00B4A959 /* ColorPickerTarget.png */,
+				D3E04A4F15D6A23C00B4A959 /* ColorPicker.png */,
+				D3E04A4015D685F500B4A959 /* seperator.png */,
 				D3E7997F1590BE4B000A3E6C /* Starbucks.pkpass */,
 				D3E7997815909F18000A3E6C /* certificate.pem */,
 				D3E7997915909F18000A3E6C /* key.pem */,
@@ -382,18 +408,27 @@
 		D3F58A45158CD6DA00A937D9 /* Pass Creator */ = {
 			isa = PBXGroup;
 			children = (
-				D3B04E2D1592038100836AD6 /* ZipKit */,
+				D3F58A4E158CD6DA00A937D9 /* AppDelegate.h */,
+				D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */,
+				D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */,
+				D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */,
 				D3B04E271592033A00836AD6 /* PassBundle.h */,
 				D3B04E281592033A00836AD6 /* PassBundle.mm */,
 				D3B04E291592033A00836AD6 /* PassBundleSign.cpp */,
 				D3B04E2A1592033A00836AD6 /* PassBundleSign.h */,
-				D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */,
-				D3F58A4E158CD6DA00A937D9 /* AppDelegate.h */,
-				D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */,
-				D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */,
+				D3F58A46158CD6DA00A937D9 /* Supporting Files */,
 				D3F58A57158CD6DA00A937D9 /* ViewController.h */,
 				D3F58A58158CD6DA00A937D9 /* ViewController.m */,
-				D3F58A46158CD6DA00A937D9 /* Supporting Files */,
+				D3B04E2D1592038100836AD6 /* ZipKit */,
+				D3E04A4215D68A5C00B4A959 /* PassController.h */,
+				D3E04A4315D68A5C00B4A959 /* PassController.m */,
+				D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */,
+				D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */,
+				D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */,
+				D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */,
+				D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */,
+				D37D992B15D6B0E20086E0EC /* ScrollViewContainingDraggable.h */,
+				D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */,
 			);
 			path = "Pass Creator";
 			sourceTree = "<group>";
@@ -473,6 +508,11 @@
 				D3E7997B15909F18000A3E6C /* key.pem in Resources */,
 				D3E799801590BE4B000A3E6C /* Starbucks.pkpass in Resources */,
 				D3B665AF159268C4005B1B13 /* passborder.png in Resources */,
+				D3E04A4115D685F500B4A959 /* seperator.png in Resources */,
+				D3E04A4E15D6A18E00B4A959 /* ColorPickerCircle.xib in Resources */,
+				D3E04A5015D6A23C00B4A959 /* ColorPicker.png in Resources */,
+				D3E04A5215D6A2ED00B4A959 /* ColorPickerTarget.png in Resources */,
+				D37D992715D6AAD50086E0EC /* pasfoto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +544,10 @@
 				D3B04E5E1592038100836AD6 /* ZKFileArchive.m in Sources */,
 				D3B04E5F1592038100836AD6 /* ZKLFHeader.m in Sources */,
 				D3B04E601592038100836AD6 /* ZKLog.m in Sources */,
+				D3E04A4415D68A5C00B4A959 /* PassController.m in Sources */,
+				D3E04A4C15D6952D00B4A959 /* ColorPickerButton.m in Sources */,
+				D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */,
+				D37D992D15D6B0E20086E0EC /* ScrollViewContainingDraggable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

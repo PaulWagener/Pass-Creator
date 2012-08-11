@@ -60,7 +60,7 @@
 }
 
 /**
- * Create a SHA1 digest of some data
+ * Create a SHA1 digest of some data as a hexidecimal string
  */
 +(NSString*) sha1digest:(NSData*)data
 {
