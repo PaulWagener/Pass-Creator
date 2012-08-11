@@ -25,6 +25,9 @@
     [passFiles addObject:file];
 }
 
+/**
+ * Bundle all the files in a zip and add a manifest.json and signature.json file to 
+ */
 - (NSData*) data {
     ZKDataArchive *finalArchive = [ZKDataArchive archiveWithArchiveData:archive.data];
     
@@ -51,7 +54,7 @@
     NSData *signatureData = [NSData dataWithBytes:&signature[0] length:signature.size()];
     
     // Add the signature to the zip
-    [finalArchive deflateData:signatureData withFilename:@"signatfure" andAttributes:nil];
+    [finalArchive deflateData:signatureData withFilename:@"signature" andAttributes:nil];
 
     return finalArchive.data;
 }

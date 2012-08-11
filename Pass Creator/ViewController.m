@@ -35,7 +35,7 @@
 }
 
 - (void) addToArchive :(NSString*)filename{
-    NSString *url = [NSString stringWithFormat:@"http://192.168.0.107/pass/Starbucks/%@",filename];
+    NSString *url = [NSString stringWithFormat:@"http://192.168.168.134/pass/Starbucks/%@",filename];
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     
     [passBundle addFile:filename :data];
@@ -47,9 +47,9 @@ PassBundle *passBundle = nil;
     passBundle = [[PassBundle alloc] init];
     
     [self addToArchive :@"icon.png"];
-    [self addToArchive :@"icon@2x.png"];
-    [self addToArchive :@"logo.png"];
-    [self addToArchive :@"logo@2x.png"];
+    //[self addToArchive :@"icon@2x.png"];
+    //[self addToArchive :@"logo.png"];
+    //[self addToArchive :@"logo@2x.png"];
     [self addToArchive :@"pass.json"];
     
     NSError *error;
