@@ -29,7 +29,7 @@
 - (void) onTouchUp:(id)sender {
     
     [self.superview addSubview:circle];
-    circle.exclusiveTouch = YES;
+    circle.center = CGPointMake(self.center.x, self.frame.origin.y - circle.frame.size.height / 2);
 }
 
 @end

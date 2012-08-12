@@ -8,9 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PassController : UIViewController<UITextFieldDelegate> {
+@interface PassController : UIViewController<UITextFieldDelegate, UITextViewDelegate> {
     IBOutlet UIScrollView *scrollview;
     IBOutlet UIView *contentview;
+    
+    IBOutlet UIImageView *border;
+    IBOutlet UIView *pass;
+    
+    IBOutlet UIView *infoContainer;
+    
+    IBOutlet UIView *infoEvent;
+    IBOutlet UIView *infoTransit;
+    IBOutlet UIView *infoGeneric;
+    IBOutlet UIView *infoCoupon;
+    
 }
     
 @end

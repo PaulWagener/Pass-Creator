@@ -18,6 +18,19 @@
 		D37D992715D6AAD50086E0EC /* pasfoto.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D992615D6AAD50086E0EC /* pasfoto.png */; };
 		D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */; };
 		D37D992D15D6B0E20086E0EC /* ScrollViewContainingDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */; };
+		D37D992F15D7A1B40086E0EC /* border_plain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D992E15D7A1B40086E0EC /* border_plain@2x.png */; };
+		D37D993115D7A5230086E0EC /* border_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993015D7A5230086E0EC /* border_mask@2x.png */; };
+		D37D993315D7A5D90086E0EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37D993215D7A5D90086E0EC /* QuartzCore.framework */; };
+		D37D993615D7B3FC0086E0EC /* BorderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D993515D7B3FB0086E0EC /* BorderTextField.m */; };
+		D37D993815D7BA670086E0EC /* border_notched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993715D7BA670086E0EC /* border_notched@2x.png */; };
+		D37D993A15D7CD0A0086E0EC /* border_perforated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993915D7CD0A0086E0EC /* border_perforated@2x.png */; };
+		D37D993D15D7CFE20086E0EC /* border_scalloped@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993B15D7CFE20086E0EC /* border_scalloped@2x.png */; };
+		D37D993E15D7CFE20086E0EC /* border_square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993C15D7CFE20086E0EC /* border_square@2x.png */; };
+		D37D994515D7E0E20086E0EC /* transit_boat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994015D7E0E20086E0EC /* transit_boat@2x.png */; };
+		D37D994615D7E0E20086E0EC /* transit_bus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994115D7E0E20086E0EC /* transit_bus@2x.png */; };
+		D37D994715D7E0E20086E0EC /* transit_generic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994215D7E0E20086E0EC /* transit_generic@2x.png */; };
+		D37D994815D7E0E20086E0EC /* transit_plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994315D7E0E20086E0EC /* transit_plane@2x.png */; };
+		D37D994915D7E0E20086E0EC /* transit_train@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994415D7E0E20086E0EC /* transit_train@2x.png */; };
 		D3B04E2B1592033A00836AD6 /* PassBundle.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E281592033A00836AD6 /* PassBundle.mm */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E2C1592033A00836AD6 /* PassBundleSign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E291592033A00836AD6 /* PassBundleSign.cpp */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E511592038100836AD6 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E311592038100836AD6 /* NSData+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -149,6 +162,20 @@
 		D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerCircle.m; sourceTree = "<group>"; };
 		D37D992B15D6B0E20086E0EC /* ScrollViewContainingDraggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewContainingDraggable.h; sourceTree = "<group>"; };
 		D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewContainingDraggable.m; sourceTree = "<group>"; };
+		D37D992E15D7A1B40086E0EC /* border_plain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_plain@2x.png"; sourceTree = "<group>"; };
+		D37D993015D7A5230086E0EC /* border_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_mask@2x.png"; sourceTree = "<group>"; };
+		D37D993215D7A5D90086E0EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D37D993415D7B3FB0086E0EC /* BorderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderTextField.h; sourceTree = "<group>"; };
+		D37D993515D7B3FB0086E0EC /* BorderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderTextField.m; sourceTree = "<group>"; };
+		D37D993715D7BA670086E0EC /* border_notched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_notched@2x.png"; sourceTree = "<group>"; };
+		D37D993915D7CD0A0086E0EC /* border_perforated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_perforated@2x.png"; sourceTree = "<group>"; };
+		D37D993B15D7CFE20086E0EC /* border_scalloped@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_scalloped@2x.png"; sourceTree = "<group>"; };
+		D37D993C15D7CFE20086E0EC /* border_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_square@2x.png"; sourceTree = "<group>"; };
+		D37D994015D7E0E20086E0EC /* transit_boat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_boat@2x.png"; sourceTree = "<group>"; };
+		D37D994115D7E0E20086E0EC /* transit_bus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_bus@2x.png"; sourceTree = "<group>"; };
+		D37D994215D7E0E20086E0EC /* transit_generic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_generic@2x.png"; sourceTree = "<group>"; };
+		D37D994315D7E0E20086E0EC /* transit_plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_plane@2x.png"; sourceTree = "<group>"; };
+		D37D994415D7E0E20086E0EC /* transit_train@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_train@2x.png"; sourceTree = "<group>"; };
 		D3B04E271592033A00836AD6 /* PassBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassBundle.h; sourceTree = "<group>"; };
 		D3B04E281592033A00836AD6 /* PassBundle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PassBundle.mm; sourceTree = "<group>"; };
 		D3B04E291592033A00836AD6 /* PassBundleSign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassBundleSign.cpp; sourceTree = "<group>"; };
@@ -222,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D37D993315D7A5D90086E0EC /* QuartzCore.framework in Frameworks */,
 				D364BB85158FD24A0031F0D4 /* libcrypto.a in Frameworks */,
 				D364BB86158FD24A0031F0D4 /* libssl.a in Frameworks */,
 				D3D657E3158E33E80097B53A /* libz.dylib in Frameworks */,
@@ -317,6 +345,18 @@
 			path = openssl;
 			sourceTree = "<group>";
 		};
+		D37D993F15D7E0E20086E0EC /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				D37D994015D7E0E20086E0EC /* transit_boat@2x.png */,
+				D37D994115D7E0E20086E0EC /* transit_bus@2x.png */,
+				D37D994215D7E0E20086E0EC /* transit_generic@2x.png */,
+				D37D994315D7E0E20086E0EC /* transit_plane@2x.png */,
+				D37D994415D7E0E20086E0EC /* transit_train@2x.png */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
 		D3B04E2D1592038100836AD6 /* ZipKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +401,14 @@
 		D3F58A30158CD6DA00A937D9 = {
 			isa = PBXGroup;
 			children = (
+				D37D993F15D7E0E20086E0EC /* Graphics */,
+				D37D993B15D7CFE20086E0EC /* border_scalloped@2x.png */,
+				D37D993C15D7CFE20086E0EC /* border_square@2x.png */,
+				D37D993915D7CD0A0086E0EC /* border_perforated@2x.png */,
+				D37D993715D7BA670086E0EC /* border_notched@2x.png */,
+				D37D993215D7A5D90086E0EC /* QuartzCore.framework */,
+				D37D993015D7A5230086E0EC /* border_mask@2x.png */,
+				D37D992E15D7A1B40086E0EC /* border_plain@2x.png */,
 				D37D992615D6AAD50086E0EC /* pasfoto.png */,
 				D3E04A5115D6A2ED00B4A959 /* ColorPickerTarget.png */,
 				D3E04A4F15D6A23C00B4A959 /* ColorPicker.png */,
@@ -429,6 +477,8 @@
 				D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */,
 				D37D992B15D6B0E20086E0EC /* ScrollViewContainingDraggable.h */,
 				D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */,
+				D37D993415D7B3FB0086E0EC /* BorderTextField.h */,
+				D37D993515D7B3FB0086E0EC /* BorderTextField.m */,
 			);
 			path = "Pass Creator";
 			sourceTree = "<group>";
@@ -513,6 +563,17 @@
 				D3E04A5015D6A23C00B4A959 /* ColorPicker.png in Resources */,
 				D3E04A5215D6A2ED00B4A959 /* ColorPickerTarget.png in Resources */,
 				D37D992715D6AAD50086E0EC /* pasfoto.png in Resources */,
+				D37D992F15D7A1B40086E0EC /* border_plain@2x.png in Resources */,
+				D37D993115D7A5230086E0EC /* border_mask@2x.png in Resources */,
+				D37D993815D7BA670086E0EC /* border_notched@2x.png in Resources */,
+				D37D993A15D7CD0A0086E0EC /* border_perforated@2x.png in Resources */,
+				D37D993D15D7CFE20086E0EC /* border_scalloped@2x.png in Resources */,
+				D37D993E15D7CFE20086E0EC /* border_square@2x.png in Resources */,
+				D37D994515D7E0E20086E0EC /* transit_boat@2x.png in Resources */,
+				D37D994615D7E0E20086E0EC /* transit_bus@2x.png in Resources */,
+				D37D994715D7E0E20086E0EC /* transit_generic@2x.png in Resources */,
+				D37D994815D7E0E20086E0EC /* transit_plane@2x.png in Resources */,
+				D37D994915D7E0E20086E0EC /* transit_train@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +609,7 @@
 				D3E04A4C15D6952D00B4A959 /* ColorPickerButton.m in Sources */,
 				D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */,
 				D37D992D15D6B0E20086E0EC /* ScrollViewContainingDraggable.m in Sources */,
+				D37D993615D7B3FC0086E0EC /* BorderTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

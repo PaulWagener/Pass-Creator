@@ -15,7 +15,6 @@
 - (UIView*)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
     UIView* result = [super hitTest:point withEvent:event];
-    NSLog(@"%@", [result class]);
     if ([result conformsToProtocol:@protocol(Draggable)])
         self.scrollEnabled = NO;
     else
