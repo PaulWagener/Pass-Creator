@@ -33,6 +33,11 @@
     
     
     [border setImage:image];
+    
+    UIView *info = infoGeneric;
+    [infoContainer addSubview:info];
+    info.frame = CGRectMake(0, 0, info.frame.size.width, info.frame.size.height);
+    info.backgroundColor = [UIColor clearColor];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
