@@ -8,29 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		D323EFD2158E012300E6A754 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D323EFD1158E012300E6A754 /* PassKit.framework */; };
-		D364BB2E158FBF090031F0D4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D364BB29158FBF090031F0D4 /* logo.png */; };
-		D364BB2F158FBF090031F0D4 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D364BB2A158FBF090031F0D4 /* logo@2x.png */; };
-		D364BB31158FBF090031F0D4 /* pass.json in Resources */ = {isa = PBXBuildFile; fileRef = D364BB2C158FBF090031F0D4 /* pass.json */; };
-		D364BB35158FBF330031F0D4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D364BB33158FBF330031F0D4 /* icon.png */; };
-		D364BB36158FBF330031F0D4 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D364BB34158FBF330031F0D4 /* icon@2x.png */; };
 		D364BB85158FD24A0031F0D4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB83158FD24A0031F0D4 /* libcrypto.a */; };
 		D364BB86158FD24A0031F0D4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB84158FD24A0031F0D4 /* libssl.a */; };
-		D37D992715D6AAD50086E0EC /* pasfoto.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D992615D6AAD50086E0EC /* pasfoto.png */; };
 		D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */; };
 		D37D992D15D6B0E20086E0EC /* ScrollViewContainingDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */; };
-		D37D992F15D7A1B40086E0EC /* border_plain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D992E15D7A1B40086E0EC /* border_plain@2x.png */; };
-		D37D993115D7A5230086E0EC /* border_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993015D7A5230086E0EC /* border_mask@2x.png */; };
 		D37D993315D7A5D90086E0EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37D993215D7A5D90086E0EC /* QuartzCore.framework */; };
 		D37D993615D7B3FC0086E0EC /* BorderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D993515D7B3FB0086E0EC /* BorderTextField.m */; };
-		D37D993815D7BA670086E0EC /* border_notched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993715D7BA670086E0EC /* border_notched@2x.png */; };
-		D37D993A15D7CD0A0086E0EC /* border_perforated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993915D7CD0A0086E0EC /* border_perforated@2x.png */; };
-		D37D993D15D7CFE20086E0EC /* border_scalloped@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993B15D7CFE20086E0EC /* border_scalloped@2x.png */; };
-		D37D993E15D7CFE20086E0EC /* border_square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D993C15D7CFE20086E0EC /* border_square@2x.png */; };
 		D37D994515D7E0E20086E0EC /* transit_boat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994015D7E0E20086E0EC /* transit_boat@2x.png */; };
 		D37D994615D7E0E20086E0EC /* transit_bus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994115D7E0E20086E0EC /* transit_bus@2x.png */; };
 		D37D994715D7E0E20086E0EC /* transit_generic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994215D7E0E20086E0EC /* transit_generic@2x.png */; };
 		D37D994815D7E0E20086E0EC /* transit_plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994315D7E0E20086E0EC /* transit_plane@2x.png */; };
 		D37D994915D7E0E20086E0EC /* transit_train@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37D994415D7E0E20086E0EC /* transit_train@2x.png */; };
+		D392AAFA15D933500059FB02 /* Pass.m in Sources */ = {isa = PBXBuildFile; fileRef = D392AAF915D933500059FB02 /* Pass.m */; };
+		D392AAFE15D93BC70059FB02 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D392AAFD15D93BC70059FB02 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D392AB0A15D93CC50059FB02 /* border_notched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AAFF15D93CC50059FB02 /* border_notched@2x.png */; };
+		D392AB0B15D93CC50059FB02 /* border_perforated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0015D93CC50059FB02 /* border_perforated@2x.png */; };
+		D392AB0C15D93CC50059FB02 /* border_plain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0115D93CC50059FB02 /* border_plain@2x.png */; };
+		D392AB0D15D93CC50059FB02 /* border_scalloped@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0215D93CC50059FB02 /* border_scalloped@2x.png */; };
+		D392AB0E15D93CC50059FB02 /* border_square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0315D93CC50059FB02 /* border_square@2x.png */; };
+		D392AB0F15D93CC50059FB02 /* ColorPicker.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0415D93CC50059FB02 /* ColorPicker.png */; };
+		D392AB1115D93CC50059FB02 /* ColorPickerTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0615D93CC50059FB02 /* ColorPickerTarget.png */; };
+		D392AB1215D93CC50059FB02 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0715D93CC50059FB02 /* logo.png */; };
+		D392AB1315D93CC50059FB02 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0815D93CC50059FB02 /* logo@2x.png */; };
+		D392AB1415D93CC50059FB02 /* separator.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0915D93CC50059FB02 /* separator.png */; };
 		D3B04E2B1592033A00836AD6 /* PassBundle.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E281592033A00836AD6 /* PassBundle.mm */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E2C1592033A00836AD6 /* PassBundleSign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E291592033A00836AD6 /* PassBundleSign.cpp */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E511592038100836AD6 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E311592038100836AD6 /* NSData+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -49,19 +49,14 @@
 		D3B04E5E1592038100836AD6 /* ZKFileArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4B1592038100836AD6 /* ZKFileArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3B04E5F1592038100836AD6 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4D1592038100836AD6 /* ZKLFHeader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3B04E601592038100836AD6 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4F1592038100836AD6 /* ZKLog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B665AF159268C4005B1B13 /* passborder.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B665AE159268C4005B1B13 /* passborder.png */; };
 		D3D33431158CE88E00ACAA64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33430158CE88E00ACAA64 /* Default.png */; };
 		D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33432158CE89900ACAA64 /* Default@2x.png */; };
 		D3D657E3158E33E80097B53A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D657E2158E33E80097B53A /* libz.dylib */; };
-		D3E04A4115D685F500B4A959 /* seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A4015D685F500B4A959 /* seperator.png */; };
 		D3E04A4415D68A5C00B4A959 /* PassController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E04A4315D68A5C00B4A959 /* PassController.m */; };
 		D3E04A4C15D6952D00B4A959 /* ColorPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */; };
 		D3E04A4E15D6A18E00B4A959 /* ColorPickerCircle.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */; };
-		D3E04A5015D6A23C00B4A959 /* ColorPicker.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A4F15D6A23C00B4A959 /* ColorPicker.png */; };
-		D3E04A5215D6A2ED00B4A959 /* ColorPickerTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A5115D6A2ED00B4A959 /* ColorPickerTarget.png */; };
 		D3E7997A15909F18000A3E6C /* certificate.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997815909F18000A3E6C /* certificate.pem */; };
 		D3E7997B15909F18000A3E6C /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997915909F18000A3E6C /* key.pem */; };
-		D3E799801590BE4B000A3E6C /* Starbucks.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997F1590BE4B000A3E6C /* Starbucks.pkpass */; };
 		D3F58A40158CD6DA00A937D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F58A3F158CD6DA00A937D9 /* UIKit.framework */; };
 		D3F58A42158CD6DA00A937D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F58A41158CD6DA00A937D9 /* Foundation.framework */; };
 		D3F58A44158CD6DA00A937D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F58A43158CD6DA00A937D9 /* CoreGraphics.framework */; };
@@ -69,17 +64,11 @@
 		D3F58A4C158CD6DA00A937D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F58A4B158CD6DA00A937D9 /* main.m */; };
 		D3F58A50158CD6DA00A937D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */; };
 		D3F58A53158CD6DA00A937D9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */; };
-		D3F58A59158CD6DA00A937D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F58A58158CD6DA00A937D9 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D323EFD1158E012300E6A754 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Pass Creator.entitlements"; sourceTree = "<group>"; };
-		D364BB29158FBF090031F0D4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		D364BB2A158FBF090031F0D4 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
-		D364BB2C158FBF090031F0D4 /* pass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pass.json; sourceTree = "<group>"; };
-		D364BB33158FBF330031F0D4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		D364BB34158FBF330031F0D4 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		D364BB38158FD2320031F0D4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		D364BB39158FD2320031F0D4 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
 		D364BB3A158FD2320031F0D4 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
@@ -157,25 +146,32 @@
 		D364BB82158FD2320031F0D4 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
 		D364BB83158FD24A0031F0D4 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		D364BB84158FD24A0031F0D4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		D37D992615D6AAD50086E0EC /* pasfoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pasfoto.png; sourceTree = "<group>"; };
 		D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerCircle.h; sourceTree = "<group>"; };
 		D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerCircle.m; sourceTree = "<group>"; };
 		D37D992B15D6B0E20086E0EC /* ScrollViewContainingDraggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewContainingDraggable.h; sourceTree = "<group>"; };
 		D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewContainingDraggable.m; sourceTree = "<group>"; };
-		D37D992E15D7A1B40086E0EC /* border_plain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_plain@2x.png"; sourceTree = "<group>"; };
-		D37D993015D7A5230086E0EC /* border_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_mask@2x.png"; sourceTree = "<group>"; };
 		D37D993215D7A5D90086E0EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D37D993415D7B3FB0086E0EC /* BorderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderTextField.h; sourceTree = "<group>"; };
 		D37D993515D7B3FB0086E0EC /* BorderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderTextField.m; sourceTree = "<group>"; };
-		D37D993715D7BA670086E0EC /* border_notched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_notched@2x.png"; sourceTree = "<group>"; };
-		D37D993915D7CD0A0086E0EC /* border_perforated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_perforated@2x.png"; sourceTree = "<group>"; };
-		D37D993B15D7CFE20086E0EC /* border_scalloped@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_scalloped@2x.png"; sourceTree = "<group>"; };
-		D37D993C15D7CFE20086E0EC /* border_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_square@2x.png"; sourceTree = "<group>"; };
 		D37D994015D7E0E20086E0EC /* transit_boat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_boat@2x.png"; sourceTree = "<group>"; };
 		D37D994115D7E0E20086E0EC /* transit_bus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_bus@2x.png"; sourceTree = "<group>"; };
 		D37D994215D7E0E20086E0EC /* transit_generic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_generic@2x.png"; sourceTree = "<group>"; };
 		D37D994315D7E0E20086E0EC /* transit_plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_plane@2x.png"; sourceTree = "<group>"; };
 		D37D994415D7E0E20086E0EC /* transit_train@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit_train@2x.png"; sourceTree = "<group>"; };
+		D392AAF815D933500059FB02 /* Pass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pass.h; sourceTree = "<group>"; };
+		D392AAF915D933500059FB02 /* Pass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pass.m; sourceTree = "<group>"; };
+		D392AAFC15D93BC70059FB02 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		D392AAFD15D93BC70059FB02 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		D392AAFF15D93CC50059FB02 /* border_notched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_notched@2x.png"; sourceTree = "<group>"; };
+		D392AB0015D93CC50059FB02 /* border_perforated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_perforated@2x.png"; sourceTree = "<group>"; };
+		D392AB0115D93CC50059FB02 /* border_plain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_plain@2x.png"; sourceTree = "<group>"; };
+		D392AB0215D93CC50059FB02 /* border_scalloped@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_scalloped@2x.png"; sourceTree = "<group>"; };
+		D392AB0315D93CC50059FB02 /* border_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_square@2x.png"; sourceTree = "<group>"; };
+		D392AB0415D93CC50059FB02 /* ColorPicker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker.png; sourceTree = "<group>"; };
+		D392AB0615D93CC50059FB02 /* ColorPickerTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPickerTarget.png; sourceTree = "<group>"; };
+		D392AB0715D93CC50059FB02 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D392AB0815D93CC50059FB02 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		D392AB0915D93CC50059FB02 /* separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = separator.png; sourceTree = "<group>"; };
 		D3B04E271592033A00836AD6 /* PassBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassBundle.h; sourceTree = "<group>"; };
 		D3B04E281592033A00836AD6 /* PassBundle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PassBundle.mm; sourceTree = "<group>"; };
 		D3B04E291592033A00836AD6 /* PassBundleSign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassBundleSign.cpp; sourceTree = "<group>"; };
@@ -214,21 +210,16 @@
 		D3B04E4D1592038100836AD6 /* ZKLFHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLFHeader.m; sourceTree = "<group>"; };
 		D3B04E4E1592038100836AD6 /* ZKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLog.h; sourceTree = "<group>"; };
 		D3B04E4F1592038100836AD6 /* ZKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLog.m; sourceTree = "<group>"; };
-		D3B665AE159268C4005B1B13 /* passborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passborder.png; sourceTree = "<group>"; };
 		D3D33430158CE88E00ACAA64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D3D33432158CE89900ACAA64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3D657E2158E33E80097B53A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		D3E04A4015D685F500B4A959 /* seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seperator.png; sourceTree = "<group>"; };
 		D3E04A4215D68A5C00B4A959 /* PassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassController.h; sourceTree = "<group>"; };
 		D3E04A4315D68A5C00B4A959 /* PassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassController.m; sourceTree = "<group>"; };
 		D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerButton.h; sourceTree = "<group>"; };
 		D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerButton.m; sourceTree = "<group>"; };
 		D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerCircle.xib; sourceTree = "<group>"; };
-		D3E04A4F15D6A23C00B4A959 /* ColorPicker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker.png; sourceTree = "<group>"; };
-		D3E04A5115D6A2ED00B4A959 /* ColorPickerTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPickerTarget.png; sourceTree = "<group>"; };
 		D3E7997815909F18000A3E6C /* certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certificate.pem; sourceTree = "<group>"; };
 		D3E7997915909F18000A3E6C /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
-		D3E7997F1590BE4B000A3E6C /* Starbucks.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starbucks.pkpass; sourceTree = "<group>"; };
 		D3F58A3B158CD6DA00A937D9 /* Pass Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pass Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F58A3F158CD6DA00A937D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3F58A41158CD6DA00A937D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -240,8 +231,6 @@
 		D3F58A4E158CD6DA00A937D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D3F58A52158CD6DA00A937D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		D3F58A57158CD6DA00A937D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D3F58A58158CD6DA00A937D9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +337,16 @@
 		D37D993F15D7E0E20086E0EC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				D392AAFF15D93CC50059FB02 /* border_notched@2x.png */,
+				D392AB0015D93CC50059FB02 /* border_perforated@2x.png */,
+				D392AB0115D93CC50059FB02 /* border_plain@2x.png */,
+				D392AB0215D93CC50059FB02 /* border_scalloped@2x.png */,
+				D392AB0315D93CC50059FB02 /* border_square@2x.png */,
+				D392AB0415D93CC50059FB02 /* ColorPicker.png */,
+				D392AB0615D93CC50059FB02 /* ColorPickerTarget.png */,
+				D392AB0715D93CC50059FB02 /* logo.png */,
+				D392AB0815D93CC50059FB02 /* logo@2x.png */,
+				D392AB0915D93CC50059FB02 /* separator.png */,
 				D37D994015D7E0E20086E0EC /* transit_boat@2x.png */,
 				D37D994115D7E0E20086E0EC /* transit_bus@2x.png */,
 				D37D994215D7E0E20086E0EC /* transit_generic@2x.png */,
@@ -402,27 +401,8 @@
 			isa = PBXGroup;
 			children = (
 				D37D993F15D7E0E20086E0EC /* Graphics */,
-				D37D993B15D7CFE20086E0EC /* border_scalloped@2x.png */,
-				D37D993C15D7CFE20086E0EC /* border_square@2x.png */,
-				D37D993915D7CD0A0086E0EC /* border_perforated@2x.png */,
-				D37D993715D7BA670086E0EC /* border_notched@2x.png */,
-				D37D993215D7A5D90086E0EC /* QuartzCore.framework */,
-				D37D993015D7A5230086E0EC /* border_mask@2x.png */,
-				D37D992E15D7A1B40086E0EC /* border_plain@2x.png */,
-				D37D992615D6AAD50086E0EC /* pasfoto.png */,
-				D3E04A5115D6A2ED00B4A959 /* ColorPickerTarget.png */,
-				D3E04A4F15D6A23C00B4A959 /* ColorPicker.png */,
-				D3E04A4015D685F500B4A959 /* seperator.png */,
-				D3E7997F1590BE4B000A3E6C /* Starbucks.pkpass */,
 				D3E7997815909F18000A3E6C /* certificate.pem */,
 				D3E7997915909F18000A3E6C /* key.pem */,
-				D364BB33158FBF330031F0D4 /* icon.png */,
-				D364BB34158FBF330031F0D4 /* icon@2x.png */,
-				D364BB29158FBF090031F0D4 /* logo.png */,
-				D364BB2A158FBF090031F0D4 /* logo@2x.png */,
-				D364BB2C158FBF090031F0D4 /* pass.json */,
-				D3B665AE159268C4005B1B13 /* passborder.png */,
-				D3D657E2158E33E80097B53A /* libz.dylib */,
 				D3D33432158CE89900ACAA64 /* Default@2x.png */,
 				D3D33430158CE88E00ACAA64 /* Default.png */,
 				D3F58A45158CD6DA00A937D9 /* Pass Creator */,
@@ -442,13 +422,15 @@
 		D3F58A3E158CD6DA00A937D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D364BB37158FD2320031F0D4 /* openssl */,
+				D3F58A43158CD6DA00A937D9 /* CoreGraphics.framework */,
+				D3F58A41158CD6DA00A937D9 /* Foundation.framework */,
 				D364BB83158FD24A0031F0D4 /* libcrypto.a */,
 				D364BB84158FD24A0031F0D4 /* libssl.a */,
+				D3D657E2158E33E80097B53A /* libz.dylib */,
+				D364BB37158FD2320031F0D4 /* openssl */,
 				D323EFD1158E012300E6A754 /* PassKit.framework */,
+				D37D993215D7A5D90086E0EC /* QuartzCore.framework */,
 				D3F58A3F158CD6DA00A937D9 /* UIKit.framework */,
-				D3F58A41158CD6DA00A937D9 /* Foundation.framework */,
-				D3F58A43158CD6DA00A937D9 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -458,27 +440,29 @@
 			children = (
 				D3F58A4E158CD6DA00A937D9 /* AppDelegate.h */,
 				D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */,
+				D37D993415D7B3FB0086E0EC /* BorderTextField.h */,
+				D37D993515D7B3FB0086E0EC /* BorderTextField.m */,
+				D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */,
+				D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */,
+				D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */,
+				D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */,
+				D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */,
+				D392AAFC15D93BC70059FB02 /* JSONKit.h */,
+				D392AAFD15D93BC70059FB02 /* JSONKit.m */,
 				D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */,
 				D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */,
+				D392AAF815D933500059FB02 /* Pass.h */,
+				D392AAF915D933500059FB02 /* Pass.m */,
 				D3B04E271592033A00836AD6 /* PassBundle.h */,
 				D3B04E281592033A00836AD6 /* PassBundle.mm */,
 				D3B04E291592033A00836AD6 /* PassBundleSign.cpp */,
 				D3B04E2A1592033A00836AD6 /* PassBundleSign.h */,
-				D3F58A46158CD6DA00A937D9 /* Supporting Files */,
-				D3F58A57158CD6DA00A937D9 /* ViewController.h */,
-				D3F58A58158CD6DA00A937D9 /* ViewController.m */,
-				D3B04E2D1592038100836AD6 /* ZipKit */,
 				D3E04A4215D68A5C00B4A959 /* PassController.h */,
 				D3E04A4315D68A5C00B4A959 /* PassController.m */,
-				D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */,
-				D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */,
-				D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */,
-				D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */,
-				D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */,
 				D37D992B15D6B0E20086E0EC /* ScrollViewContainingDraggable.h */,
 				D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */,
-				D37D993415D7B3FB0086E0EC /* BorderTextField.h */,
-				D37D993515D7B3FB0086E0EC /* BorderTextField.m */,
+				D3F58A46158CD6DA00A937D9 /* Supporting Files */,
+				D3B04E2D1592038100836AD6 /* ZipKit */,
 			);
 			path = "Pass Creator";
 			sourceTree = "<group>";
@@ -549,31 +533,24 @@
 				D3F58A53158CD6DA00A937D9 /* MainStoryboard.storyboard in Resources */,
 				D3D33431158CE88E00ACAA64 /* Default.png in Resources */,
 				D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */,
-				D364BB2E158FBF090031F0D4 /* logo.png in Resources */,
-				D364BB2F158FBF090031F0D4 /* logo@2x.png in Resources */,
-				D364BB31158FBF090031F0D4 /* pass.json in Resources */,
-				D364BB35158FBF330031F0D4 /* icon.png in Resources */,
-				D364BB36158FBF330031F0D4 /* icon@2x.png in Resources */,
 				D3E7997A15909F18000A3E6C /* certificate.pem in Resources */,
 				D3E7997B15909F18000A3E6C /* key.pem in Resources */,
-				D3E799801590BE4B000A3E6C /* Starbucks.pkpass in Resources */,
-				D3B665AF159268C4005B1B13 /* passborder.png in Resources */,
-				D3E04A4115D685F500B4A959 /* seperator.png in Resources */,
 				D3E04A4E15D6A18E00B4A959 /* ColorPickerCircle.xib in Resources */,
-				D3E04A5015D6A23C00B4A959 /* ColorPicker.png in Resources */,
-				D3E04A5215D6A2ED00B4A959 /* ColorPickerTarget.png in Resources */,
-				D37D992715D6AAD50086E0EC /* pasfoto.png in Resources */,
-				D37D992F15D7A1B40086E0EC /* border_plain@2x.png in Resources */,
-				D37D993115D7A5230086E0EC /* border_mask@2x.png in Resources */,
-				D37D993815D7BA670086E0EC /* border_notched@2x.png in Resources */,
-				D37D993A15D7CD0A0086E0EC /* border_perforated@2x.png in Resources */,
-				D37D993D15D7CFE20086E0EC /* border_scalloped@2x.png in Resources */,
-				D37D993E15D7CFE20086E0EC /* border_square@2x.png in Resources */,
 				D37D994515D7E0E20086E0EC /* transit_boat@2x.png in Resources */,
 				D37D994615D7E0E20086E0EC /* transit_bus@2x.png in Resources */,
 				D37D994715D7E0E20086E0EC /* transit_generic@2x.png in Resources */,
 				D37D994815D7E0E20086E0EC /* transit_plane@2x.png in Resources */,
 				D37D994915D7E0E20086E0EC /* transit_train@2x.png in Resources */,
+				D392AB0A15D93CC50059FB02 /* border_notched@2x.png in Resources */,
+				D392AB0B15D93CC50059FB02 /* border_perforated@2x.png in Resources */,
+				D392AB0C15D93CC50059FB02 /* border_plain@2x.png in Resources */,
+				D392AB0D15D93CC50059FB02 /* border_scalloped@2x.png in Resources */,
+				D392AB0E15D93CC50059FB02 /* border_square@2x.png in Resources */,
+				D392AB0F15D93CC50059FB02 /* ColorPicker.png in Resources */,
+				D392AB1115D93CC50059FB02 /* ColorPickerTarget.png in Resources */,
+				D392AB1215D93CC50059FB02 /* logo.png in Resources */,
+				D392AB1315D93CC50059FB02 /* logo@2x.png in Resources */,
+				D392AB1415D93CC50059FB02 /* separator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +563,6 @@
 			files = (
 				D3F58A4C158CD6DA00A937D9 /* main.m in Sources */,
 				D3F58A50158CD6DA00A937D9 /* AppDelegate.m in Sources */,
-				D3F58A59158CD6DA00A937D9 /* ViewController.m in Sources */,
 				D3B04E2B1592033A00836AD6 /* PassBundle.mm in Sources */,
 				D3B04E2C1592033A00836AD6 /* PassBundleSign.cpp in Sources */,
 				D3B04E511592038100836AD6 /* NSData+ZKAdditions.m in Sources */,
@@ -610,6 +586,8 @@
 				D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */,
 				D37D992D15D6B0E20086E0EC /* ScrollViewContainingDraggable.m in Sources */,
 				D37D993615D7B3FC0086E0EC /* BorderTextField.m in Sources */,
+				D392AAFA15D933500059FB02 /* Pass.m in Sources */,
+				D392AAFE15D93BC70059FB02 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,8 @@
     IBOutlet ColorPickerButton *labelColor;
     IBOutlet ColorPickerButton *valueColor;
     
+    IBOutlet UISegmentedControl *segmentedPassType;
+    
     IBOutletCollection(UITextField) NSArray *labels;
     IBOutletCollection(UITextField) NSArray *values;
     

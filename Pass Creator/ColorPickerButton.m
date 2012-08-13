@@ -13,9 +13,6 @@
 
 
 - (void) awakeFromNib {
-    
-    [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
     self.layer.borderColor = [UIColor colorWithWhite:0.3 alpha:1.0].CGColor;
     self.layer.borderWidth = 0.5f;
     self.layer.cornerRadius = 10.0f;
@@ -35,10 +32,10 @@
         CGFloat brightness, dummy;
         [color getHue:&dummy saturation:&dummy brightness:&brightness alpha:&dummy];
         
-        if(brightness > 0.5)
-            self.titleLabel.textColor = [UIColor blackColor];
+        if(brightness > 0.3)
+            [_self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         else
-            self.titleLabel.textColor = [UIColor whiteColor];
+            [_self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
         // Notify listener of the color change
         if(self.onColorChange)
