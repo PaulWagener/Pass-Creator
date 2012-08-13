@@ -1,7 +1,9 @@
 
 #import "PassBundle.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "JSONKit.h"
 #include "PassBundleSign.h"
+
 
 @implementation PassFile
 @end
@@ -32,15 +34,22 @@
     ZKDataArchive *finalArchive = [ZKDataArchive archiveWithArchiveData:archive.data];
     
     // Create the manifest
+    NSMutableDictionary *manifestDictionary = [NSMutableDictionary dictionary];
+
     NSString *manifestJson = @"{";
     
     for(PassFile *file in passFiles) {
+        [manifestDictionary setObject:file->sha1 forKey:file->filename];
         manifestJson = [NSString stringWithFormat:@"%@ \"%@\":\"%@\",",manifestJson, file->filename, file->sha1];
     }
     manifestJson = [manifestJson stringByAppendingString:@"}"];
+   
     
+    manifestJson = @"{\"pass.json\":\"b99b798843a6b963904590a89edbaff16faefbf4\",\"icon.png\":\"859bc0e60d3cb3dc772fdeda13316e5e2e22ae07\"}";
+    
+     NSLog(@"\n\n|%@|\n|%@|\n\n %d", manifestDictionary.JSONString, manifestJson, [manifestDictionary.JSONString isEqualToString:manifestJson]);
     // Add the manifest to the zip
-    [finalArchive deflateData:[manifestJson dataUsingEncoding:NSASCIIStringEncoding] withFilename:@"manifest.json" andAttributes:nil];
+    [finalArchive deflateData:[manifestDictionary.JSONString dataUsingEncoding:NSASCIIStringEncoding] withFilename:@"manifest.json" andAttributes:nil];
     
     // Sign the manifest
     const char *key_pem = [[NSBundle mainBundle] pathForResource:@"key" ofType:@"pem"].UTF8String;
