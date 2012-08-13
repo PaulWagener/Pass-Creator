@@ -28,7 +28,7 @@
 }
 
 /**
- * Bundle all the files in a zip and add a manifest.json and signature.json file to 
+ * Bundle all the files in a zip and add a manifest.json and signature file to it
  */
 - (NSData*) data {
     ZKDataArchive *finalArchive = [ZKDataArchive archiveWithArchiveData:archive.data];
@@ -36,27 +36,21 @@
     // Create the manifest
     NSMutableDictionary *manifestDictionary = [NSMutableDictionary dictionary];
 
-    NSString *manifestJson = @"{";
-    
     for(PassFile *file in passFiles) {
         [manifestDictionary setObject:file->sha1 forKey:file->filename];
-        manifestJson = [NSString stringWithFormat:@"%@ \"%@\":\"%@\",",manifestJson, file->filename, file->sha1];
     }
-    manifestJson = [manifestJson stringByAppendingString:@"}"];
-   
     
-    manifestJson = @"{\"pass.json\":\"b99b798843a6b963904590a89edbaff16faefbf4\",\"icon.png\":\"859bc0e60d3cb3dc772fdeda13316e5e2e22ae07\"}";
-    
-     NSLog(@"\n\n|%@|\n|%@|\n\n %d", manifestDictionary.JSONString, manifestJson, [manifestDictionary.JSONString isEqualToString:manifestJson]);
+    NSData *manifestJson = manifestDictionary.JSONData;
+
     // Add the manifest to the zip
-    [finalArchive deflateData:[manifestDictionary.JSONString dataUsingEncoding:NSASCIIStringEncoding] withFilename:@"manifest.json" andAttributes:nil];
+    [finalArchive deflateData:manifestJson withFilename:@"manifest.json" andAttributes:nil];
     
     // Sign the manifest
     const char *key_pem = [[NSBundle mainBundle] pathForResource:@"key" ofType:@"pem"].UTF8String;
     const char *certificate_pem = [[NSBundle mainBundle] pathForResource:@"certificate" ofType:@"pem"].UTF8String;
     PassBundleSign signer(key_pem, certificate_pem);
     
-    unsigned char *manifest_pointer = (unsigned char*)manifestJson.UTF8String;
+    unsigned char *manifest_pointer = (unsigned char*)manifestJson.bytes;
     int manifest_length = manifestJson.length;
 
     std::vector<unsigned char> signature = signer.signature(manifest_pointer, manifest_length);

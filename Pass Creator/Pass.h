@@ -30,11 +30,23 @@ enum BarcodeType {
     BARCODE_PDF417
 };
 
+@interface UIColor(UIColorWithCSS)
+
+- (NSString*) cssString;
+
+@end
+
+
 @interface Pass : NSObject
 
 @property NSString *title;
 
 @property UIImage *image;
+
+// Colors
+@property UIColor *backgroundColor;
+@property UIColor *labelColor;
+@property UIColor *valueColor;
 
 // Labels & Values
 @property NSString *primaryLabel1;
@@ -55,11 +67,11 @@ enum BarcodeType {
 @property NSString *secondaryLabel4;
 @property NSString *secondaryValue4;
 
-@property NSString *auxiliaryLabel5;
-@property NSString *auxiliaryValue5;
+@property (copy) NSString *auxiliaryLabel5;
+@property (copy) NSString *auxiliaryValue5;
 
-@property NSString *auxiliaryLabel6;
-@property NSString *auxiliaryValue6;
+@property (strong) NSString *auxiliaryLabel6;
+@property (strong) NSString *auxiliaryValue6;
 
 // Barcode
 @property enum BarcodeType barcodeType;

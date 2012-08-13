@@ -8,7 +8,7 @@
 #include "PassBundleSign.h"
 
 /**
- * Load signatures
+ * Load certificates
  */
 PassBundleSign::PassBundleSign(const char *key_pem, const char *certificate_pem) {
     OpenSSL_add_all_algorithms();
@@ -40,7 +40,6 @@ std::vector<unsigned char> PassBundleSign::signature(unsigned char* data, int da
     
     BIO *in = BIO_new_mem_buf(data, data_length);
 	PKCS7 *p7 = PKCS7_sign(scert, skey, NULL, in, flags);
-    
 	
     int signature_size = i2d_PKCS7(p7, NULL);
     std::vector<unsigned char> signature(signature_size);

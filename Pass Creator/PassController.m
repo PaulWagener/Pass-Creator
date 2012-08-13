@@ -26,7 +26,7 @@
     // Initialize the color picker buttons
     PassController *_self = self;
     backgroundColor.onColorChange = ^(UIColor *color) {
-        pass.backgroundColor = color;
+        passView.backgroundColor = color;
     };
     labelColor.onColorChange = ^(UIColor *color){
         for(UITextField *label in _self->labels)
@@ -41,6 +41,7 @@
     backgroundColor.color = [UIColor redColor];
     labelColor.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
     valueColor.color = [UIColor blueColor];
+    self.pass = [[Pass alloc] init];
 }
 
 - (IBAction) passTypeChanged:(id)sender {
@@ -87,9 +88,31 @@
     info.backgroundColor = [UIColor clearColor];
 }
 
+- (void) updatePass {
+    self.pass.title = titleLabel.text;
+    self.pass.primaryLabel1 = primaryLabel1.text;
+    self.pass.primaryValue1 = primaryValue1.text;
+    self.pass.primaryLabel2 = primaryLabel2.text;
+    self.pass.primaryValue2 = primaryValue2.text;
+    
+    self.pass.secondaryLabel1 = secondaryLabel1.text;
+    self.pass.secondaryValue1 = secondaryValue1.text;
+    self.pass.secondaryLabel2 = secondaryLabel2.text;
+    self.pass.secondaryValue2 = secondaryValue2.text;
+    self.pass.secondaryLabel3 = secondaryLabel3.text;
+    self.pass.secondaryValue3 = secondaryValue3.text;
+    self.pass.secondaryLabel4 = secondaryLabel4.text;
+    self.pass.secondaryValue4 = secondaryValue4.text;
+    
+    self.pass.auxiliaryLabel5 = auxiliaryLabel5.text;
+    self.pass.auxiliaryValue5 = auxiliaryValue5.text;
+    self.pass.auxiliaryLabel6 = auxiliaryLabel6.text;
+    self.pass.auxiliaryValue6 = auxiliaryValue6.text;
+}
+
 - (IBAction) preview:(id)sender {
-    Pass *pass2 = [[Pass alloc] init];
-    UIViewController *f =  [pass2 previewViewController];
+    [self updatePass];
+    UIViewController *f =  [self.pass previewViewController];
     [self presentModalViewController:f animated:YES];
 }
 

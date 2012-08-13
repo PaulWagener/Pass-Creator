@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ColorPickerButton.h"
+#import "Pass.h"
 
 @interface PassController : UIViewController<UITextFieldDelegate, UITextViewDelegate> {
     IBOutlet UIScrollView *scrollview;
     IBOutlet UIView *contentview;
     
     IBOutlet UIImageView *border;
-    IBOutlet UIView *pass;
+    IBOutlet UIView *passView;
     
     IBOutlet UIView *infoContainer;
     
@@ -27,13 +28,30 @@
     IBOutlet ColorPickerButton *labelColor;
     IBOutlet ColorPickerButton *valueColor;
     
+    IBOutlet UITextField *titleLabel;
+    IBOutlet UITextField *primaryLabel1;
+    IBOutlet UITextField *primaryValue1;
+    IBOutlet UITextField *primaryLabel2;
+    IBOutlet UITextField *primaryValue2;
+    IBOutlet UITextField *secondaryLabel1;
+    IBOutlet UITextField *secondaryValue1;
+    IBOutlet UITextField *secondaryLabel2;
+    IBOutlet UITextField *secondaryValue2;
+    IBOutlet UITextField *secondaryLabel3;
+    IBOutlet UITextField *secondaryValue3;
+    IBOutlet UITextField *secondaryLabel4;
+    IBOutlet UITextField *secondaryValue4;
+    IBOutlet UITextField *auxiliaryLabel5;
+    IBOutlet UITextField *auxiliaryValue5;
+    IBOutlet UITextField *auxiliaryLabel6;
+    IBOutlet UITextField *auxiliaryValue6;
+    
     IBOutlet UISegmentedControl *segmentedPassType;
     
     IBOutletCollection(UITextField) NSArray *labels;
     IBOutletCollection(UITextField) NSArray *values;
-    
-    
-    
 }
+
+@property Pass *pass;
     
 @end

@@ -342,7 +342,7 @@
                                                     <!--2012-08-13 10:03:51 +0000-->
                                                 </date>
                                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                                    <mutableData key="data">
+                                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -360,7 +360,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                                 </timeZone>
                                             </datePicker>
                                         </subviews>
@@ -586,6 +586,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="auxiliaryLabel5" destination="LbX-X6-xt1" id="NKO-hb-Bof"/>
+                        <outlet property="auxiliaryLabel6" destination="Vib-b7-eBG" id="r6i-RL-cM9"/>
+                        <outlet property="auxiliaryValue5" destination="QaR-lA-ptS" id="8Qf-hv-L4k"/>
+                        <outlet property="auxiliaryValue6" destination="9SY-jv-bRt" id="3Hp-ya-dpe"/>
                         <outlet property="backgroundColor" destination="2od-PA-68z" id="2R4-hY-Ccw"/>
                         <outlet property="border" destination="mvV-9w-nfp" id="d8f-oF-a9M"/>
                         <outlet property="contentview" destination="OYb-gi-lJc" id="wOk-Uk-JbX"/>
@@ -595,9 +599,22 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="infoGeneric" destination="wy7-Vj-EUh" id="oW3-4b-Pus"/>
                         <outlet property="infoTransit" destination="Pgf-KH-aUg" id="ptP-ez-9nY"/>
                         <outlet property="labelColor" destination="ftu-m9-Thb" id="QfL-hq-TmX"/>
-                        <outlet property="pass" destination="F9a-xS-eWA" id="gfe-87-rSf"/>
+                        <outlet property="passView" destination="F9a-xS-eWA" id="W2o-bv-ryj"/>
+                        <outlet property="primaryLabel1" destination="oFL-x7-7V3" id="amA-8r-nyu"/>
+                        <outlet property="primaryLabel2" destination="AUn-Hf-5nG" id="ubn-Ra-Z5N"/>
+                        <outlet property="primaryValue1" destination="CSe-e6-JTT" id="SsK-CP-iqP"/>
+                        <outlet property="primaryValue2" destination="1cu-py-14G" id="xDY-jv-ItP"/>
                         <outlet property="scrollview" destination="mqO-Xf-aif" id="9Z9-CQ-OeG"/>
+                        <outlet property="secondaryLabel1" destination="s2q-pl-2en" id="j0p-cd-vG5"/>
+                        <outlet property="secondaryLabel2" destination="z29-5J-pAX" id="jCL-qJ-gVg"/>
+                        <outlet property="secondaryLabel3" destination="xib-Fz-X7A" id="ARC-9R-tVl"/>
+                        <outlet property="secondaryLabel4" destination="uSV-Dg-CvH" id="tiq-gf-e61"/>
+                        <outlet property="secondaryValue1" destination="l2Z-mM-7Cp" id="8N0-ci-k2b"/>
+                        <outlet property="secondaryValue2" destination="g0k-hv-XAj" id="nUD-aG-jvq"/>
+                        <outlet property="secondaryValue3" destination="XH5-21-4jb" id="mvf-dR-V3i"/>
+                        <outlet property="secondaryValue4" destination="vBZ-ew-Eec" id="jmH-v5-bBV"/>
                         <outlet property="segmentedPassType" destination="Vni-Yg-iBT" id="B92-AZ-h9z"/>
+                        <outlet property="titleLabel" destination="fJe-ZT-BWj" id="DDr-JV-3KA"/>
                         <outlet property="valueColor" destination="2W0-cT-HKQ" id="yW3-qx-9sg"/>
                         <outletCollection property="labels" destination="s2q-pl-2en" id="SJd-eX-IBT"/>
                         <outletCollection property="labels" destination="z29-5J-pAX" id="vkj-QF-ILk"/>
@@ -638,6 +655,65 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="seperator.png" width="16" height="16"/>
         <image name="transit_plane@2x.png" width="73" height="74"/>
     </resources>
+    <classes>
+        <class className="BorderTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BorderTextField.h"/>
+        </class>
+        <class className="ColorPickerButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPickerButton.h"/>
+            <relationships>
+                <relationship kind="outlet" name="circle" candidateClass="ColorPickerCircle"/>
+            </relationships>
+        </class>
+        <class className="ColorPickerCircle" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPickerCircle.h"/>
+            <relationships>
+                <relationship kind="outlet" name="brightnessTarget" candidateClass="UIView"/>
+                <relationship kind="outlet" name="colorView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="hueTarget" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="PassController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PassController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="auxiliaryLabel5" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="auxiliaryLabel6" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="auxiliaryValue5" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="auxiliaryValue6" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="backgroundColor" candidateClass="ColorPickerButton"/>
+                <relationship kind="outlet" name="border" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="contentview" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoCoupon" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoEvent" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoGeneric" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoTransit" candidateClass="UIView"/>
+                <relationship kind="outlet" name="labelColor" candidateClass="ColorPickerButton"/>
+                <relationship kind="outlet" name="passView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="primaryLabel1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="primaryLabel2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="primaryValue1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="primaryValue2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollview" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="secondaryLabel1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondaryLabel2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondaryLabel3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondaryLabel4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondaryValue1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondaryValue2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondaryValue3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondaryValue4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="segmentedPassType" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="valueColor" candidateClass="ColorPickerButton"/>
+                <relationship kind="outletCollection" name="labels" candidateClass="UITextField"/>
+                <relationship kind="outletCollection" name="values" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ScrollViewContainingDraggable" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScrollViewContainingDraggable.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
