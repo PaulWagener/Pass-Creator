@@ -8,9 +8,28 @@
 
 #import <UIKit/UIKit.h>
 #import "ColorPickerCircle.h"
+
+@class ColorPickerBackgroundView;
+
 @interface ColorPickerButton : UIButton {
-    IBOutlet ColorPickerCircle *circle;
+    bool colorPickin;
+    UIColor *_color;
 }
 
+@property (nonatomic, copy) void (^onColorChange)(UIColor*);
+
+@property IBOutlet ColorPickerCircle *circle;
+@property ColorPickerBackgroundView *background;
+@property UIColor *color;
+
+@end
+
+/**
+ * A large semi-transparant view obscuring the background from reaching any touches events
+ * As soon as it's touched the color picker circle should be dismissed
+ */
+@interface ColorPickerBackgroundView : UIView<Draggable>;
+
+@property ColorPickerButton *button;
 
 @end

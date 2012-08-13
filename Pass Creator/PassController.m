@@ -34,10 +34,27 @@
     
     [border setImage:image];
     
-    UIView *info = infoGeneric;
+    UIView *info = infoTransit;
     [infoContainer addSubview:info];
     info.frame = CGRectMake(0, 0, info.frame.size.width, info.frame.size.height);
     info.backgroundColor = [UIColor clearColor];
+    
+    backgroundColor.color = [UIColor redColor];
+    labelColor.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+    valueColor.color = [UIColor blueColor];
+    
+    PassController *_self = self;
+    backgroundColor.onColorChange = ^(UIColor *color) {
+        pass.backgroundColor = color;
+    };
+    labelColor.onColorChange = ^(UIColor *color){
+        for(UITextField *label in _self->labels)
+            label.textColor = color;
+    };
+    valueColor.onColorChange = ^(UIColor *color) {
+        for(UITextField *value in _self->values)
+            value.textColor = color;
+    };
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {

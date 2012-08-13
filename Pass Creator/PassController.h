@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ColorPickerButton.h"
 
 @interface PassController : UIViewController<UITextFieldDelegate, UITextViewDelegate> {
     IBOutlet UIScrollView *scrollview;
@@ -21,6 +22,15 @@
     IBOutlet UIView *infoTransit;
     IBOutlet UIView *infoGeneric;
     IBOutlet UIView *infoCoupon;
+    
+    IBOutlet ColorPickerButton *backgroundColor;
+    IBOutlet ColorPickerButton *labelColor;
+    IBOutlet ColorPickerButton *valueColor;
+    
+    IBOutletCollection(UITextField) NSArray *labels;
+    IBOutletCollection(UITextField) NSArray *values;
+    
+    
     
 }
     

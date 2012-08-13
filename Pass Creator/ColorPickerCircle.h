@@ -10,9 +10,18 @@
 #import "ScrollViewContainingDraggable.h"
 
 @interface ColorPickerCircle : UIView<Draggable> {
+    @public
     IBOutlet UIView *hueTarget;
     IBOutlet UIView *brightnessTarget;
     IBOutlet UIView *colorView;
+    
+    CGFloat hue;
+    CGFloat saturation;
+    CGFloat brightness;
 }
+
+@property (nonatomic, copy) void (^onColorChange)(UIColor*);
+
+- (void) setColor:(UIColor *)color;
 
 @end
