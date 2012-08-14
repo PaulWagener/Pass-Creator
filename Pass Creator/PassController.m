@@ -38,13 +38,41 @@
     };
     
     // Just testing
-    backgroundColor.color = [UIColor redColor];
-    labelColor.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-    valueColor.color = [UIColor blueColor];
+    backgroundColor.color = [UIColor purpleColor];
+    labelColor.color = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+    valueColor.color = [UIColor blackColor];
     self.pass = [[Pass alloc] init];
+    [self setPassType:COUPON];
+    segmentedPassType.selectedSegmentIndex = GENERIC;
+}
+
+- (IBAction) chooseTransitType:(id)sender {
+    [[[UIActionSheet alloc] initWithTitle:@"Transit Type" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Air", @"Train", @"Bus", @"Boat", @"Generic", nil] showInView:passView];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    self.pass.transitType = buttonIndex;
+    [self setTransitType:buttonIndex];
+}
+
+/**
+ * Set the transit icon on the button between the origin and the destination label
+ */
+- (void) setTransitType:(enum TransitType)transitType {
+    if(transitType == TRANSIT_AIR)
+        [transitButton setImage:[UIImage imageNamed:@"transit_plane.png"] forState:UIControlStateNormal];
+    else if(transitType == TRANSIT_TRAIN)
+        [transitButton setImage:[UIImage imageNamed:@"transit_train.png"] forState:UIControlStateNormal];
+    else if(transitType == TRANSIT_BUS)
+        [transitButton setImage:[UIImage imageNamed:@"transit_bus.png"] forState:UIControlStateNormal];
+    else if(transitType == TRANSIT_BOAT)
+        [transitButton setImage:[UIImage imageNamed:@"transit_boat.png"] forState:UIControlStateNormal];
+    else if(transitType == TRANSIT_GENERIC)
+        [transitButton setImage:[UIImage imageNamed:@"transit_generic.png"] forState:UIControlStateNormal];
 }
 
 - (IBAction) passTypeChanged:(id)sender {
+    self.pass.passType = segmentedPassType.selectedSegmentIndex;
     [self setPassType:segmentedPassType.selectedSegmentIndex];
 }
 
@@ -55,12 +83,9 @@
     UIView *info;
     switch (passType) {
         case BOARDING:
-        {
-            //UIEdgeInsets notchedinsets = UIEdgeInsetsMake(72, 32, 32, 32);
             borderImage = [[UIImage imageNamed:@"border_notched.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(72, 32, 32, 32)];
             info = infoTransit;
             break;
-        }
             
         case COUPON:
             borderImage = [[UIImage imageNamed:@"border_perforated.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(72, 21, 32, 15)];
@@ -73,11 +98,15 @@
             break;
             
         case GENERIC:
+        case STORE:
         default:
-            borderImage = [[UIImage imageNamed:@"border_plain"] resizableImageWithCapInsets:UIEdgeInsetsMake(32, 32, 32, 32)];
+            borderImage = [[UIImage imageNamed:@"border_plain"] resizableImageWithCapInsets:UIEdgeInsetsMake(72, 32, 32, 32)];
             info = infoGeneric;
             break;
     }
+    
+    if(passType == STORE)
+        info = infoCoupon;
     
     [border setImage:borderImage];
 
@@ -88,12 +117,47 @@
     info.backgroundColor = [UIColor clearColor];
 }
 
+/**
+ * These functions return what is in the current primary label & value textfields
+ */
+- (NSString*) getPrimaryLabel1 {
+    if(self.pass.passType == GENERIC)
+        return genericLabel.text;
+    if(self.pass.passType == EVENT)
+        return eventLabel.text;
+    if(self.pass.passType == BOARDING)
+        return boardingOriginLabel.text;
+    if(self.pass.passType == COUPON || self.pass.passType == STORE)
+        return couponLabel.text;
+    return @"";
+}
+
+- (NSString*) getPrimaryValue1 {
+    if(self.pass.passType == GENERIC)
+        return genericValue.text;
+    if(self.pass.passType == EVENT)
+        return eventValue.text;
+    if(self.pass.passType == BOARDING)
+        return boardingOriginValue.text;
+    if(self.pass.passType == COUPON || self.pass.passType == STORE)
+        return couponValue.text;
+    return @"";
+}
+
+- (NSString*) getPrimaryLabel2 {
+    return boardingDestinationLabel.text;
+}
+
+- (NSString*) getPrimaryValue2 {
+    return boardingDestinationValue.text;
+}
+
 - (void) updatePass {
     self.pass.title = titleLabel.text;
-    self.pass.primaryLabel1 = primaryLabel1.text;
-    self.pass.primaryValue1 = primaryValue1.text;
-    self.pass.primaryLabel2 = primaryLabel2.text;
-    self.pass.primaryValue2 = primaryValue2.text;
+    self.pass.primaryLabel1 = [self getPrimaryLabel1];
+    self.pass.primaryValue1 = [self getPrimaryValue1];
+    self.pass.primaryLabel2 = [self getPrimaryLabel2];
+    self.pass.primaryValue2 = [self getPrimaryValue2];
     
     self.pass.secondaryLabel1 = secondaryLabel1.text;
     self.pass.secondaryValue1 = secondaryValue1.text;
@@ -104,10 +168,11 @@
     self.pass.secondaryLabel4 = secondaryLabel4.text;
     self.pass.secondaryValue4 = secondaryValue4.text;
     
-    self.pass.auxiliaryLabel5 = auxiliaryLabel5.text;
-    self.pass.auxiliaryValue5 = auxiliaryValue5.text;
-    self.pass.auxiliaryLabel6 = auxiliaryLabel6.text;
-    self.pass.auxiliaryValue6 = auxiliaryValue6.text;
+    self.pass.backgroundColor = backgroundColor.color;
+    self.pass.labelColor = labelColor.color;
+    self.pass.valueColor = valueColor.color;
+    
+    self.pass.passType = segmentedPassType.selectedSegmentIndex;
 }
 
 - (IBAction) preview:(id)sender {
@@ -125,14 +190,6 @@
 {
     [textField resignFirstResponder];
     [scrollview setContentOffset:CGPointMake(0, -self.navigationController.navigationBar.frame.size.height) animated:YES];
-    return YES;
-}
-
-- (BOOL) textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if ([text rangeOfString:@"\n"].location != NSNotFound) {
-        [textView resignFirstResponder];
-        return NO;
-    }
     return YES;
 }
 

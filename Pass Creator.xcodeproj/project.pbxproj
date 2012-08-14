@@ -31,6 +31,7 @@
 		D392AB1215D93CC50059FB02 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0715D93CC50059FB02 /* logo.png */; };
 		D392AB1315D93CC50059FB02 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0815D93CC50059FB02 /* logo@2x.png */; };
 		D392AB1415D93CC50059FB02 /* separator.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0915D93CC50059FB02 /* separator.png */; };
+		D392AB1615DA72990059FB02 /* sheen.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB1515DA72990059FB02 /* sheen.png */; };
 		D3B04E2B1592033A00836AD6 /* PassBundle.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E281592033A00836AD6 /* PassBundle.mm */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E2C1592033A00836AD6 /* PassBundleSign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E291592033A00836AD6 /* PassBundleSign.cpp */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E511592038100836AD6 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E311592038100836AD6 /* NSData+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -172,6 +173,7 @@
 		D392AB0715D93CC50059FB02 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D392AB0815D93CC50059FB02 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		D392AB0915D93CC50059FB02 /* separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = separator.png; sourceTree = "<group>"; };
+		D392AB1515DA72990059FB02 /* sheen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheen.png; sourceTree = "<group>"; };
 		D3B04E271592033A00836AD6 /* PassBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassBundle.h; sourceTree = "<group>"; };
 		D3B04E281592033A00836AD6 /* PassBundle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PassBundle.mm; sourceTree = "<group>"; };
 		D3B04E291592033A00836AD6 /* PassBundleSign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassBundleSign.cpp; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 		D37D993F15D7E0E20086E0EC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				D392AB1515DA72990059FB02 /* sheen.png */,
 				D392AAFF15D93CC50059FB02 /* border_notched@2x.png */,
 				D392AB0015D93CC50059FB02 /* border_perforated@2x.png */,
 				D392AB0115D93CC50059FB02 /* border_plain@2x.png */,
@@ -551,6 +554,7 @@
 				D392AB1215D93CC50059FB02 /* logo.png in Resources */,
 				D392AB1315D93CC50059FB02 /* logo@2x.png in Resources */,
 				D392AB1415D93CC50059FB02 /* separator.png in Resources */,
+				D392AB1615DA72990059FB02 /* sheen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
 #import "ColorPickerButton.h"
 #import "Pass.h"
 
-@interface PassController : UIViewController<UITextFieldDelegate, UITextViewDelegate> {
+@interface PassController : UIViewController<UITextFieldDelegate, UITextViewDelegate, UIActionSheetDelegate> {
     IBOutlet UIScrollView *scrollview;
     IBOutlet UIView *contentview;
     
@@ -41,10 +41,21 @@
     IBOutlet UITextField *secondaryValue3;
     IBOutlet UITextField *secondaryLabel4;
     IBOutlet UITextField *secondaryValue4;
-    IBOutlet UITextField *auxiliaryLabel5;
-    IBOutlet UITextField *auxiliaryValue5;
-    IBOutlet UITextField *auxiliaryLabel6;
-    IBOutlet UITextField *auxiliaryValue6;
+    
+    // Specific controls
+    IBOutlet UITextField *genericLabel;
+    IBOutlet UITextField *genericValue;
+    
+    IBOutlet UITextField *boardingOriginLabel;
+    IBOutlet UITextField *boardingOriginValue;
+    IBOutlet UITextField *boardingDestinationLabel;
+    IBOutlet UITextField *boardingDestinationValue;
+    
+    IBOutlet UITextField *couponLabel;
+    IBOutlet UITextField *couponValue;
+    
+    
+    IBOutlet UIButton *transitButton;
     
     IBOutlet UISegmentedControl *segmentedPassType;
     

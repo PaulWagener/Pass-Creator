@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 enum PassType {
+    GENERIC,
+    EVENT,
     BOARDING,
     COUPON,
-    EVENT,
-    GENERIC,
     STORE
 };
 
@@ -39,7 +39,7 @@ enum BarcodeType {
 
 @interface Pass : NSObject
 
-@property NSString *title;
+@property (copy) NSString *title;
 
 @property UIImage *image;
 
@@ -49,34 +49,28 @@ enum BarcodeType {
 @property UIColor *valueColor;
 
 // Labels & Values
-@property NSString *primaryLabel1;
-@property NSString *primaryValue1;
+@property (copy) NSString *primaryLabel1;
+@property (copy) NSString *primaryValue1;
 
-@property NSString *primaryLabel2;
-@property NSString *primaryValue2;
+@property (copy) NSString *primaryLabel2;
+@property (copy) NSString *primaryValue2;
 
-@property NSString *secondaryLabel1;
-@property NSString *secondaryValue1;
+@property (copy) NSString *secondaryLabel1;
+@property (copy) NSString *secondaryValue1;
 
-@property NSString *secondaryLabel2;
-@property NSString *secondaryValue2;
+@property (copy) NSString *secondaryLabel2;
+@property (copy) NSString *secondaryValue2;
 
-@property NSString *secondaryLabel3;
-@property NSString *secondaryValue3;
+@property (copy) NSString *secondaryLabel3;
+@property (copy) NSString *secondaryValue3;
 
-@property NSString *secondaryLabel4;
-@property NSString *secondaryValue4;
-
-@property (copy) NSString *auxiliaryLabel5;
-@property (copy) NSString *auxiliaryValue5;
-
-@property (strong) NSString *auxiliaryLabel6;
-@property (strong) NSString *auxiliaryValue6;
+@property (copy) NSString *secondaryLabel4;
+@property (copy) NSString *secondaryValue4;
 
 // Barcode
 @property enum BarcodeType barcodeType;
-@property NSString *barcodeMessage;
-@property NSString *barcodeText;
+@property (copy) NSString *barcodeMessage;
+@property (copy) NSString *barcodeText;
 
 // Location
 
