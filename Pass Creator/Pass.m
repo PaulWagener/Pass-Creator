@@ -49,7 +49,9 @@ PassBundle *passBundle = nil;
     // Primary fields dictionary
     NSMutableArray *primaryFields = [NSMutableArray array];
     [self addLabelValue:primaryFields :@"primaryfield1" :self.primaryLabel1 :self.primaryValue1];
-    [self addLabelValue:primaryFields :@"primaryfield2" :self.primaryLabel2 :self.primaryValue2];
+    
+    if(self.passType == BOARDING)
+        [self addLabelValue:primaryFields :@"primaryfield2" :self.primaryLabel2 :self.primaryValue2];
     
     // Secondary fields dictionary
     NSMutableArray *secondaryFields = [NSMutableArray array];
@@ -70,17 +72,27 @@ PassBundle *passBundle = nil;
     else if(self.passType == STORE)
         passTypeString = @"storeCard";
     
-    NSString *transitTypeString;
-    if(self.transitType == TRANSIT_AIR)
-        transitTypeString = @"PKTransitTypeAir";
-    else if(self.transitType == TRANSIT_TRAIN)
-        transitTypeString = @"PKTransitTypeTrain";
-    else if(self.transitType == TRANSIT_BUS)
-        transitTypeString = @"PKTransitTypeBus";
-    else if(self.transitType == TRANSIT_BOAT)
-        transitTypeString = @"PKTransitTypeBoat";
-    else if(self.transitType == TRANSIT_GENERIC)
-        transitTypeString = @"PKTransitTypeGeneric";
+    NSMutableDictionary *fieldsDictionary = @{
+        @"primaryFields" : primaryFields,
+        @"secondaryFields": secondaryFields,
+    }.mutableCopy;
+    
+    // Add transit type information
+    if(self.passType == BOARDING) {
+        NSString *transitTypeString;
+        if(self.transitType == TRANSIT_AIR)
+            transitTypeString = @"PKTransitTypeAir";
+        else if(self.transitType == TRANSIT_TRAIN)
+            transitTypeString = @"PKTransitTypeTrain";
+        else if(self.transitType == TRANSIT_BUS)
+            transitTypeString = @"PKTransitTypeBus";
+        else if(self.transitType == TRANSIT_BOAT)
+            transitTypeString = @"PKTransitTypeBoat";
+        else if(self.transitType == TRANSIT_GENERIC)
+            transitTypeString = @"PKTransitTypeGeneric";
+        
+        [fieldsDictionary setObject:transitTypeString forKey:@"transitType"];
+    }
         
     
     NSMutableDictionary *passDictionary =
@@ -91,36 +103,42 @@ PassBundle *passBundle = nil;
     @"organizationName" : @"Pass Creator",
     @"teamIdentifier" : @"37HYQWCA73",
     @"description": @"Pass Creator Pass",
-    passTypeString: @{
-        @"transitType": transitTypeString,
-        @"primaryFields" : primaryFields,
-        @"secondaryFields": secondaryFields,
-    },
+    passTypeString: fieldsDictionary,
     @"backFields": @[@{@"key": @"credits", @"label": @"Created By Pass Creator", @"value": @"Download at ..."}],
-    
-    /*
-    @"barcode" : @{
-    @"message" : self.barcodeMessage == nil ? @"k" : self.barcodeMessage,
-    @"altText" : self.barcodeText == nil ? @"" : self.barcodeText,
-    @"format" : @"PKBarcodeFormatPDF417",
-    @"messageEncoding" : @"utf-8"
-    },*/
-    
     @"backgroundColor" : self.backgroundColor.cssString,
     @"labelColor" : self.labelColor.cssString,
     @"foregroundColor" : self.valueColor.cssString,
-    @"logoText": self.title == nil ? @"" : self.title
     }.mutableCopy;
     
-    [passBundle addFile:@"thumbnail.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ColorPicker" ofType:@"png"]]];
+    if(self.title != nil && ![self.title isEqualToString:@""])
+        [passDictionary setObject:self.title forKey:@"logoText"];
+    
+    
+    if(self.thumbnail != nil && (self.passType == GENERIC || self.passType == EVENT)) {
+        [passBundle addFile:@"thumbnail.png" : UIImagePNGRepresentation(self.thumbnail)];
+    }
+    
+    if(self.background != nil && self.passType == EVENT)
+        [passBundle addFile:@"background.png" : UIImagePNGRepresentation(self.background)];
+
+    if(self.logo != nil)
+        [passBundle addFile:@"logo.png" :UIImagePNGRepresentation(self.logo)];
+    
+    if(self.strip != nil && (self.passType == COUPON || self.passType == STORE))
+        [passBundle addFile:@"strip.png" :UIImagePNGRepresentation(self.strip)];
+    
+    /*
     [passBundle addFile:@"strip.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ColorPicker" ofType:@"png"]]];
-    [passBundle addFile:@"logo.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ColorPicker" ofType:@"png"]]];
+
     [passBundle addFile:@"background.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ColorPicker" ofType:@"png"]]];
+     */
     
     [passBundle addFile:@"pass.json" :passDictionary.JSONData];
     
     NSError *error;
-    PKPass *pass = [[PKPass alloc] initWithData:[passBundle data] error:&error];
+    NSData *passData = [passBundle data];
+    NSLog(@"Pass Size: %d", passData.length);
+    PKPass *pass = [[PKPass alloc] initWithData:passData error:&error];
     
     return [[PKAddPassesViewController alloc] initWithPass:pass];
     

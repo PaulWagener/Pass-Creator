@@ -175,8 +175,8 @@
 		D392AB0815D93CC50059FB02 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		D392AB0915D93CC50059FB02 /* separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = separator.png; sourceTree = "<group>"; };
 		D392AB1515DA72990059FB02 /* sheen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheen.png; sourceTree = "<group>"; };
-		D392AB1715DA85610059FB02 /* ImagePickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerButton.h; sourceTree = "<group>"; };
 		D392AB1815DA85620059FB02 /* ImagePickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerButton.m; sourceTree = "<group>"; };
+		D392AB1A15DA8A7A0059FB02 /* ImagePickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerButton.h; sourceTree = "<group>"; };
 		D3B04E271592033A00836AD6 /* PassBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassBundle.h; sourceTree = "<group>"; };
 		D3B04E281592033A00836AD6 /* PassBundle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PassBundle.mm; sourceTree = "<group>"; };
 		D3B04E291592033A00836AD6 /* PassBundleSign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassBundleSign.cpp; sourceTree = "<group>"; };
@@ -453,7 +453,7 @@
 				D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */,
 				D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */,
 				D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */,
-				D392AB1715DA85610059FB02 /* ImagePickerButton.h */,
+				D392AB1A15DA8A7A0059FB02 /* ImagePickerButton.h */,
 				D392AB1815DA85620059FB02 /* ImagePickerButton.m */,
 				D392AAFC15D93BC70059FB02 /* JSONKit.h */,
 				D392AAFD15D93BC70059FB02 /* JSONKit.m */,

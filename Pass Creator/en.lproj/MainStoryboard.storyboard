@@ -43,11 +43,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" id="W1c-wU-hwx" userLabel="Logo">
-                                                <rect key="frame" x="9" y="11" width="48" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                            </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="whileEditing" text="Title" id="fJe-ZT-BWj" userLabel="Title" customClass="BorderTextField">
                                                 <rect key="frame" x="65" y="21" width="235" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -150,39 +145,35 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A8g-qp-SMg" customClass="ImagePickerButton">
+                                                <rect key="frame" x="11" y="13" width="46" height="47"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxWidth">
+                                                        <integer key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
+                                                        <integer key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="viewController" destination="Vga-re-kw6" id="VBY-P1-eJX"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98392939130000001" green="1" blue="0.98794704349999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="eaw-Dp-sDN" userLabel="Appearance">
-                                        <rect key="frame" x="7" y="422" width="300" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Vni-Yg-iBT">
-                                                <rect key="frame" x="8" y="74" width="287" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="Generic"/>
-                                                    <segment title="Event"/>
-                                                    <segment title="Boarding"/>
-                                                    <segment title="Coupon"/>
-                                                    <segment title="Store"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="passTypeChanged:" destination="Vga-re-kw6" eventType="valueChanged" id="nCM-9Q-4ih"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Appearance" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="Tmo-Gt-KLP">
-                                                <rect key="frame" x="8" y="5" width="302" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.77000000000000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2od-PA-68z" userLabel="Background Color Picker" customClass="ColorPickerButton">
-                                        <rect key="frame" x="14" y="460" width="95" height="31"/>
+                                        <rect key="frame" x="12" y="422" width="95" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Background">
@@ -194,7 +185,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ftu-m9-Thb" userLabel="Label Color Picker" customClass="ColorPickerButton">
-                                        <rect key="frame" x="114" y="460" width="92" height="32"/>
+                                        <rect key="frame" x="112" y="422" width="92" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Label">
@@ -206,7 +197,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2W0-cT-HKQ" userLabel="Value Color Picker" customClass="ColorPickerButton">
-                                        <rect key="frame" x="214" y="460" width="86" height="31"/>
+                                        <rect key="frame" x="212" y="422" width="86" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Value">
@@ -217,43 +208,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <view contentMode="scaleToFill" id="YZr-gQ-UVC" userLabel="Barcode">
-                                        <rect key="frame" x="9" y="545" width="298" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Barcode" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="EB1-VT-b3g">
-                                                <rect key="frame" x="7" y="6" width="92" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="5Kw-B5-l2o">
-                                                <rect key="frame" x="5" y="73" width="285" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="Aztec"/>
-                                                    <segment title="QR"/>
-                                                    <segment title="PDF417"/>
-                                                </segments>
-                                            </segmentedControl>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message Payload" minimumFontSize="17" text="" id="63w-Lk-7oO">
-                                                <rect key="frame" x="101" y="6" width="189" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" minimumFontSize="17" text="" id="uMl-Fm-kIC">
-                                                <rect key="frame" x="101" y="40" width="189" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.77000000000000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    </view>
                                     <view contentMode="scaleToFill" id="c4v-B5-394" userLabel="Location">
                                         <rect key="frame" x="13" y="667" width="298" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -330,6 +284,58 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.77000000000000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Vni-Yg-iBT">
+                                        <rect key="frame" x="13" y="461" width="287" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Generic"/>
+                                            <segment title="Event"/>
+                                            <segment title="Boarding"/>
+                                            <segment title="Coupon"/>
+                                            <segment title="Store"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="passTypeChanged:" destination="Vga-re-kw6" eventType="valueChanged" id="nCM-9Q-4ih"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" id="3rx-c6-yYA">
+                                        <rect key="frame" x="12" y="498" width="291" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Background image:" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="kp8-am-Gso">
+                                                <rect key="frame" x="12" y="9" width="172" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jYV-ws-S6Z" customClass="ImagePickerButton">
+                                                <rect key="frame" x="192" y="9" width="85" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxWidth">
+                                                        <integer key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
+                                                        <integer key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="viewController" destination="Vga-re-kw6" id="cpc-gI-1jl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -337,11 +343,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="320" y="26" width="320" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" id="ZOT-TM-sAu" userLabel="Thumbnail Image">
-                                        <rect key="frame" x="194" y="7" width="106" height="106"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="whileEditing" text="Label" id="hMY-sa-Xrq" userLabel="Label Event" customClass="BorderTextField">
                                         <rect key="frame" x="20" y="35" width="152" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -362,6 +363,30 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <outlet property="delegate" destination="Vga-re-kw6" id="63z-ah-A4d"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Oge-zj-AjX" customClass="ImagePickerButton">
+                                        <rect key="frame" x="210" y="13" width="90" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxWidth">
+                                                <integer key="value" value="160"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
+                                                <integer key="value" value="160"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="viewController" destination="Vga-re-kw6" id="chJ-ig-0DO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -436,13 +461,29 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="320" y="283" width="320" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" id="bD2-aM-vKp" userLabel="Background Strip">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="118"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A2U-vr-EFh" customClass="ImagePickerButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                    </imageView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
+                                                <integer key="value" value="245"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="viewController" destination="Vga-re-kw6" id="Fso-37-my6"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="whileEditing" text="Label" id="PKh-Iv-FeY" userLabel="Label Coupon" customClass="BorderTextField">
-                                        <rect key="frame" x="10" y="78" width="265" height="27"/>
+                                        <rect key="frame" x="10" y="78" width="158" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                         <color key="textColor" red="0.98392939130000001" green="1" blue="0.98794704349999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -452,7 +493,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="whileEditing" text="Value" id="iOE-i7-Ucx" userLabel="Value Coupon" customClass="BorderTextField">
-                                        <rect key="frame" x="10" y="14" width="265" height="65"/>
+                                        <rect key="frame" x="10" y="14" width="158" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                         <color key="textColor" red="0.98392939130000001" green="1" blue="0.98794704349999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -479,14 +520,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backgroundColor" destination="2od-PA-68z" id="2R4-hY-Ccw"/>
+                        <outlet property="backgroundImage" destination="jYV-ws-S6Z" id="IMJ-1F-rsS"/>
                         <outlet property="boardingDestinationLabel" destination="AUn-Hf-5nG" id="iW0-M8-FRx"/>
                         <outlet property="boardingDestinationValue" destination="1cu-py-14G" id="1P8-4a-IXs"/>
                         <outlet property="boardingOriginLabel" destination="oFL-x7-7V3" id="32G-u2-Axr"/>
                         <outlet property="boardingOriginValue" destination="CSe-e6-JTT" id="sxF-Xd-BGw"/>
                         <outlet property="border" destination="mvV-9w-nfp" id="d8f-oF-a9M"/>
                         <outlet property="contentview" destination="OYb-gi-lJc" id="wOk-Uk-JbX"/>
+                        <outlet property="couponImage" destination="A2U-vr-EFh" id="VvE-34-7G7"/>
                         <outlet property="couponLabel" destination="PKh-Iv-FeY" id="hNq-Wx-Kib"/>
                         <outlet property="couponValue" destination="iOE-i7-Ucx" id="JEl-sM-PT6"/>
+                        <outlet property="eventOptions" destination="3rx-c6-yYA" id="eLc-Ep-6ZF"/>
+                        <outlet property="genericImage" destination="Oge-zj-AjX" id="6HH-k9-uvD"/>
                         <outlet property="genericLabel" destination="hMY-sa-Xrq" id="O0h-cQ-NtJ"/>
                         <outlet property="genericValue" destination="Rn1-eE-Q3X" id="4aR-9X-mKe"/>
                         <outlet property="infoContainer" destination="XmF-t2-soK" id="Qdm-hy-mC0"/>
@@ -495,6 +540,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="infoGeneric" destination="vXD-xj-4or" id="LCi-1P-YaK"/>
                         <outlet property="infoTransit" destination="Pgf-KH-aUg" id="ptP-ez-9nY"/>
                         <outlet property="labelColor" destination="ftu-m9-Thb" id="QfL-hq-TmX"/>
+                        <outlet property="logoImage" destination="A8g-qp-SMg" id="RJD-4K-bak"/>
                         <outlet property="passView" destination="F9a-xS-eWA" id="W2o-bv-ryj"/>
                         <outlet property="primaryLabel1" destination="oFL-x7-7V3" id="amA-8r-nyu"/>
                         <outlet property="primaryLabel2" destination="AUn-Hf-5nG" id="ubn-Ra-Z5N"/>
@@ -527,7 +573,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outletCollection property="labels" destination="oFL-x7-7V3" id="Vks-kF-LG8"/>
                         <outletCollection property="values" destination="Rn1-eE-Q3X" id="lVT-5M-dZX"/>
                         <outletCollection property="labels" destination="hMY-sa-Xrq" id="BjH-cw-VIl"/>
-                        <outletCollection property="values" destination="fJe-ZT-BWj" id="dTI-fC-7wA"/>
+                        <outletCollection property="labels" destination="fJe-ZT-BWj" id="3dp-dH-emz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="718-RW-V5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -536,7 +582,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="logo.png" width="90" height="90"/>
         <image name="separator.png" width="568" height="8"/>
         <image name="sheen.png" width="34" height="751"/>
         <image name="transit_plane@2x.png" width="73" height="74"/>
@@ -559,18 +604,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="hueTarget" candidateClass="UIView"/>
             </relationships>
         </class>
+        <class className="ImagePickerButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagePickerButton.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewController" candidateClass="UIViewController"/>
+            </relationships>
+        </class>
         <class className="PassController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PassController.h"/>
             <relationships>
                 <relationship kind="outlet" name="backgroundColor" candidateClass="ColorPickerButton"/>
+                <relationship kind="outlet" name="backgroundImage" candidateClass="ImagePickerButton"/>
                 <relationship kind="outlet" name="boardingDestinationLabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="boardingDestinationValue" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="boardingOriginLabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="boardingOriginValue" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="border" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="contentview" candidateClass="UIView"/>
+                <relationship kind="outlet" name="couponImage" candidateClass="ImagePickerButton"/>
                 <relationship kind="outlet" name="couponLabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="couponValue" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="eventOptions" candidateClass="UIView"/>
+                <relationship kind="outlet" name="genericImage" candidateClass="ImagePickerButton"/>
                 <relationship kind="outlet" name="genericLabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="genericValue" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="infoContainer" candidateClass="UIView"/>
@@ -579,6 +634,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="infoGeneric" candidateClass="UIView"/>
                 <relationship kind="outlet" name="infoTransit" candidateClass="UIView"/>
                 <relationship kind="outlet" name="labelColor" candidateClass="ColorPickerButton"/>
+                <relationship kind="outlet" name="logoImage" candidateClass="ImagePickerButton"/>
                 <relationship kind="outlet" name="passView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="primaryLabel1" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="primaryLabel2" candidateClass="UITextField"/>

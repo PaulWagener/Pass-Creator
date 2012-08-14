@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ColorPickerButton.h"
 #import "Pass.h"
-
+#import "ImagePickerButton.h"
 @interface PassController : UIViewController<UITextFieldDelegate, UITextViewDelegate, UIActionSheetDelegate> {
     IBOutlet UIScrollView *scrollview;
     IBOutlet UIView *contentview;
+    
+    IBOutlet ImagePickerButton *logoImage;
+    IBOutlet ImagePickerButton *backgroundImage;
+    IBOutlet UIView *eventOptions;
     
     IBOutlet UIImageView *border;
     IBOutlet UIView *passView;
@@ -45,17 +49,20 @@
     // Specific controls
     IBOutlet UITextField *genericLabel;
     IBOutlet UITextField *genericValue;
+    IBOutlet ImagePickerButton *genericImage;
     
     IBOutlet UITextField *boardingOriginLabel;
     IBOutlet UITextField *boardingOriginValue;
     IBOutlet UITextField *boardingDestinationLabel;
     IBOutlet UITextField *boardingDestinationValue;
+    IBOutlet UIButton *transitButton;
     
     IBOutlet UITextField *couponLabel;
     IBOutlet UITextField *couponValue;
+    IBOutlet ImagePickerButton *couponImage;
     
     
-    IBOutlet UIButton *transitButton;
+
     
     IBOutlet UISegmentedControl *segmentedPassType;
     

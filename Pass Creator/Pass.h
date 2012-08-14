@@ -41,7 +41,10 @@ enum BarcodeType {
 
 @property (copy) NSString *title;
 
-@property UIImage *image;
+@property UIImage *logo;
+@property UIImage *thumbnail;
+@property UIImage *strip;
+@property UIImage *background;
 
 // Colors
 @property UIColor *backgroundColor;

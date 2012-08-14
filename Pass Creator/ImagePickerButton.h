@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImagePickerButton : UIButton
+@interface ImagePickerButton : UIButton<UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    UIImage *_image;
+}
 
+
+@property IBOutlet UIViewController *viewController;
+@property UIImage *image;
+@property CGFloat maxHeight;
+@property CGFloat maxWidth;
 @end

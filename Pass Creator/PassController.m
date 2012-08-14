@@ -42,8 +42,9 @@
     labelColor.color = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
     valueColor.color = [UIColor blackColor];
     self.pass = [[Pass alloc] init];
-    [self setPassType:COUPON];
+    
     segmentedPassType.selectedSegmentIndex = GENERIC;
+    [self setPassType:GENERIC];
 }
 
 - (IBAction) chooseTransitType:(id)sender {
@@ -115,6 +116,10 @@
     [infoContainer addSubview:info];
     info.frame = CGRectMake(0, 0, info.frame.size.width, info.frame.size.height);
     info.backgroundColor = [UIColor clearColor];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        eventOptions.alpha = passType == EVENT ? 1.0 : 0.0;
+    }];
 }
 
 /**
@@ -167,6 +172,11 @@
     self.pass.backgroundColor = backgroundColor.color;
     self.pass.labelColor = labelColor.color;
     self.pass.valueColor = valueColor.color;
+    
+    self.pass.logo = logoImage.image;
+    self.pass.thumbnail = genericImage.image;
+    self.pass.strip = couponImage.image;
+    self.pass.background = backgroundImage.image;
     
     self.pass.passType = segmentedPassType.selectedSegmentIndex;
 }
