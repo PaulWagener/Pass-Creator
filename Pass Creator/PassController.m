@@ -121,10 +121,8 @@
  * These functions return what is in the current primary label & value textfields
  */
 - (NSString*) getPrimaryLabel1 {
-    if(self.pass.passType == GENERIC)
+    if(self.pass.passType == GENERIC || self.pass.passType == EVENT)
         return genericLabel.text;
-    if(self.pass.passType == EVENT)
-        return eventLabel.text;
     if(self.pass.passType == BOARDING)
         return boardingOriginLabel.text;
     if(self.pass.passType == COUPON || self.pass.passType == STORE)
@@ -133,10 +131,8 @@
 }
 
 - (NSString*) getPrimaryValue1 {
-    if(self.pass.passType == GENERIC)
+    if(self.pass.passType == GENERIC || self.pass.passType == EVENT)
         return genericValue.text;
-    if(self.pass.passType == EVENT)
-        return eventValue.text;
     if(self.pass.passType == BOARDING)
         return boardingOriginValue.text;
     if(self.pass.passType == COUPON || self.pass.passType == STORE)
