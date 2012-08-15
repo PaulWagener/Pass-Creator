@@ -35,6 +35,8 @@
 
 - (void) awakeFromNib {
     [self addTarget:self action:@selector(onTouchUp:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
     if(self.aspectFill)
         [self.imageView setContentMode:UIViewContentModeScaleAspectFill];
     else
@@ -63,18 +65,18 @@
 }
 
 - (void) clear:(id)sender {
-    self.image = nil;
-    
-
-    
     [self.viewController dismissModalViewControllerAnimated:YES];
+    self.image = nil;
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    // Try to get the image that was edited (if it exists)
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     if(image == nil)
         image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
+
+    // Resize image to be within maxHeight & maxWidth limit (but without changing the aspect ratio)
     CGSize newSize = image.size;
     if(self.maxHeight > 0 && newSize.height > self.maxHeight) {
         newSize.width *= self.maxHeight / newSize.height;

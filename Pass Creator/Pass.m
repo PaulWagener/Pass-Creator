@@ -195,20 +195,20 @@
      * Add other files
      */
     
-    // Add mandatory logo (should never be visible for user as long as we don't do push notifications)
-    [passBundle addFile:@"icon.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"logo" ofType:@"png"]]];
+    // Add mandatory logo (should never be visible for user as long as we don't do push notifications, locations or dates)
+    [passBundle addFile:@"icon@2x.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"logo" ofType:@"png"]]];
 
     if(self.thumbnail != nil && (self.passType == GENERIC || self.passType == EVENT))
-        [passBundle addFile:@"thumbnail.png" : UIImagePNGRepresentation(self.thumbnail)];
+        [passBundle addFile:@"thumbnail@2x.png" : UIImagePNGRepresentation(self.thumbnail)];
     
     if(self.thumbnail != nil && self.passType == EVENT)
-        [passBundle addFile:@"background.png" : UIImagePNGRepresentation(self.thumbnail)];
+        [passBundle addFile:@"background@2x.png": UIImagePNGRepresentation(self.thumbnail)];
 
     if(self.logo != nil)
-        [passBundle addFile:@"logo.png" :UIImagePNGRepresentation(self.logo)];
+        [passBundle addFile:@"logo@2x.png" :UIImagePNGRepresentation(self.logo)];
     
     if(self.strip != nil && (self.passType == COUPON || self.passType == STORE))
-        [passBundle addFile:@"strip.png" :UIImagePNGRepresentation(self.strip)];
+        [passBundle addFile:@"strip@2x.png" :UIImagePNGRepresentation(self.strip)];
     
     return [passBundle data];
 }

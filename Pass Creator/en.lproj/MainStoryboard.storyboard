@@ -213,7 +213,7 @@
                                         </state>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Vni-Yg-iBT">
-                                        <rect key="frame" x="6" y="422" width="308" height="30"/>
+                                        <rect key="frame" x="6" y="411" width="308" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="Generic"/>

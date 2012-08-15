@@ -22,7 +22,7 @@
 
 - (void) awakeFromNib {
     self.borderStyle = UITextBorderStyleNone;
-    self.layer.borderColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.05].CGColor;
+    self.layer.borderColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.15].CGColor;
     self.layer.borderWidth = 1.0f;
 }
 

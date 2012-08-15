@@ -8,20 +8,15 @@
 
 #import "ColorPickerCircle.h"
 #import <QuartzCore/QuartzCore.h>
-#define MAX_
+
 @implementation ColorPickerCircle
 
+
 - (void) awakeFromNib {
+    // Make the background color view, which gives the brightness / saturation its color, a perfect circle
     colorView.layer.cornerRadius = self.frame.size.height / 2;
     self.exclusiveTouch = YES;
 }
-
-enum DragMode {
-    HUE,
-    BRIGHTNESS,
-};
-
-enum DragMode dragMode = BRIGHTNESS;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
@@ -39,8 +34,6 @@ enum DragMode dragMode = BRIGHTNESS;
     [self touchAtPoint:touchPoint];
 }
 
-
-
 /**
  * Plaats grip & grafiek constant terwijl de gebruik aan het draggen is
  */
@@ -50,10 +43,6 @@ enum DragMode dragMode = BRIGHTNESS;
     [self touchAtPoint:touchPoint];
 }
 
-#define MAX_BRIGHTNESS_DISTANCE 0.60
-#define CENTER_HUE_DISTANCE 0.77
-#define PI 3.14159
-#define TWICE_PI (PI * 2)
 - (void) touchAtPoint:(CGPoint)touchPoint {
     CGPoint vector = touchPoint;
     vector.x -= self.frame.size.width / 2;
