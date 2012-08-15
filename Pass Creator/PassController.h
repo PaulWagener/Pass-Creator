@@ -15,8 +15,8 @@
     IBOutlet UIView *contentview;
     
     IBOutlet ImagePickerButton *logoImage;
-    IBOutlet ImagePickerButton *backgroundImage;
-    IBOutlet UIView *eventOptions;
+    IBOutlet UIImageView *passBackground;
+    IBOutlet UIImageView *sheen;
     
     IBOutlet UIImageView *border;
     IBOutlet UIView *passView;

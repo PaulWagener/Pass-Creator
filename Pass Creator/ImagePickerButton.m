@@ -10,8 +10,10 @@
 #import <UIKit/UIKit.h>
 @implementation ImagePickerButton
 
+/**
+ * Resize image
+ */
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
-    //UIGraphicsBeginImageContext(newSize);
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -26,11 +28,17 @@
 - (void) setImage:(UIImage *)image {
     _image = image;
     [self setImage:image forState:UIControlStateNormal];
+    
+    if(self.onImageChanged != nil)
+        self.onImageChanged(image);
 }
 
 - (void) awakeFromNib {
     [self addTarget:self action:@selector(onTouchUp:) forControlEvents:UIControlEventTouchUpInside];
-    [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    if(self.aspectFill)
+        [self.imageView setContentMode:UIViewContentModeScaleAspectFill];
+    else
+        [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
 }
 
 - (void) onTouchUp:(id)sender {
@@ -39,19 +47,26 @@
     p.delegate = self;
 
     [self.viewController presentModalViewController:p animated:YES];
-    //[self.viewController.navigationController pushViewController:p animated:YES];
 }
 
+/**
+ * Add option to clear image
+ */
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clear:)];
-    clearButton.tintColor = [UIColor redColor];
-    
-    viewController.navigationItem.leftBarButtonItem = clearButton;
+    if(self.image != nil) {
+        UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clear:)];
+        clearButton.tintColor = [UIColor redColor];
+        
+        viewController.navigationItem.leftBarButtonItem = clearButton;
+    }
 }
 
 - (void) clear:(id)sender {
     self.image = nil;
+    
+
+    
     [self.viewController dismissModalViewControllerAnimated:YES];
 }
 
@@ -74,6 +89,5 @@
     self.image = [ImagePickerButton imageWithImage:image scaledToSize:newSize];
     
     [self.viewController dismissModalViewControllerAnimated:YES];
-    
 }
 @end

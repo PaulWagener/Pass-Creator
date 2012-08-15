@@ -17,4 +17,6 @@
 @property UIImage *image;
 @property CGFloat maxHeight;
 @property CGFloat maxWidth;
+@property bool aspectFill;
+@property (nonatomic, copy) void (^onImageChanged)(UIImage*);
 @end

@@ -10,6 +10,8 @@
 #import "PassController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <PassKit/PassKit.h>
+
+#import "UIImage+StackBlur.h"
 @interface PassController ()
 
 @end
@@ -42,6 +44,11 @@
     labelColor.color = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
     valueColor.color = [UIColor blackColor];
     self.pass = [[Pass alloc] init];
+    
+    
+    genericImage.onImageChanged = ^(UIImage* image) {
+        passBackground.image = image == nil ? nil : [image stackBlur:20];
+    };
     
     segmentedPassType.selectedSegmentIndex = GENERIC;
     [self setPassType:GENERIC];
@@ -117,9 +124,30 @@
     info.frame = CGRectMake(0, 0, info.frame.size.width, info.frame.size.height);
     info.backgroundColor = [UIColor clearColor];
     
+    // Do event stuff
+
+    // Hide the buttons!
     [UIView animateWithDuration:0.5 animations:^{
-        eventOptions.alpha = passType == EVENT ? 1.0 : 0.0;
+        const bool alpha = passType == EVENT ? 0.0 : 1.0;
+        backgroundColor.alpha = alpha;
+        labelColor.alpha = alpha;
+        valueColor.alpha = alpha;
     }];
+    
+    // Change the backgrounds!
+    passBackground.hidden = passType != EVENT;
+    sheen.image = passType == EVENT ? [UIImage imageNamed:@"sheen_event.png"] : [UIImage imageNamed:@"sheen.png"];
+    
+    // Change the colors!
+    if(passType == EVENT) {
+        backgroundColor.onColorChange([UIColor colorWithWhite:0.3 alpha:1.0]);
+        labelColor.onColorChange([UIColor colorWithWhite:1.0 alpha:1.0]);
+        valueColor.onColorChange([UIColor colorWithWhite:0.85 alpha:1.0]);
+    } else {
+        backgroundColor.onColorChange(backgroundColor.color);
+        labelColor.onColorChange(labelColor.color);
+        valueColor.onColorChange(valueColor.color);
+    }
 }
 
 /**
@@ -176,7 +204,6 @@
     self.pass.logo = logoImage.image;
     self.pass.thumbnail = genericImage.image;
     self.pass.strip = couponImage.image;
-    self.pass.background = backgroundImage.image;
     
     self.pass.passType = segmentedPassType.selectedSegmentIndex;
 }

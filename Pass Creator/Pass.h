@@ -39,12 +39,13 @@ enum BarcodeType {
 
 @interface Pass : NSObject
 
+@property NSString *serialNumber;
+
 @property (copy) NSString *title;
 
 @property UIImage *logo;
 @property UIImage *thumbnail;
 @property UIImage *strip;
-@property UIImage *background;
 
 // Colors
 @property UIColor *backgroundColor;

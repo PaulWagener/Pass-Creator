@@ -23,14 +23,6 @@
 
 @implementation Pass
 
-PassBundle *passBundle = nil;
-- (void) addToArchive :(NSString*)filename{
-    NSString *url = [NSString stringWithFormat:@"http://192.168.0.107/pass/Starbucks/%@",filename];
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    
-    [passBundle addFile:filename :data];
-}
-
 - (void) addLabelValue:(NSMutableArray*)fields :(NSString*)key :(NSString*) label :(NSString*) value {
     const bool notBothEmpty = (!([label isEqualToString:@""]) || !([value isEqualToString:@""]));
     if(label != nil
@@ -42,9 +34,10 @@ PassBundle *passBundle = nil;
 }
 
 - (UIViewController*) previewViewController {
-    passBundle = [[PassBundle alloc] init];
+    PassBundle* passBundle = [[PassBundle alloc] init];
     
-    [self addToArchive :@"icon.png"];
+    if (self.serialNumber == nil)
+        self.serialNumber = @"foo";
     
     // Primary fields dictionary
     NSMutableArray *primaryFields = [NSMutableArray array];
@@ -72,9 +65,16 @@ PassBundle *passBundle = nil;
     else if(self.passType == STORE)
         passTypeString = @"storeCard";
     
+    NSArray *auxiliaryFields = [NSArray array];
+    if(self.passType == EVENT) {
+        auxiliaryFields = secondaryFields;
+        secondaryFields = [NSArray array];
+    }
+    
     NSMutableDictionary *fieldsDictionary = @{
         @"primaryFields" : primaryFields,
         @"secondaryFields": secondaryFields,
+        @"auxiliaryFields": auxiliaryFields
     }.mutableCopy;
     
     // Add transit type information
@@ -99,27 +99,41 @@ PassBundle *passBundle = nil;
     @{
     @"formatVersion" : @1,
     @"passTypeIdentifier" : @"pass.nl.paulwagener.passcreator",
-    @"serialNumber" : @"1",
+    @"serialNumber" : self.serialNumber,
     @"organizationName" : @"Pass Creator",
     @"teamIdentifier" : @"37HYQWCA73",
     @"description": @"Pass Creator Pass",
     passTypeString: fieldsDictionary,
     @"backFields": @[@{@"key": @"credits", @"label": @"Created By Pass Creator", @"value": @"Download at ..."}],
-    @"backgroundColor" : self.backgroundColor.cssString,
-    @"labelColor" : self.labelColor.cssString,
-    @"foregroundColor" : self.valueColor.cssString,
     }.mutableCopy;
+    
+    if(self.passType != EVENT) {
+        [passDictionary setObject:self.backgroundColor.cssString forKey:@"backgroundColor"];
+        [passDictionary setObject:self.labelColor.cssString forKey:@"labelColor"];
+        [passDictionary setObject:self.valueColor.cssString forKey:@"foregroundColor"];
+    } else if(self.thumbnail == nil) {
+        [passDictionary setObject:@"#626262" forKey:@"backgroundColor"];
+        [passDictionary setObject:@"#FFFFFF" forKey:@"labelColor"];
+        [passDictionary setObject:@"#DADADA" forKey:@"foregroundColor"];
+    }
     
     if(self.title != nil && ![self.title isEqualToString:@""])
         [passDictionary setObject:self.title forKey:@"logoText"];
     
+    [passBundle addFile:@"pass.json" :passDictionary.JSONData];
     
-    if(self.thumbnail != nil && (self.passType == GENERIC || self.passType == EVENT)) {
+    /**
+     * Add other files
+     */
+    
+    // Add mandatory logo (should never be visible for user as long as we don't do push notifications)
+    [passBundle addFile:@"icon.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"logo" ofType:@"png"]]];
+
+    if(self.thumbnail != nil && (self.passType == GENERIC || self.passType == EVENT))
         [passBundle addFile:@"thumbnail.png" : UIImagePNGRepresentation(self.thumbnail)];
-    }
     
-    if(self.background != nil && self.passType == EVENT)
-        [passBundle addFile:@"background.png" : UIImagePNGRepresentation(self.background)];
+    if(self.thumbnail != nil && self.passType == EVENT)
+        [passBundle addFile:@"background.png" : UIImagePNGRepresentation(self.thumbnail)];
 
     if(self.logo != nil)
         [passBundle addFile:@"logo.png" :UIImagePNGRepresentation(self.logo)];
@@ -127,26 +141,13 @@ PassBundle *passBundle = nil;
     if(self.strip != nil && (self.passType == COUPON || self.passType == STORE))
         [passBundle addFile:@"strip.png" :UIImagePNGRepresentation(self.strip)];
     
-    /*
-    [passBundle addFile:@"strip.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ColorPicker" ofType:@"png"]]];
-
-    [passBundle addFile:@"background.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ColorPicker" ofType:@"png"]]];
-     */
-    
-    [passBundle addFile:@"pass.json" :passDictionary.JSONData];
-    
     NSError *error;
     NSData *passData = [passBundle data];
     NSLog(@"Pass Size: %d", passData.length);
     PKPass *pass = [[PKPass alloc] initWithData:passData error:&error];
+
     
     return [[PKAddPassesViewController alloc] initWithPass:pass];
-    
-    
-    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Starbucks" ofType:@"pkpass"]];
-    PKPass *pkpass = [[PKPass alloc] initWithData:data error:nil];
-    return [[PKAddPassesViewController alloc] initWithPass:pkpass];
-    
 }
 
 @end
