@@ -39,19 +39,18 @@
             value.textColor = color;
     };
     
-    // Just testing
-    backgroundColor.color = [UIColor purpleColor];
-    labelColor.color = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
-    valueColor.color = [UIColor blackColor];
-    self.pass = [[Pass alloc] init];
-    
+    if(self.pass == nil)
+        self.pass = [[Pass alloc] init];
     
     genericImage.onImageChanged = ^(UIImage* image) {
         passBackground.image = image == nil ? nil : [image stackBlur:20];
     };
     
-    segmentedPassType.selectedSegmentIndex = GENERIC;
-    [self setPassType:GENERIC];
+    // Just testing
+    NSData *passData = [[NSUserDefaults standardUserDefaults] objectForKey:@"pass"];
+    self.pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
+    
+    [self updateFromPass];
 }
 
 - (IBAction) chooseTransitType:(id)sender {
@@ -166,40 +165,73 @@
 /**
  * These functions return what is in the current primary label & value textfields
  */
-- (NSString*) getPrimaryLabel1 {
+- (UITextField*) getPrimaryLabel1 {
     if(self.pass.passType == GENERIC || self.pass.passType == EVENT)
-        return genericLabel.text;
+        return genericLabel;
     if(self.pass.passType == BOARDING)
-        return boardingOriginLabel.text;
+        return boardingOriginLabel;
     if(self.pass.passType == COUPON || self.pass.passType == STORE)
-        return couponLabel.text;
-    return @"";
+        return couponLabel;
+    return nil;
 }
 
-- (NSString*) getPrimaryValue1 {
+- (UITextField*) getPrimaryValue1 {
     if(self.pass.passType == GENERIC || self.pass.passType == EVENT)
-        return genericValue.text;
+        return genericValue;
     if(self.pass.passType == BOARDING)
-        return boardingOriginValue.text;
+        return boardingOriginValue;
     if(self.pass.passType == COUPON || self.pass.passType == STORE)
-        return couponValue.text;
-    return @"";
+        return couponValue;
+    return nil;
 }
 
-- (NSString*) getPrimaryLabel2 {
-    return boardingDestinationLabel.text;
+- (UITextField*) getPrimaryLabel2 {
+    return boardingDestinationLabel;
 }
 
-- (NSString*) getPrimaryValue2 {
-    return boardingDestinationValue.text;
+- (UITextField*) getPrimaryValue2 {
+    return boardingDestinationValue;
 }
 
-- (void) updatePass {
+/**
+ * Update the user interface with values from the current pass
+ */
+- (void) updateFromPass {
+    titleLabel.text = self.pass.title;
+    
+    backgroundColor.color = self.pass.backgroundColor;
+    labelColor.color = self.pass.labelColor;
+    valueColor.color = self.pass.valueColor;
+    
+    [self setPassType:self.pass.passType];
+    segmentedPassType.selectedSegmentIndex = self.pass.passType;
+    [self setTransitType:self.pass.transitType];
+    [self getPrimaryLabel1].text = self.pass.primaryLabel1;
+    [self getPrimaryValue1].text = self.pass.primaryValue1;
+    [self getPrimaryLabel2].text = self.pass.primaryLabel2;
+    [self getPrimaryValue2].text = self.pass.primaryValue2;
+    secondaryLabel1.text = self.pass.secondaryLabel1;
+    secondaryValue1.text = self.pass.secondaryValue1;
+    secondaryLabel2.text = self.pass.secondaryLabel2;
+    secondaryValue2.text = self.pass.secondaryValue2;
+    secondaryLabel3.text = self.pass.secondaryLabel3;
+    secondaryValue3.text = self.pass.secondaryValue3;
+    secondaryLabel4.text = self.pass.secondaryLabel4;
+    secondaryValue4.text = self.pass.secondaryValue4;
+    
+
+    
+    logoImage.image = self.pass.logo;
+    genericImage.image = self.pass.thumbnail;
+    couponImage.image = self.pass.strip;
+}
+
+- (void) updateToPass {
     self.pass.title = titleLabel.text;
-    self.pass.primaryLabel1 = [self getPrimaryLabel1];
-    self.pass.primaryValue1 = [self getPrimaryValue1];
-    self.pass.primaryLabel2 = [self getPrimaryLabel2];
-    self.pass.primaryValue2 = [self getPrimaryValue2];
+    self.pass.primaryLabel1 = [self getPrimaryLabel1].text;
+    self.pass.primaryValue1 = [self getPrimaryValue1].text;
+    self.pass.primaryLabel2 = [self getPrimaryLabel2].text;
+    self.pass.primaryValue2 = [self getPrimaryValue2].text;
     
     self.pass.secondaryLabel1 = secondaryLabel1.text;
     self.pass.secondaryValue1 = secondaryValue1.text;
@@ -221,18 +253,28 @@
     self.pass.passType = segmentedPassType.selectedSegmentIndex;
 }
 
+- (IBAction) save:(id)sender {
+    [self updateToPass];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.pass];
+    NSLog(@"Pass data saved to %d bytes", data.length);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:data forKey:@"pass"];
+    [defaults synchronize];
+}
+
 - (IBAction) preview:(id)sender {
-    [self updatePass];
+    [self updateToPass];
     NSError *error;
     NSData *passData =  [self.pass pkpassData];
     PKPass *pkpass = [[PKPass alloc] initWithData:passData error:&error];
     
     UIViewController *passController = [[PKAddPassesViewController alloc] initWithPass:pkpass];
-    passController.navigationItem.title = @"HACKED";
     [self presentModalViewController:passController  animated:YES];
-
 }
 
+/**
+ * Delegate functions for all the textfields
+ */
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     CGRect rc = [textField convertRect:textField.bounds toView:scrollview];
     [scrollview setContentOffset:CGPointMake(0, rc.origin.y - 160) animated:YES];

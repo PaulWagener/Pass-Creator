@@ -23,6 +23,75 @@
 
 @implementation Pass
 
+
+- (id) init {
+    self = [super init];
+    self.serialNumber = @"";
+    self.passType = GENERIC;
+    self.transitType = TRANSIT_AIR;
+    self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+    self.labelColor = [UIColor blackColor];
+    self.valueColor = [UIColor blackColor];
+    self.title = @"";
+    return self;
+}
+/**
+ * Enable serialization / deserialization to data
+ */
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.serialNumber forKey:@"serialNumber"];
+    [coder encodeInt:self.passType forKey:@"passType"];
+    [coder encodeInt:self.transitType forKey:@"transitType"];
+    [coder encodeObject:self.logo forKey:@"logo"];
+    [coder encodeObject:self.thumbnail forKey:@"thumbnail"];
+    [coder encodeObject:self.strip forKey:@"strip"];
+    [coder encodeObject:self.backgroundColor forKey:@"backgroundColor"];
+    [coder encodeObject:self.labelColor forKey:@"labelColor"];
+    [coder encodeObject:self.valueColor forKey:@"valueColor"];
+    [coder encodeObject:self.title forKey:@"title"];
+    [coder encodeObject:self.primaryLabel1 forKey:@"primaryLabel1"];
+    [coder encodeObject:self.primaryValue1 forKey:@"primaryValue1"];
+    [coder encodeObject:self.primaryLabel2 forKey:@"primaryLabel2"];
+    [coder encodeObject:self.primaryValue2 forKey:@"primaryValue2"];
+    [coder encodeObject:self.secondaryLabel1 forKey:@"secondaryLabel1"];
+    [coder encodeObject:self.secondaryValue1 forKey:@"secondaryValue1"];
+    [coder encodeObject:self.secondaryLabel2 forKey:@"secondaryLabel2"];
+    [coder encodeObject:self.secondaryValue2 forKey:@"secondaryValue2"];
+    [coder encodeObject:self.secondaryLabel3 forKey:@"secondaryLabel3"];
+    [coder encodeObject:self.secondaryValue3 forKey:@"secondaryValue3"];
+    [coder encodeObject:self.secondaryLabel4 forKey:@"secondaryLabel4"];
+    [coder encodeObject:self.secondaryValue4 forKey:@"secondaryValue4"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    self = [self init];
+    self.serialNumber = [decoder decodeObjectForKey:@"serialNumber"];
+    self.passType = [decoder decodeIntForKey:@"passType"];
+    self.transitType = [decoder decodeIntForKey:@"transitType"];
+    self.logo = [decoder decodeObjectForKey:@"logo"];
+    self.thumbnail = [decoder decodeObjectForKey:@"thumbnail"];
+    self.strip = [decoder decodeObjectForKey:@"strip"];
+    self.backgroundColor = [decoder decodeObjectForKey:@"backgroundColor"];
+    self.labelColor = [decoder decodeObjectForKey:@"labelColor"];
+    self.valueColor = [decoder decodeObjectForKey:@"valueColor"];
+    self.title = [decoder decodeObjectForKey:@"title"];
+    self.primaryLabel1 = [decoder decodeObjectForKey:@"primaryLabel1"];
+    self.primaryValue1 = [decoder decodeObjectForKey:@"primaryValue1"];
+    self.primaryLabel2 = [decoder decodeObjectForKey:@"primaryLabel2"];
+    self.primaryValue2 = [decoder decodeObjectForKey:@"primaryValue2"];
+    self.secondaryLabel1 = [decoder decodeObjectForKey:@"secondaryLabel1"];
+    self.secondaryValue1 = [decoder decodeObjectForKey:@"secondaryValue1"];
+    self.secondaryLabel2 = [decoder decodeObjectForKey:@"secondaryLabel2"];
+    self.secondaryValue2 = [decoder decodeObjectForKey:@"secondaryValue2"];
+    self.secondaryLabel3 = [decoder decodeObjectForKey:@"secondaryLabel3"];
+    self.secondaryValue3 = [decoder decodeObjectForKey:@"secondaryValue3"];
+    self.secondaryLabel4 = [decoder decodeObjectForKey:@"secondaryLabel4"];
+    self.secondaryValue4 = [decoder decodeObjectForKey:@"secondaryValue4"];
+    
+    return self;
+}
+
+
 - (void) addLabelValue:(NSMutableArray*)fields :(NSString*)key :(NSString*) label :(NSString*) value {
     const bool notBothEmpty = (!([label isEqualToString:@""]) || !([value isEqualToString:@""]));
     if(label != nil

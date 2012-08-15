@@ -329,7 +329,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lzK-08-8Yr" userLabel="Transit Button">
-                                        <rect key="frame" x="136" y="38" width="53" height="52"/>
+                                        <rect key="frame" x="136" y="35" width="53" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="contentEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
@@ -400,6 +400,11 @@
                     </scrollView>
                     <navigationItem key="navigationItem" title="Create Pass" id="MYy-6A-iTs">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1W9-cO-FXj"/>
+                        <barButtonItem key="leftBarButtonItem" title="Save" id="9V4-bm-xFm">
+                            <connections>
+                                <action selector="save:" destination="Vga-re-kw6" id="SqA-qn-mNY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Preview" style="done" id="EOp-GI-via">
                             <connections>
                                 <action selector="preview:" destination="Vga-re-kw6" id="Vf2-lF-i6b"/>

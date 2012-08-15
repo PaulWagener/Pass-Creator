@@ -37,12 +37,16 @@ enum BarcodeType {
 @end
 
 
-@interface Pass : NSObject
+@interface Pass : NSObject<NSCoding>
 
+// Internal
 @property NSString *serialNumber;
 
-@property (copy) NSString *title;
+// Type information
+@property enum PassType passType;
+@property enum TransitType transitType;
 
+// Images
 @property UIImage *logo;
 @property UIImage *thumbnail;
 @property UIImage *strip;
@@ -53,6 +57,8 @@ enum BarcodeType {
 @property UIColor *valueColor;
 
 // Labels & Values
+@property (copy) NSString *title;
+
 @property (copy) NSString *primaryLabel1;
 @property (copy) NSString *primaryValue1;
 
@@ -70,19 +76,6 @@ enum BarcodeType {
 
 @property (copy) NSString *secondaryLabel4;
 @property (copy) NSString *secondaryValue4;
-
-// Barcode
-@property enum BarcodeType barcodeType;
-@property (copy) NSString *barcodeMessage;
-@property (copy) NSString *barcodeText;
-
-// Location
-
-// Relevant Date & Time
-
-@property enum PassType passType;
-
-@property enum TransitType transitType;
 
 - (NSData*) pkpassData;
 
