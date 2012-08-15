@@ -124,6 +124,19 @@
     info.frame = CGRectMake(0, 0, info.frame.size.width, info.frame.size.height);
     info.backgroundColor = [UIColor clearColor];
     
+    // Change the title!
+    if(passType == GENERIC)
+        self.navigationItem.title = @"Card";
+    else if(passType == EVENT)
+        self.navigationItem.title = @"Event Ticket";
+    else if(passType == BOARDING)
+        self.navigationItem.title = @"Boarding Pass";
+    else if(passType == COUPON)
+        self.navigationItem.title = @"Coupon";
+    else if(passType == STORE)
+        self.navigationItem.title = @"Store Card";
+        
+    
     // Do event stuff
 
     // Hide the buttons!
@@ -210,8 +223,14 @@
 
 - (IBAction) preview:(id)sender {
     [self updatePass];
-    UIViewController *f =  [self.pass previewViewController];
-    [self presentModalViewController:f animated:YES];
+    NSError *error;
+    NSData *passData =  [self.pass pkpassData];
+    PKPass *pkpass = [[PKPass alloc] initWithData:passData error:&error];
+    
+    UIViewController *passController = [[PKAddPassesViewController alloc] initWithPass:pkpass];
+    passController.navigationItem.title = @"HACKED";
+    [self presentModalViewController:passController  animated:YES];
+
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {

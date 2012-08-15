@@ -84,6 +84,6 @@ enum BarcodeType {
 
 @property enum TransitType transitType;
 
-- (UIViewController*) previewViewController;
+- (NSData*) pkpassData;
 
 @end

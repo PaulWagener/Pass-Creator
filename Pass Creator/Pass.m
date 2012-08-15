@@ -33,7 +33,7 @@
     
 }
 
-- (UIViewController*) previewViewController {
+- (NSData*) pkpassData {
     PassBundle* passBundle = [[PassBundle alloc] init];
     
     if (self.serialNumber == nil)
@@ -141,13 +141,7 @@
     if(self.strip != nil && (self.passType == COUPON || self.passType == STORE))
         [passBundle addFile:@"strip.png" :UIImagePNGRepresentation(self.strip)];
     
-    NSError *error;
-    NSData *passData = [passBundle data];
-    NSLog(@"Pass Size: %d", passData.length);
-    PKPass *pass = [[PKPass alloc] initWithData:passData error:&error];
-
-    
-    return [[PKAddPassesViewController alloc] initWithPass:pass];
+    return [passBundle data];
 }
 
 @end
