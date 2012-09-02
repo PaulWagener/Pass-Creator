@@ -62,6 +62,10 @@
 		D3E04A4E15D6A18E00B4A959 /* ColorPickerCircle.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */; };
 		D3E7997A15909F18000A3E6C /* certificate.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997815909F18000A3E6C /* certificate.pem */; };
 		D3E7997B15909F18000A3E6C /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997915909F18000A3E6C /* key.pem */; };
+		D3EA07AE15F372C4006B7283 /* MainTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA07AD15F372C4006B7283 /* MainTableController.m */; };
+		D3EA07B115F37CB6006B7283 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3EA07B015F37CB6006B7283 /* Defaults.plist */; };
+		D3EA07B315F37DBE006B7283 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA07B215F37DBD006B7283 /* MessageUI.framework */; };
+		D3EA07B715F39408006B7283 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA07B615F39408006B7283 /* add@2x.png */; };
 		D3F58A40158CD6DA00A937D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F58A3F158CD6DA00A937D9 /* UIKit.framework */; };
 		D3F58A42158CD6DA00A937D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F58A41158CD6DA00A937D9 /* Foundation.framework */; };
 		D3F58A44158CD6DA00A937D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F58A43158CD6DA00A937D9 /* CoreGraphics.framework */; };
@@ -232,6 +236,11 @@
 		D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerCircle.xib; sourceTree = "<group>"; };
 		D3E7997815909F18000A3E6C /* certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certificate.pem; sourceTree = "<group>"; };
 		D3E7997915909F18000A3E6C /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
+		D3EA07AC15F372C4006B7283 /* MainTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableController.h; sourceTree = "<group>"; };
+		D3EA07AD15F372C4006B7283 /* MainTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableController.m; sourceTree = "<group>"; };
+		D3EA07B015F37CB6006B7283 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		D3EA07B215F37DBD006B7283 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D3EA07B615F39408006B7283 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		D3F58A3B158CD6DA00A937D9 /* Pass Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pass Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F58A3F158CD6DA00A937D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3F58A41158CD6DA00A937D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -250,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EA07B315F37DBE006B7283 /* MessageUI.framework in Frameworks */,
 				D39ACFF315DBCDAB00FDBE69 /* CoreImage.framework in Frameworks */,
 				D3F58A44158CD6DA00A937D9 /* CoreGraphics.framework in Frameworks */,
 				D37D993315D7A5D90086E0EC /* QuartzCore.framework in Frameworks */,
@@ -350,6 +360,7 @@
 		D37D993F15D7E0E20086E0EC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				D3EA07B615F39408006B7283 /* add@2x.png */,
 				D392AAFF15D93CC50059FB02 /* border_notched@2x.png */,
 				D392AB0015D93CC50059FB02 /* border_perforated@2x.png */,
 				D392AB0115D93CC50059FB02 /* border_plain@2x.png */,
@@ -415,6 +426,8 @@
 		D3F58A30158CD6DA00A937D9 = {
 			isa = PBXGroup;
 			children = (
+				D3EA07B215F37DBD006B7283 /* MessageUI.framework */,
+				D3EA07B015F37CB6006B7283 /* Defaults.plist */,
 				D39ACFF215DBCDAB00FDBE69 /* CoreImage.framework */,
 				D37D993F15D7E0E20086E0EC /* Graphics */,
 				D3E7997815909F18000A3E6C /* certificate.pem */,
@@ -468,6 +481,8 @@
 				D392AAFC15D93BC70059FB02 /* JSONKit.h */,
 				D392AAFD15D93BC70059FB02 /* JSONKit.m */,
 				D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */,
+				D3EA07AC15F372C4006B7283 /* MainTableController.h */,
+				D3EA07AD15F372C4006B7283 /* MainTableController.m */,
 				D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */,
 				D392AAF815D933500059FB02 /* Pass.h */,
 				D392AAF915D933500059FB02 /* Pass.m */,
@@ -480,9 +495,9 @@
 				D37D992B15D6B0E20086E0EC /* ScrollViewContainingDraggable.h */,
 				D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */,
 				D3F58A46158CD6DA00A937D9 /* Supporting Files */,
-				D3B04E2D1592038100836AD6 /* ZipKit */,
 				D39ACFF415DBCE9A00FDBE69 /* UIImage+StackBlur.h */,
 				D39ACFF515DBCE9A00FDBE69 /* UIImage+StackBlur.m */,
+				D3B04E2D1592038100836AD6 /* ZipKit */,
 			);
 			path = "Pass Creator";
 			sourceTree = "<group>";
@@ -573,6 +588,8 @@
 				D392AB1415D93CC50059FB02 /* separator.png in Resources */,
 				D392AB1615DA72990059FB02 /* sheen.png in Resources */,
 				D304393F15DBD77E00AA342A /* sheen_event@2x.png in Resources */,
+				D3EA07B115F37CB6006B7283 /* Defaults.plist in Resources */,
+				D3EA07B715F39408006B7283 /* add@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +629,7 @@
 				D392AAFE15D93BC70059FB02 /* JSONKit.m in Sources */,
 				D392AB1915DA85620059FB02 /* ImagePickerButton.m in Sources */,
 				D39ACFF615DBCE9A00FDBE69 /* UIImage+StackBlur.m in Sources */,
+				D3EA07AE15F372C4006B7283 /* MainTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,8 @@
 #import "ColorPickerButton.h"
 #import "Pass.h"
 #import "ImagePickerButton.h"
-@interface PassController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate> {
+#import <MessageUI/MessageUI.h>
+@interface PassController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     IBOutlet UIScrollView *scrollview;
     IBOutlet UIView *contentview;
     

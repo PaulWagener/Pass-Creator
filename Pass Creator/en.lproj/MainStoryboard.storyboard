@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2829" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ijE-Sa-fZZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2829" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ijE-Sa-fZZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1914"/>
     </dependencies>
@@ -12,19 +12,99 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Vga-re-kw6" kind="relationship" relationship="rootViewController" id="5Hb-DN-BNI"/>
+                        <segue destination="Whl-xH-lJG" kind="relationship" relationship="rootViewController" id="fvV-0A-gF6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJA-Gs-ihL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1424" y="-87"/>
         </scene>
+        <!--Main Table Controller - Passes-->
+        <scene sceneID="JFy-gZ-jQf">
+            <objects>
+                <tableViewController id="Whl-xH-lJG" customClass="MainTableController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="57" sectionHeaderHeight="10" sectionFooterHeight="10" id="PpL-AI-ktj">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" showsReorderControl="YES" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainCell" textLabel="EBt-aj-xhP" detailTextLabel="bYp-zE-ibn" rowHeight="57" style="IBUITableViewCellStyleSubtitle" id="Ppe-Dj-tEv">
+                                <rect key="frame" x="0.0" y="46" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="280" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Title" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="EBt-aj-xhP">
+                                            <rect key="frame" x="10" y="8" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Subtitle" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="bYp-zE-ibn">
+                                            <rect key="frame" x="10" y="30" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="Vga-re-kw6" kind="push" id="Yez-i0-xCZ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="AddCell" textLabel="GFK-9z-WV4" imageView="kds-LD-LW1" rowHeight="57" style="IBUITableViewCellStyleDefault" id="oo7-nN-Iny">
+                                <rect key="frame" x="0.0" y="104" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="280" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Create new pass" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="GFK-9z-WV4">
+                                            <rect key="frame" x="36" y="0.0" width="234" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="add.png" id="kds-LD-LW1">
+                                            <rect key="frame" x="10" y="20" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="Vga-re-kw6" kind="push" id="xFo-UV-X7Z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Whl-xH-lJG" id="OBC-90-i0q"/>
+                            <outlet property="delegate" destination="Whl-xH-lJG" id="Lmu-pw-soI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Passes" id="KeD-iD-a3G">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="vJQ-Rm-vB3">
+                            <connections>
+                                <action selector="edit:" destination="Whl-xH-lJG" id="Gc2-O5-RvG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ey3-7d-D7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1001" y="-74"/>
+        </scene>
         <!--Pass Controller - Create Pass-->
         <scene sceneID="orl-Rc-oq5">
             <objects>
                 <viewController id="Vga-re-kw6" customClass="PassController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" maximumZoomScale="3" id="mqO-Xf-aif" customClass="ScrollViewContainingDraggable">
-                        <rect key="frame" x="0.0" y="64" width="640" height="500"/>
+                        <rect key="frame" x="0.0" y="20" width="640" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="OYb-gi-lJc">
@@ -216,7 +296,7 @@
                                         <rect key="frame" x="6" y="411" width="308" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="Generic"/>
+                                            <segment title="Card"/>
                                             <segment title="Event"/>
                                             <segment title="Boarding"/>
                                             <segment title="Coupon"/>
@@ -400,11 +480,6 @@
                     </scrollView>
                     <navigationItem key="navigationItem" title="Create Pass" id="MYy-6A-iTs">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1W9-cO-FXj"/>
-                        <barButtonItem key="leftBarButtonItem" title="Save" id="9V4-bm-xFm">
-                            <connections>
-                                <action selector="save:" destination="Vga-re-kw6" id="SqA-qn-mNY"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Preview" style="done" id="EOp-GI-via">
                             <connections>
                                 <action selector="preview:" destination="Vga-re-kw6" id="Vf2-lF-i6b"/>
@@ -412,7 +487,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backgroundColor" destination="2od-PA-68z" id="2R4-hY-Ccw"/>
@@ -474,10 +548,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="718-RW-V5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-972" y="-94"/>
+            <point key="canvasLocation" x="-547" y="-94"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add.png" width="16" height="16"/>
         <image name="separator.png" width="568" height="8"/>
         <image name="sheen.png" width="34" height="751"/>
         <image name="transit_plane@2x.png" width="73" height="74"/>
@@ -504,6 +579,12 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagePickerButton.h"/>
             <relationships>
                 <relationship kind="outlet" name="viewController" candidateClass="UIViewController"/>
+            </relationships>
+        </class>
+        <class className="MainTableController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTableController.h"/>
+            <relationships>
+                <relationship kind="action" name="edit:"/>
             </relationships>
         </class>
         <class className="PassController" superclassName="UIViewController">
@@ -562,4 +643,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="xFo-UV-X7Z"/>
+    </inferredMetricsTieBreakers>
 </document>

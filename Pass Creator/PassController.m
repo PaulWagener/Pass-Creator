@@ -262,14 +262,26 @@
     [defaults synchronize];
 }
 
+
 - (IBAction) preview:(id)sender {
     [self updateToPass];
-    NSError *error;
+    //NSError *error;
     NSData *passData =  [self.pass pkpassData];
-    PKPass *pkpass = [[PKPass alloc] initWithData:passData error:&error];
+    //PKPass *pkpass = [[PKPass alloc] initWithData:passData error:&error];
     
-    UIViewController *passController = [[PKAddPassesViewController alloc] initWithPass:pkpass];
-    [self presentModalViewController:passController  animated:YES];
+    MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
+    mailCompose.mailComposeDelegate = self;
+    [mailCompose setMessageBody:@"Ik weet nog wel een leuke nieuwe tag.\n\nNamelijk:" isHTML:NO];
+    [mailCompose addAttachmentData:passData mimeType:@"application/vnd.apple.pkpass" fileName:@"pass.pkpass"];
+    [self presentModalViewController:mailCompose animated:YES];
+
+    
+    //UIViewController *passController = [[PKAddPassesViewController alloc] initWithPass:pkpass];
+    //[self presentModalViewController:passController  animated:YES];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 /**
