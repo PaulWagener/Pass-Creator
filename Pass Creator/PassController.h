@@ -11,7 +11,7 @@
 #import "Pass.h"
 #import "ImagePickerButton.h"
 #import <MessageUI/MessageUI.h>
-@interface PassController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
+@interface PassController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate> {
     IBOutlet UIScrollView *scrollview;
     IBOutlet UIView *contentview;
     
@@ -69,8 +69,19 @@
     
     IBOutletCollection(UITextField) NSArray *labels;
     IBOutletCollection(UITextField) NSArray *values;
+    
+    enum TransitType transitType;
+    enum PassType passType;
 }
 
-@property Pass *pass;
-    
+// Only to be used in viewDidLoad
+@property Pass *loadPass;
+
+/**
+ * Function to call if the pass controller wants to save
+ */
+@property (nonatomic, copy) void (^savePass)(Pass*);
+
+- (void) updateFromPass:(Pass*)pass;
+
 @end

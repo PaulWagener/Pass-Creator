@@ -7,7 +7,7 @@
 //
 
 #import "MainTableController.h"
-
+#import "PassController.h"
 @implementation MainTableController
 
 NSMutableArray *passes;
@@ -33,6 +33,49 @@ NSMutableArray *passes;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(edit:)];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    PassController *passController = segue.destinationViewController;
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    
+    
+    Pass *pass;
+    int passIndex;
+    if(path.section == 1) {
+        
+        // Load new pass
+        NSData *passData = [[NSUserDefaults standardUserDefaults] dataForKey:@"New Pass"];
+        pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
+        [passes addObject:@{}];
+        passIndex = passes.count - 1;
+    } else if(path.section == 0) {
+        
+        // Load existing pass
+        NSData *passData = [[passes objectAtIndex:path.row] objectForKey:@"data"];
+        pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
+        
+        passIndex = path.row;
+    }
+    
+    
+    passController.loadPass = pass;
+    passController.savePass = ^(Pass *newPass) {
+        NSData *newPassData = [NSKeyedArchiver  archivedDataWithRootObject:newPass];
+        [passes replaceObjectAtIndex:passIndex withObject:@{@"name": newPass.title, @"data": newPassData}];
+        [self.tableView reloadData];
+        
+        [self save];
+    };
+}
+
+- (void) save {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:passes forKey:@"Passes"];
+    [defaults synchronize];
+    NSLog(@"Save that pass!");
+}
+
+#pragma mark Table
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -68,6 +111,7 @@ NSMutableArray *passes;
     if(editingStyle == UITableViewCellEditingStyleDelete) {
         [passes removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self save];
     }
 }
 
@@ -80,6 +124,10 @@ NSMutableArray *passes;
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    NSArray *pass = [passes objectAtIndex:fromIndexPath.row];
+    [passes removeObjectAtIndex:fromIndexPath.row];
+	[passes insertObject:pass atIndex:toIndexPath.row];
+    [self save];
 }
 
 /**
