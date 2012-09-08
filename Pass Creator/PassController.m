@@ -42,7 +42,7 @@
     genericImage.onImageChanged = ^(UIImage* image) {
         passBackground.image = image == nil ? nil : [image stackBlur:20];
     };
-    
+    self.navigationItem.rightBarButtonItems = @[sendButton, previewButton];
     // Just testing
     /*NSData *passData = [[NSUserDefaults standardUserDefaults] objectForKey:@"pass"];
     Pass *pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
@@ -137,9 +137,9 @@
     if(passType == GENERIC)
         self.navigationItem.title = @"Card";
     else if(passType == EVENT)
-        self.navigationItem.title = @"Event Ticket";
+        self.navigationItem.title = @"Event";
     else if(passType == BOARDING)
-        self.navigationItem.title = @"Boarding Pass";
+        self.navigationItem.title = @"Boarding";
     else if(passType == COUPON)
         self.navigationItem.title = @"Coupon";
     else if(passType == STORE)
@@ -296,15 +296,19 @@
     NSData *passData =  [pass pkpassData];
     PKPass *pkpass = [[PKPass alloc] initWithData:passData error:&error];
     
-    /*MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
-    mailCompose.mailComposeDelegate = self;
-    [mailCompose setMessageBody:@"Ik weet nog wel een leuke nieuwe tag.\n\nNamelijk:" isHTML:NO];
-    [mailCompose addAttachmentData:passData mimeType:@"application/vnd.apple.pkpass" fileName:@"pass.pkpass"];
-    [self presentModalViewController:mailCompose animated:YES];
-     */
-    
     UIViewController *passController = [[PKAddPassesViewController alloc] initWithPass:pkpass];
     [self presentModalViewController:passController  animated:YES];
+}
+
+- (IBAction) send:(id)sender {
+    Pass *pass = [self updateToPass];
+    NSData *passData =  [pass pkpassData];
+
+    MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
+     mailCompose.mailComposeDelegate = self;
+     [mailCompose setMessageBody:@"\n\n\n\n" isHTML:NO];
+     [mailCompose addAttachmentData:passData mimeType:@"application/vnd.apple.pkpass" fileName:@"pass.pkpass"];
+     [self presentModalViewController:mailCompose animated:YES];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {

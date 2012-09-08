@@ -63,7 +63,8 @@
     IBOutlet ImagePickerButton *couponImage;
     
     
-
+    IBOutlet UIBarButtonItem *sendButton;
+    IBOutlet UIBarButtonItem *previewButton;
     
     IBOutlet UISegmentedControl *segmentedPassType;
     
