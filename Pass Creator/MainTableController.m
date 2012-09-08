@@ -8,12 +8,33 @@
 
 #import "MainTableController.h"
 #import "PassController.h"
+#import "Credits.h"
 @implementation MainTableController
-
-NSMutableArray *passes;
 
 - (void) viewDidLoad {
     passes = [[NSUserDefaults standardUserDefaults] arrayForKey:@"Passes"].mutableCopy;
+    
+    // Respond to changes in credits (for example the initial sync)
+    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSUbiquitousKeyValueStoreDidChangeExternallyNotification object:store queue:nil usingBlock:^(NSNotification *notification) {
+        [self setCreditText];
+    }];
+    
+    // get any changes since the last app launch right now (safer)
+    [store synchronize];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [self setCreditText];
+}
+
+- (void) setCreditText {
+    creditLabel.text = [NSString stringWithFormat:@"Credits: %d", [Credits getCredits]];
+}
+
+// Testing function
+- (IBAction) addCredit:(id)sender {
+    [Credits addCredits:1];
 }
 
 /**
@@ -35,47 +56,59 @@ NSMutableArray *passes;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    PassController *passController = segue.destinationViewController;
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     
-    
-    Pass *pass;
-    int passIndex;
-    if(path.section == 1) {
+    if([segue.identifier hasPrefix:@"pass"]) {
+        PassController *passController = segue.destinationViewController;
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         
-        // Load new pass
-        NSData *passData = [[NSUserDefaults standardUserDefaults] dataForKey:@"New Pass"];
-        pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
-        [passes addObject:@{}];
-        passIndex = passes.count - 1;
-    } else if(path.section == 0) {
         
-        // Load existing pass
-        NSData *passData = [[passes objectAtIndex:path.row] objectForKey:@"data"];
-        pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
+        Pass *pass;
+        int passIndex;
+        if(path.section == 1) {
+            
+            // Load new pass
+            NSData *passData = [[NSUserDefaults standardUserDefaults] dataForKey:@"New Pass"];
+            pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
+            [passes addObject:@{}];
+            passIndex = passes.count - 1;
+        } else if(path.section == 0) {
+            
+            // Load existing pass
+            NSData *passData = [[passes objectAtIndex:path.row] objectForKey:@"data"];
+            pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
+            
+            passIndex = path.row;
+        }
         
-        passIndex = path.row;
+        passController.loadPass = pass;
+        passController.savePass = ^(Pass *newPass) {
+            NSData *newPassData = [NSKeyedArchiver  archivedDataWithRootObject:newPass];
+            [passes replaceObjectAtIndex:passIndex withObject:@{@"name": newPass.title, @"data": newPassData}];
+            [self.tableView reloadData];
+            
+            [self save];
+        };
     }
-    
-    
-    passController.loadPass = pass;
-    passController.savePass = ^(Pass *newPass) {
-        NSData *newPassData = [NSKeyedArchiver  archivedDataWithRootObject:newPass];
-        [passes replaceObjectAtIndex:passIndex withObject:@{@"name": newPass.title, @"data": newPassData}];
-        [self.tableView reloadData];
-        
-        [self save];
-    };
 }
 
 - (void) save {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:passes forKey:@"Passes"];
     [defaults synchronize];
-    NSLog(@"Save that pass!");
 }
 
 #pragma mark Table
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if(section == [self numberOfSectionsInTableView:tableView]-1)
+        return creditsView;
+    
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return [self tableView:tableView viewForFooterInSection:section].frame.size.height;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;

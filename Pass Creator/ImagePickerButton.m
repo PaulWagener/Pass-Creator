@@ -48,7 +48,7 @@
     p.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     p.delegate = self;
 
-    [self.viewController presentModalViewController:p animated:YES];
+    [self.viewController presentViewController:p animated:YES completion:nil];
 }
 
 /**
@@ -65,7 +65,7 @@
 }
 
 - (void) clear:(id)sender {
-    [self.viewController dismissModalViewControllerAnimated:YES];
+    [self.viewController dismissViewControllerAnimated:YES completion:nil];
     self.image = nil;
 }
 
@@ -90,6 +90,6 @@
     
     self.image = [ImagePickerButton imageWithImage:image scaledToSize:newSize];
     
-    [self.viewController dismissModalViewControllerAnimated:YES];
+    [self.viewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end

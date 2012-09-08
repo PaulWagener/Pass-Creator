@@ -297,7 +297,7 @@
     PKPass *pkpass = [[PKPass alloc] initWithData:passData error:&error];
     
     UIViewController *passController = [[PKAddPassesViewController alloc] initWithPass:pkpass];
-    [self presentModalViewController:passController  animated:YES];
+    [self presentViewController:passController animated:YES completion:nil];
 }
 
 - (IBAction) send:(id)sender {
@@ -308,11 +308,11 @@
      mailCompose.mailComposeDelegate = self;
      [mailCompose setMessageBody:@"\n\n\n\n" isHTML:NO];
      [mailCompose addAttachmentData:passData mimeType:@"application/vnd.apple.pkpass" fileName:@"pass.pkpass"];
-     [self presentModalViewController:mailCompose animated:YES];
+     [self presentViewController:mailCompose animated:YES completion:nil];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /**

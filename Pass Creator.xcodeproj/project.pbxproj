@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D304393F15DBD77E00AA342A /* sheen_event@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D304393E15DBD77E00AA342A /* sheen_event@2x.png */; };
 		D323EFD2158E012300E6A754 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D323EFD1158E012300E6A754 /* PassKit.framework */; };
+		D32E641A15FB84CD00F3F874 /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = D32E641915FB84CD00F3F874 /* Credits.m */; };
+		D3540E3915FBB89100801B49 /* BuyCreditsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3540E3815FBB89100801B49 /* BuyCreditsController.m */; };
+		D3540E3B15FBBE4900801B49 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3540E3A15FBBE4900801B49 /* StoreKit.framework */; };
 		D364BB85158FD24A0031F0D4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB83158FD24A0031F0D4 /* libcrypto.a */; };
 		D364BB86158FD24A0031F0D4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB84158FD24A0031F0D4 /* libssl.a */; };
 		D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */; };
@@ -78,6 +81,11 @@
 /* Begin PBXFileReference section */
 		D304393E15DBD77E00AA342A /* sheen_event@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheen_event@2x.png"; sourceTree = "<group>"; };
 		D323EFD1158E012300E6A754 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		D32E641815FB84CD00F3F874 /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credits.h; sourceTree = "<group>"; };
+		D32E641915FB84CD00F3F874 /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credits.m; sourceTree = "<group>"; };
+		D3540E3715FBB89100801B49 /* BuyCreditsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCreditsController.h; sourceTree = "<group>"; };
+		D3540E3815FBB89100801B49 /* BuyCreditsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCreditsController.m; sourceTree = "<group>"; };
+		D3540E3A15FBBE4900801B49 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Pass Creator.entitlements"; sourceTree = "<group>"; };
 		D364BB38158FD2320031F0D4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		D364BB39158FD2320031F0D4 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
@@ -259,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3540E3B15FBBE4900801B49 /* StoreKit.framework in Frameworks */,
 				D3EA07B315F37DBE006B7283 /* MessageUI.framework in Frameworks */,
 				D39ACFF315DBCDAB00FDBE69 /* CoreImage.framework in Frameworks */,
 				D3F58A44158CD6DA00A937D9 /* CoreGraphics.framework in Frameworks */,
@@ -426,6 +435,7 @@
 		D3F58A30158CD6DA00A937D9 = {
 			isa = PBXGroup;
 			children = (
+				D3540E3A15FBBE4900801B49 /* StoreKit.framework */,
 				D3EA07B215F37DBD006B7283 /* MessageUI.framework */,
 				D3EA07B015F37CB6006B7283 /* Defaults.plist */,
 				D39ACFF215DBCDAB00FDBE69 /* CoreImage.framework */,
@@ -471,11 +481,15 @@
 				D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */,
 				D37D993415D7B3FB0086E0EC /* BorderTextField.h */,
 				D37D993515D7B3FB0086E0EC /* BorderTextField.m */,
+				D3540E3715FBB89100801B49 /* BuyCreditsController.h */,
+				D3540E3815FBB89100801B49 /* BuyCreditsController.m */,
 				D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */,
 				D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */,
 				D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */,
 				D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */,
 				D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */,
+				D32E641815FB84CD00F3F874 /* Credits.h */,
+				D32E641915FB84CD00F3F874 /* Credits.m */,
 				D392AB1A15DA8A7A0059FB02 /* ImagePickerButton.h */,
 				D392AB1815DA85620059FB02 /* ImagePickerButton.m */,
 				D392AAFC15D93BC70059FB02 /* JSONKit.h */,
@@ -630,6 +644,8 @@
 				D392AB1915DA85620059FB02 /* ImagePickerButton.m in Sources */,
 				D39ACFF615DBCE9A00FDBE69 /* UIImage+StackBlur.m in Sources */,
 				D3EA07AE15F372C4006B7283 /* MainTableController.m in Sources */,
+				D32E641A15FB84CD00F3F874 /* Credits.m in Sources */,
+				D3540E3915FBB89100801B49 /* BuyCreditsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +678,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -676,7 +693,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				SDKROOT = iphoneos6.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -688,7 +707,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paul Wagener";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -696,7 +716,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos6.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7F1A17EC-1FEC-4A8B-9FA3-AA9F315725FA";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -705,16 +727,17 @@
 		D3F58A5D158CD6DA00A937D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Pass Creator/Pass Creator.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pass Creator/Pass Creator-Prefix.pch";
 				INFOPLIST_FILE = "Pass Creator/Pass Creator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -722,16 +745,17 @@
 		D3F58A5E158CD6DA00A937D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Pass Creator/Pass Creator.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pass Creator/Pass Creator-Prefix.pch";
 				INFOPLIST_FILE = "Pass Creator/Pass Creator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

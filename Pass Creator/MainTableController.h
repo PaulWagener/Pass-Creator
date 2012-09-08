@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainTableController : UITableViewController
+@interface MainTableController : UITableViewController {
+    IBOutlet UILabel *creditLabel;
+    IBOutlet UIView *creditsView;
+    
+    NSMutableArray *passes;
+}
 
 - (IBAction) edit :(id)sender;
 @end
