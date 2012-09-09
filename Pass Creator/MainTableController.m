@@ -9,6 +9,8 @@
 #import "MainTableController.h"
 #import "PassController.h"
 #import "Credits.h"
+#import "BuyCreditsController.h"
+
 @implementation MainTableController
 
 - (void) viewDidLoad {
@@ -32,11 +34,6 @@
     creditLabel.text = [NSString stringWithFormat:@"Credits: %d", [Credits getCredits]];
 }
 
-// Testing function
-- (IBAction) addCredit:(id)sender {
-    [Credits addCredits:1];
-}
-
 /**
  * Start editing passes
  */
@@ -56,6 +53,10 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"credits"]) {
+        BuyCreditsController *buyCredits = segue.destinationViewController;
+        buyCredits.parent = self;
+    }
     
     if([segue.identifier hasPrefix:@"pass"]) {
         PassController *passController = segue.destinationViewController;
@@ -107,7 +108,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return [self tableView:tableView viewForFooterInSection:section].frame.size.height;
+    if(section == 0)
+        return 0;
+    
+    return [self tableView:tableView viewForFooterInSection:section].bounds.size.height;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

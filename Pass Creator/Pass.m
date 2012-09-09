@@ -26,7 +26,6 @@
 
 - (id) init {
     self = [super init];
-    self.serialNumber = @"";
     self.passType = GENERIC;
     self.transitType = TRANSIT_AIR;
     self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1.0];
@@ -39,7 +38,6 @@
  * Enable serialization / deserialization to data
  */
 - (void)encodeWithCoder:(NSCoder *)coder {
-    [coder encodeObject:self.serialNumber forKey:@"serialNumber"];
     [coder encodeInt:self.passType forKey:@"passType"];
     [coder encodeInt:self.transitType forKey:@"transitType"];
     [coder encodeObject:self.logo forKey:@"logo"];
@@ -65,7 +63,6 @@
 
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [self init];
-    self.serialNumber = [decoder decodeObjectForKey:@"serialNumber"];
     self.passType = [decoder decodeIntForKey:@"passType"];
     self.transitType = [decoder decodeIntForKey:@"transitType"];
     self.logo = [decoder decodeObjectForKey:@"logo"];
@@ -104,9 +101,6 @@
 
 - (NSData*) pkpassData {
     PassBundle* passBundle = [[PassBundle alloc] init];
-    
-    if (self.serialNumber == nil)
-        self.serialNumber = @"foo";
     
     // Primary fields dictionary
     NSMutableArray *primaryFields = [NSMutableArray array];
@@ -162,13 +156,20 @@
         
         [fieldsDictionary setObject:transitTypeString forKey:@"transitType"];
     }
-        
+    
+
+    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    NSMutableString *serialNumber = [NSMutableString string];
+    for (int i = 0; i < 16; i++)
+        [serialNumber appendFormat: @"%C", [letters characterAtIndex: arc4random() % [letters length]]];
+    
+    NSLog(@"%@", serialNumber);
     
     NSMutableDictionary *passDictionary =
     @{
     @"formatVersion" : @1,
     @"passTypeIdentifier" : @"pass.nl.paulwagener.passcreator",
-    @"serialNumber" : self.serialNumber,
+    @"serialNumber" : serialNumber,
     @"organizationName" : @"Pass Creator",
     @"teamIdentifier" : @"37HYQWCA73",
     @"description": @"Pass Creator Pass",

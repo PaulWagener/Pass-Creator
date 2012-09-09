@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainTableController : UITableViewController {
+@interface MainTableController : UITableViewController<UINavigationControllerDelegate> {
     IBOutlet UILabel *creditLabel;
     IBOutlet UIView *creditsView;
     
@@ -16,4 +16,5 @@
 }
 
 - (IBAction) edit :(id)sender;
+- (void) setCreditText;
 @end

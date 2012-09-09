@@ -10,7 +10,7 @@
 #import "PassController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <PassKit/PassKit.h>
-
+#import "Credits.h"
 #import "UIImage+StackBlur.h"
 @interface PassController ()
 
@@ -299,20 +299,36 @@
     UIViewController *passController = [[PKAddPassesViewController alloc] initWithPass:pkpass];
     [self presentViewController:passController animated:YES completion:nil];
 }
-
 - (IBAction) send:(id)sender {
     Pass *pass = [self updateToPass];
     NSData *passData =  [pass pkpassData];
+    
+    if([Credits getCredits] <= 0) {
+        [[[UIAlertView alloc] initWithTitle:@"Not enough credits" message:@"You need atleast 1 credit to be able to send this pass by mail. Tap OK to buy credits" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil] show];
+    } else {
+        
+        MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
+        mailCompose.mailComposeDelegate = self;
+        [mailCompose setMessageBody:@"\n\n\n\n" isHTML:NO];
+        [mailCompose addAttachmentData:passData mimeType:@"application/vnd.apple.pkpass" fileName:[NSString stringWithFormat:@"%@.pkpass", pass.title]];
+        [self presentViewController:mailCompose animated:YES completion:nil];
+        
+        [[[UIAlertView alloc] initWithTitle:@"Credits" message:[NSString stringWithFormat:@"Sending or saving this mail will cost 1 credit. You currently have %d credit%@",[Credits getCredits],[Credits getCredits] == 1 ? @"" : @"s"] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+}
 
-    MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
-     mailCompose.mailComposeDelegate = self;
-     [mailCompose setMessageBody:@"\n\n\n\n" isHTML:NO];
-     [mailCompose addAttachmentData:passData mimeType:@"application/vnd.apple.pkpass" fileName:@"pass.pkpass"];
-     [self presentViewController:mailCompose animated:YES completion:nil];
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == 1) {
+        [self performSegueWithIdentifier:@"credits" sender:self];
+    }
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if(result != MFMailComposeResultCancelled && result != MFMailComposeResultFailed) {
+        [Credits useCredit];
+    }
 }
 
 /**

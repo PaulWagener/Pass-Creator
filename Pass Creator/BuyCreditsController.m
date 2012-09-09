@@ -8,6 +8,7 @@
 
 #import "BuyCreditsController.h"
 #import "Credits.h"
+
 @implementation SKProduct (LocalizedPrice)
 
 -(NSNumberFormatter*) numberFormatter {
@@ -55,7 +56,17 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     // Listen for payment callbacks
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated {
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    
+    creditsLabel.text = [NSString stringWithFormat:@"%d", [Credits getCredits]];
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
 }
 
 /**
@@ -92,13 +103,21 @@
     for (SKPaymentTransaction *transaction in transactions) {
         switch (transaction.transactionState) {
             case SKPaymentTransactionStateFailed:
+            {
                 //If the failure is not from the user canceling show an error
                 if(transaction.error.code != SKErrorPaymentCancelled)
                     [[[UIAlertView alloc] initWithTitle:@"Purchase error" message:transaction.error.localizedDescription delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil] show];
                 
+                activity.alpha = 0.0;
+                [UIView animateWithDuration:0.5 animations:^{
+                    tableview.alpha = 1.0;
+                }];
+                
+                
                 //Finish transaction
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
+            }
                 
             case SKPaymentTransactionStateRestored:
             case SKPaymentTransactionStatePurchased:
@@ -116,6 +135,16 @@
                 }
                 
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                
+                // Congratulate the user and allow for further purchases
+                creditsLabel.text = [NSString stringWithFormat:@"%d", [Credits getCredits]];
+                [[[UIAlertView alloc] initWithTitle:@"Credits upgraded" message:[NSString stringWithFormat:@"You now have %d credit%@", [Credits getCredits], [Credits getCredits] == 1 ? @"" : @"s"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                
+                [self.parent setCreditText];
+                activity.alpha = 0.0;
+                [UIView animateWithDuration:0.5 animations:^{
+                    tableview.alpha = 1.0;
+                }];
             }
                 
             default:
@@ -124,12 +153,18 @@
     }
 }
 
+#pragma mark Tableview
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SKProduct *product = [[storeProducts objectAtIndex:indexPath.row] valueForKey:@"product"];
     SKPayment *payment = [SKPayment paymentWithProduct:product];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [UIView animateWithDuration:0.5 animations:^{
+        tableview.alpha = 0.0;
+        activity.alpha = 1.0;
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -139,15 +174,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreditsCell"];
-    
     NSDictionary *storeProduct = [storeProducts objectAtIndex:indexPath.row];
     SKProduct *product = [storeProduct valueForKey:@"product"];
     
-    NSNumberFormatter *formatter = [product numberFormatter];
+    //Title
     NSNumber *count = [storeProduct valueForKey:@"count"];
-    NSDecimalNumber *price_per_card = [product.price decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithDecimal:count.decimalValue]];
-    
     cell.textLabel.text = [NSString stringWithFormat:@"%@ credit%@ (%@)", count, [count intValue] == 1 ? @"" : @"s", [product localizedPrice]];
+    
+    // Subtitle
+    NSDecimalNumber *price_per_card = [product.price decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithDecimal:count.decimalValue]];
+    NSNumberFormatter *formatter = [product numberFormatter];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ per pass", [formatter stringFromNumber:price_per_card]];
     
     return cell;

@@ -40,7 +40,7 @@ enum BarcodeType {
 @interface Pass : NSObject<NSCoding>
 
 // Internal
-@property NSString *serialNumber;
+//@property NSString *serialNumber;
 
 // Type information
 @property enum PassType passType;

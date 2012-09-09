@@ -209,12 +209,13 @@
                     </view>
                     <connections>
                         <outlet property="activity" destination="2Bx-s3-zwx" id="kDk-b0-dUy"/>
+                        <outlet property="creditsLabel" destination="fN4-vg-4DF" id="M8e-uZ-07A"/>
                         <outlet property="tableview" destination="s5u-pN-uDl" id="P2g-j3-Q6I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgc-95-gYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624" y="636"/>
+            <point key="canvasLocation" x="-324" y="607"/>
         </scene>
         <!--Pass Controller - Create Pass-->
         <scene sceneID="orl-Rc-oq5">
@@ -677,11 +678,12 @@
                         <outletCollection property="values" destination="Rn1-eE-Q3X" id="lVT-5M-dZX"/>
                         <outletCollection property="labels" destination="hMY-sa-Xrq" id="BjH-cw-VIl"/>
                         <outletCollection property="labels" destination="fJe-ZT-BWj" id="3dp-dH-emz"/>
+                        <segue destination="HaX-yN-5hD" kind="modal" identifier="credits" modalTransitionStyle="partialCurl" id="Yic-EF-9U6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="718-RW-V5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="-74"/>
+            <point key="canvasLocation" x="-393" y="-148"/>
         </scene>
     </scenes>
     <resources>
@@ -698,6 +700,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BuyCreditsController.h"/>
             <relationships>
                 <relationship kind="outlet" name="activity" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="creditsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableview" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -789,5 +792,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="xFo-UV-X7Z"/>
+        <segue reference="Yic-EF-9U6"/>
     </inferredMetricsTieBreakers>
 </document>
