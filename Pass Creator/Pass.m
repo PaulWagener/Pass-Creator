@@ -158,12 +158,11 @@
     }
     
 
+    // Generate a random serial number as to avoid collision with existing passes
     NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSMutableString *serialNumber = [NSMutableString string];
     for (int i = 0; i < 16; i++)
         [serialNumber appendFormat: @"%C", [letters characterAtIndex: arc4random() % [letters length]]];
-    
-    NSLog(@"%@", serialNumber);
     
     NSMutableDictionary *passDictionary =
     @{
@@ -197,7 +196,7 @@
      */
     
     // Add mandatory logo (should never be visible for user as long as we don't do push notifications, locations or dates)
-    [passBundle addFile:@"icon@2x.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"logo" ofType:@"png"]]];
+    [passBundle addFile:@"icon@2x.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon@2x" ofType:@"png"]]];
 
     if(self.thumbnail != nil && (self.passType == GENERIC || self.passType == EVENT))
         [passBundle addFile:@"thumbnail@2x.png" : UIImagePNGRepresentation(self.thumbnail)];

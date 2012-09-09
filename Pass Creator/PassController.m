@@ -261,19 +261,6 @@
     return pass;
 }
 
-/*
-- (IBAction) save:(id)sender {
-    Pass *pass = [self updateToPass];
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:pass];
-    NSLog(@"Pass data saved to %d bytes", data.length);
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:data forKey:@"pass"];
-    [defaults synchronize];
-    
-    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
-}
-*/
-
 - (void) save {
     Pass *pass = [self updateToPass];
     
@@ -285,7 +272,6 @@
     if(viewController != self) {
         [self save];
         self.navigationController.delegate = nil;
-        NSLog(@"Save");
     }
 }
 

@@ -74,7 +74,7 @@
  */
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
     [[[UIAlertView alloc] initWithTitle:@"Error contacting server" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil] show];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 

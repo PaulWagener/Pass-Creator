@@ -17,14 +17,7 @@
 				<string>Icon@2x.png</string>
 				<string>Icon.png</string>
 				<string>Default.png</string>
-				<string>Default.png</string>
 				<string>Default@2x.png</string>
-				<string>Icon~ipad.png</string>
-				<string>Icon@2x~ipad.png</string>
-				<string>Default-Portrait~ipad.png</string>
-				<string>Default-Portrait@2x~ipad.png</string>
-				<string>Default-Landscape~ipad.png</string>
-				<string>Default-Landscape@2x~ipad.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -45,8 +38,6 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
-	<string>MainStoryboard</string>
-	<key>UIMainStoryboardFile~ipad</key>
 	<string>MainStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
