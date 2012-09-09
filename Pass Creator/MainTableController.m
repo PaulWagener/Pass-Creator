@@ -98,6 +98,15 @@
     [defaults synchronize];
 }
 
+- (IBAction)naarTwitter:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://twitter.com/PassCreator"]];
+}
+
+- (IBAction) naarFacebook:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://facebook.com/PassCreator"]];
+}
+
+
 #pragma mark Table
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {

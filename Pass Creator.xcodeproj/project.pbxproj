@@ -34,8 +34,6 @@
 		D392AB0E15D93CC50059FB02 /* border_square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0315D93CC50059FB02 /* border_square@2x.png */; };
 		D392AB0F15D93CC50059FB02 /* ColorPicker.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0415D93CC50059FB02 /* ColorPicker.png */; };
 		D392AB1115D93CC50059FB02 /* ColorPickerTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0615D93CC50059FB02 /* ColorPickerTarget.png */; };
-		D392AB1215D93CC50059FB02 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0715D93CC50059FB02 /* logo.png */; };
-		D392AB1315D93CC50059FB02 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0815D93CC50059FB02 /* logo@2x.png */; };
 		D392AB1415D93CC50059FB02 /* separator.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB0915D93CC50059FB02 /* separator.png */; };
 		D392AB1615DA72990059FB02 /* sheen.png in Resources */ = {isa = PBXBuildFile; fileRef = D392AB1515DA72990059FB02 /* sheen.png */; };
 		D392AB1915DA85620059FB02 /* ImagePickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D392AB1815DA85620059FB02 /* ImagePickerButton.m */; };
@@ -59,6 +57,8 @@
 		D3B04E5E1592038100836AD6 /* ZKFileArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4B1592038100836AD6 /* ZKFileArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3B04E5F1592038100836AD6 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4D1592038100836AD6 /* ZKLFHeader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3B04E601592038100836AD6 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4F1592038100836AD6 /* ZKLog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D3BCEA5E15FCE4F7009989C5 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BCEA5C15FCE4F7009989C5 /* facebook.png */; };
+		D3BCEA5F15FCE4F7009989C5 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BCEA5D15FCE4F7009989C5 /* twitter.png */; };
 		D3D33431158CE88E00ACAA64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33430158CE88E00ACAA64 /* Default.png */; };
 		D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33432158CE89900ACAA64 /* Default@2x.png */; };
 		D3D657E3158E33E80097B53A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D657E2158E33E80097B53A /* libz.dylib */; };
@@ -191,8 +191,6 @@
 		D392AB0315D93CC50059FB02 /* border_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border_square@2x.png"; sourceTree = "<group>"; };
 		D392AB0415D93CC50059FB02 /* ColorPicker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker.png; sourceTree = "<group>"; };
 		D392AB0615D93CC50059FB02 /* ColorPickerTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPickerTarget.png; sourceTree = "<group>"; };
-		D392AB0715D93CC50059FB02 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		D392AB0815D93CC50059FB02 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		D392AB0915D93CC50059FB02 /* separator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = separator.png; sourceTree = "<group>"; };
 		D392AB1515DA72990059FB02 /* sheen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheen.png; sourceTree = "<group>"; };
 		D392AB1815DA85620059FB02 /* ImagePickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerButton.m; sourceTree = "<group>"; };
@@ -238,6 +236,8 @@
 		D3B04E4D1592038100836AD6 /* ZKLFHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLFHeader.m; sourceTree = "<group>"; };
 		D3B04E4E1592038100836AD6 /* ZKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLog.h; sourceTree = "<group>"; };
 		D3B04E4F1592038100836AD6 /* ZKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLog.m; sourceTree = "<group>"; };
+		D3BCEA5C15FCE4F7009989C5 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		D3BCEA5D15FCE4F7009989C5 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		D3D33430158CE88E00ACAA64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D3D33432158CE89900ACAA64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3D657E2158E33E80097B53A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -373,6 +373,8 @@
 		D37D993F15D7E0E20086E0EC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				D3BCEA5C15FCE4F7009989C5 /* facebook.png */,
+				D3BCEA5D15FCE4F7009989C5 /* twitter.png */,
 				D3EA07B615F39408006B7283 /* add@2x.png */,
 				D392AAFF15D93CC50059FB02 /* border_notched@2x.png */,
 				D392AB0015D93CC50059FB02 /* border_perforated@2x.png */,
@@ -381,8 +383,6 @@
 				D392AB0315D93CC50059FB02 /* border_square@2x.png */,
 				D392AB0415D93CC50059FB02 /* ColorPicker.png */,
 				D392AB0615D93CC50059FB02 /* ColorPickerTarget.png */,
-				D392AB0715D93CC50059FB02 /* logo.png */,
-				D392AB0815D93CC50059FB02 /* logo@2x.png */,
 				D392AB0915D93CC50059FB02 /* separator.png */,
 				D392AB1515DA72990059FB02 /* sheen.png */,
 				D304393E15DBD77E00AA342A /* sheen_event@2x.png */,
@@ -603,8 +603,6 @@
 				D392AB0E15D93CC50059FB02 /* border_square@2x.png in Resources */,
 				D392AB0F15D93CC50059FB02 /* ColorPicker.png in Resources */,
 				D392AB1115D93CC50059FB02 /* ColorPickerTarget.png in Resources */,
-				D392AB1215D93CC50059FB02 /* logo.png in Resources */,
-				D392AB1315D93CC50059FB02 /* logo@2x.png in Resources */,
 				D392AB1415D93CC50059FB02 /* separator.png in Resources */,
 				D392AB1615DA72990059FB02 /* sheen.png in Resources */,
 				D304393F15DBD77E00AA342A /* sheen_event@2x.png in Resources */,
@@ -612,6 +610,8 @@
 				D3EA07B715F39408006B7283 /* add@2x.png in Resources */,
 				D3540E3D15FCC30F00801B49 /* Icon@2x.png in Resources */,
 				D3540E3F15FCC31400801B49 /* Icon.png in Resources */,
+				D3BCEA5E15FCE4F7009989C5 /* facebook.png in Resources */,
+				D3BCEA5F15FCE4F7009989C5 /* twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +686,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Pass Creator/Pass Creator.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -715,6 +716,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Pass Creator/Pass Creator.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;

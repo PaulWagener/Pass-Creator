@@ -43,10 +43,6 @@
         passBackground.image = image == nil ? nil : [image stackBlur:20];
     };
     self.navigationItem.rightBarButtonItems = @[sendButton, previewButton];
-    // Just testing
-    /*NSData *passData = [[NSUserDefaults standardUserDefaults] objectForKey:@"pass"];
-    Pass *pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
-    [self updateFromPass:pass];*/
     
     [self updateFromPass:self.loadPass];
 }
