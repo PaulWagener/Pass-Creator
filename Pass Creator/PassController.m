@@ -292,6 +292,7 @@
         MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
         mailCompose.mailComposeDelegate = self;
         [mailCompose setMessageBody:@"\n\n\n\n" isHTML:NO];
+        [mailCompose setSubject:pass.title];
         [mailCompose addAttachmentData:passData mimeType:@"application/vnd.apple.pkpass" fileName:[NSString stringWithFormat:@"%@.pkpass", pass.title]];
         [self presentViewController:mailCompose animated:YES completion:nil];
         

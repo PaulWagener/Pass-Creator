@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D304393F15DBD77E00AA342A /* sheen_event@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D304393E15DBD77E00AA342A /* sheen_event@2x.png */; };
 		D323EFD2158E012300E6A754 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D323EFD1158E012300E6A754 /* PassKit.framework */; };
+		D32525A616022C8D00CFFA18 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32525A516022C8D00CFFA18 /* Default-568h@2x.png */; };
+		D32525B916025D1700CFFA18 /* AppleWWDRCA.cer in Resources */ = {isa = PBXBuildFile; fileRef = D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */; };
 		D32E641A15FB84CD00F3F874 /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = D32E641915FB84CD00F3F874 /* Credits.m */; };
 		D3540E3915FBB89100801B49 /* BuyCreditsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3540E3815FBB89100801B49 /* BuyCreditsController.m */; };
 		D3540E3B15FBBE4900801B49 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3540E3A15FBBE4900801B49 /* StoreKit.framework */; };
@@ -83,6 +85,8 @@
 /* Begin PBXFileReference section */
 		D304393E15DBD77E00AA342A /* sheen_event@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheen_event@2x.png"; sourceTree = "<group>"; };
 		D323EFD1158E012300E6A754 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		D32525A516022C8D00CFFA18 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleWWDRCA.cer; sourceTree = "<group>"; };
 		D32E641815FB84CD00F3F874 /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credits.h; sourceTree = "<group>"; };
 		D32E641915FB84CD00F3F874 /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credits.m; sourceTree = "<group>"; };
 		D3540E3715FBB89100801B49 /* BuyCreditsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCreditsController.h; sourceTree = "<group>"; };
@@ -439,20 +443,21 @@
 		D3F58A30158CD6DA00A937D9 = {
 			isa = PBXGroup;
 			children = (
+				D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */,
+				D3E7997815909F18000A3E6C /* certificate.pem */,
+				D32525A516022C8D00CFFA18 /* Default-568h@2x.png */,
+				D3D33430158CE88E00ACAA64 /* Default.png */,
+				D3D33432158CE89900ACAA64 /* Default@2x.png */,
+				D3EA07B015F37CB6006B7283 /* Defaults.plist */,
+				D3F58A3E158CD6DA00A937D9 /* Frameworks */,
+				D37D993F15D7E0E20086E0EC /* Graphics */,
 				D3540E3E15FCC31400801B49 /* Icon.png */,
 				D3540E3C15FCC30F00801B49 /* Icon@2x.png */,
-				D3540E3A15FBBE4900801B49 /* StoreKit.framework */,
-				D3EA07B215F37DBD006B7283 /* MessageUI.framework */,
-				D3EA07B015F37CB6006B7283 /* Defaults.plist */,
-				D39ACFF215DBCDAB00FDBE69 /* CoreImage.framework */,
-				D37D993F15D7E0E20086E0EC /* Graphics */,
-				D3E7997815909F18000A3E6C /* certificate.pem */,
 				D3E7997915909F18000A3E6C /* key.pem */,
-				D3D33432158CE89900ACAA64 /* Default@2x.png */,
-				D3D33430158CE88E00ACAA64 /* Default.png */,
+				D3EA07B215F37DBD006B7283 /* MessageUI.framework */,
 				D3F58A45158CD6DA00A937D9 /* Pass Creator */,
-				D3F58A3E158CD6DA00A937D9 /* Frameworks */,
 				D3F58A3C158CD6DA00A937D9 /* Products */,
+				D3540E3A15FBBE4900801B49 /* StoreKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -467,6 +472,7 @@
 		D3F58A3E158CD6DA00A937D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D39ACFF215DBCDAB00FDBE69 /* CoreImage.framework */,
 				D3F58A43158CD6DA00A937D9 /* CoreGraphics.framework */,
 				D3F58A41158CD6DA00A937D9 /* Foundation.framework */,
 				D364BB83158FD24A0031F0D4 /* libcrypto.a */,
@@ -584,6 +590,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32525B916025D1700CFFA18 /* AppleWWDRCA.cer in Resources */,
 				D3F58A4A158CD6DA00A937D9 /* InfoPlist.strings in Resources */,
 				D3F58A53158CD6DA00A937D9 /* MainStoryboard.storyboard in Resources */,
 				D3D33431158CE88E00ACAA64 /* Default.png in Resources */,
@@ -612,6 +619,7 @@
 				D3540E3F15FCC31400801B49 /* Icon.png in Resources */,
 				D3BCEA5E15FCE4F7009989C5 /* facebook.png in Resources */,
 				D3BCEA5F15FCE4F7009989C5 /* twitter.png in Resources */,
+				D32525A616022C8D00CFFA18 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -713,6 +722,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

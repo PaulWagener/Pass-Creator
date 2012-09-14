@@ -48,7 +48,9 @@
     // Sign the manifest
     const char *key_pem = [[NSBundle mainBundle] pathForResource:@"key" ofType:@"pem"].UTF8String;
     const char *certificate_pem = [[NSBundle mainBundle] pathForResource:@"certificate" ofType:@"pem"].UTF8String;
-    PassBundleSign signer(key_pem, certificate_pem);
+    const char *wwdr_cer =[[NSBundle mainBundle] pathForResource:@"AppleWWDRCA" ofType:@"cer"].UTF8String;
+
+    PassBundleSign signer(key_pem, certificate_pem, wwdr_cer);
     
     unsigned char *manifest_pointer = (unsigned char*)manifestJson.bytes;
     int manifest_length = manifestJson.length;
