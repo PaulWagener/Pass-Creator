@@ -26,6 +26,16 @@
     
     // get any changes since the last app launch right now (safer)
     [store synchronize];
+    
+    self.tableView.alpha = 0.0;
+    self.navigationController.navigationBar.alpha = 0.0;
+    self.navigationController.navigationBarHidden = YES;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.navigationController.navigationBarHidden = NO;
+        self.tableView.alpha = 1.0;
+        self.navigationController.navigationBar.alpha = 1.0;
+    }];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

@@ -17,6 +17,8 @@
 		D3540E3D15FCC30F00801B49 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3540E3C15FCC30F00801B49 /* Icon@2x.png */; };
 		D3540E3F15FCC31400801B49 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3540E3E15FCC31400801B49 /* Icon.png */; };
 		D35A4D01160DC00F00C94625 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D364BB83158FD24A0031F0D4 /* libcrypto.a */; };
+		D35A4D20160DE81000C94625 /* LaunchImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35A4D1F160DE81000C94625 /* LaunchImageController.m */; };
+		D35A4D22160DE98C00C94625 /* table_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D35A4D21160DE98C00C94625 /* table_background.png */; };
 		D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */; };
 		D37D992D15D6B0E20086E0EC /* ScrollViewContainingDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D992C15D6B0E20086E0EC /* ScrollViewContainingDraggable.m */; };
 		D37D993315D7A5D90086E0EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37D993215D7A5D90086E0EC /* QuartzCore.framework */; };
@@ -92,6 +94,9 @@
 		D3540E3A15FBBE4900801B49 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D3540E3C15FCC30F00801B49 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		D3540E3E15FCC31400801B49 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D35A4D1E160DE81000C94625 /* LaunchImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchImageController.h; sourceTree = "<group>"; };
+		D35A4D1F160DE81000C94625 /* LaunchImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchImageController.m; sourceTree = "<group>"; };
+		D35A4D21160DE98C00C94625 /* table_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table_background.png; sourceTree = "<group>"; };
 		D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Pass Creator.entitlements"; sourceTree = "<group>"; };
 		D364BB38158FD2320031F0D4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		D364BB39158FD2320031F0D4 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
@@ -372,6 +377,7 @@
 		D37D993F15D7E0E20086E0EC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				D35A4D21160DE98C00C94625 /* table_background.png */,
 				D3BCEA5C15FCE4F7009989C5 /* facebook.png */,
 				D3BCEA5D15FCE4F7009989C5 /* twitter.png */,
 				D3EA07B615F39408006B7283 /* add@2x.png */,
@@ -499,6 +505,8 @@
 				D392AB1815DA85620059FB02 /* ImagePickerButton.m */,
 				D392AAFC15D93BC70059FB02 /* JSONKit.h */,
 				D392AAFD15D93BC70059FB02 /* JSONKit.m */,
+				D35A4D1E160DE81000C94625 /* LaunchImageController.h */,
+				D35A4D1F160DE81000C94625 /* LaunchImageController.m */,
 				D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */,
 				D3EA07AC15F372C4006B7283 /* MainTableController.h */,
 				D3EA07AD15F372C4006B7283 /* MainTableController.m */,
@@ -612,6 +620,7 @@
 				D3BCEA5E15FCE4F7009989C5 /* facebook.png in Resources */,
 				D3BCEA5F15FCE4F7009989C5 /* twitter.png in Resources */,
 				D32525A616022C8D00CFFA18 /* Default-568h@2x.png in Resources */,
+				D35A4D22160DE98C00C94625 /* table_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +663,7 @@
 				D3EA07AE15F372C4006B7283 /* MainTableController.m in Sources */,
 				D32E641A15FB84CD00F3F874 /* Credits.m in Sources */,
 				D3540E3915FBB89100801B49 /* BuyCreditsController.m in Sources */,
+				D35A4D20160DE81000C94625 /* LaunchImageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
