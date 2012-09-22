@@ -11,6 +11,8 @@
 #import "Credits.h"
 #import "BuyCreditsController.h"
 
+#define ADD_PASS_SECTION 0
+
 @implementation MainTableController
 
 - (void) viewDidLoad {
@@ -65,14 +67,14 @@
         
         Pass *pass;
         int passIndex;
-        if(path.section == 1) {
+        if(path.section == ADD_PASS_SECTION) {
             
             // Load new pass
             NSData *passData = [[NSUserDefaults standardUserDefaults] dataForKey:@"New Pass"];
             pass = [NSKeyedUnarchiver unarchiveObjectWithData:passData];
-            [passes addObject:@{}];
-            passIndex = passes.count - 1;
-        } else if(path.section == 0) {
+            [passes insertObject:@{} atIndex:0];
+            passIndex = 0;
+        } else if(path.section != ADD_PASS_SECTION) {
             
             // Load existing pass
             NSData *passData = [[passes objectAtIndex:path.row] objectForKey:@"data"];
@@ -117,9 +119,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if(section == 0)
-        return 0;
-    
     return [self tableView:tableView viewForFooterInSection:section].bounds.size.height;
 }
 
@@ -128,7 +127,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(section == 1)
+    if(section == ADD_PASS_SECTION)
         return 1;
     
     return passes.count;
@@ -136,7 +135,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1)
+    if(indexPath.section == ADD_PASS_SECTION)
         return [tableView dequeueReusableCellWithIdentifier:@"AddCell"];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCell"];
@@ -150,7 +149,7 @@
 #pragma mark Editing
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return indexPath.section == 0;
+    return indexPath.section != ADD_PASS_SECTION;
 }
 
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -166,7 +165,7 @@
 #pragma mark Moving
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    return indexPath.section == 0;
+    return indexPath.section != ADD_PASS_SECTION;
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {

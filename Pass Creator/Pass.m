@@ -173,7 +173,7 @@
     @"teamIdentifier" : @"37HYQWCA73",
     @"description": @"Pass Creator Pass",
     passTypeString: fieldsDictionary,
-    @"backFields": @[@{@"key": @"credits", @"label": @"Created By Pass Creator", @"value": @"Download at ..."}],
+    @"backFields": @[@{@"key": @"credits", @"label": @"Created By Pass Creator", @"value": @"Download at http://itunes.apple.com/nl/app/regenmelding/id492981382?mt=8&uo=4"}],
     }.mutableCopy;
     
     if(self.passType != EVENT) {
@@ -195,7 +195,7 @@
      * Add other files
      */
     
-    // Add mandatory logo (should never be visible for user as long as we don't do push notifications, locations or dates)
+    // Add mandatory logo (only visible in e-mail)
     [passBundle addFile:@"icon@2x.png" :[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Icon@2x" ofType:@"png"]]];
 
     if(self.thumbnail != nil && (self.passType == GENERIC || self.passType == EVENT))
