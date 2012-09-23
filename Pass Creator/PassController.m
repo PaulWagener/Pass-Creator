@@ -12,6 +12,8 @@
 #import <PassKit/PassKit.h>
 #import "Credits.h"
 #import "UIImage+StackBlur.h"
+#import "BarScannerController.h"
+
 @interface PassController ()
 
 @end
@@ -49,6 +51,16 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     self.navigationController.delegate = self;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"barcode"]) {
+        BarScannerController *scanner = segue.destinationViewController;
+        [scanner setData:barcode];
+        scanner.onComplete = ^(NSString *bardata){
+            [self setBarcode:bardata];
+        };
+    }
 }
 
 - (IBAction) chooseTransitType:(id)sender {
@@ -161,6 +173,18 @@
         valueColor.onColorChange(valueColor.color);
     }
 }
+- (void) setBarcode:(NSString*)barcodeData {
+    self->barcode = barcodeData;
+    
+    if([barcode isEqualToString:@""] || barcode == nil) {
+        [barcodeButton setTitle:@"No barcode" forState:UIControlStateNormal];
+        [barcodeButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    } else {
+        [barcodeButton setTitle:barcodeData forState:UIControlStateNormal];
+        [barcodeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    }
+    
+}
 
 /**
  * These functions return what is in the current primary label & value textfields
@@ -218,6 +242,7 @@
     secondaryValue3.text = pass.secondaryValue3;
     secondaryLabel4.text = pass.secondaryLabel4;
     secondaryValue4.text = pass.secondaryValue4;
+    [self setBarcode:pass.barcode];
     
     logoImage.image = pass.logo;
     genericImage.image = pass.thumbnail;
@@ -243,6 +268,7 @@
     pass.secondaryValue3 = secondaryValue3.text;
     pass.secondaryLabel4 = secondaryLabel4.text;
     pass.secondaryValue4 = secondaryValue4.text;
+    pass.barcode = barcode;
     
     pass.backgroundColor = backgroundColor.color;
     pass.labelColor = labelColor.color;

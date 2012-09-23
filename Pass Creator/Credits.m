@@ -11,7 +11,6 @@
 @implementation Credits
 
 + (int) getCredits {
-    return 500;
     NSUbiquitousKeyValueStore *icloud = [NSUbiquitousKeyValueStore defaultStore];
     return [icloud longLongForKey:@"credits"];
 }

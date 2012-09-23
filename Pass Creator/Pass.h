@@ -39,9 +39,6 @@ enum BarcodeType {
 
 @interface Pass : NSObject<NSCoding>
 
-// Internal
-//@property NSString *serialNumber;
-
 // Type information
 @property enum PassType passType;
 @property enum TransitType transitType;
@@ -76,6 +73,8 @@ enum BarcodeType {
 
 @property (copy) NSString *secondaryLabel4;
 @property (copy) NSString *secondaryValue4;
+
+@property (copy) NSString *barcode;
 
 - (NSData*) pkpassData;
 

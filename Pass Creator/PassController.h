@@ -29,6 +29,8 @@
     IBOutlet UIView *infoGeneric;
     IBOutlet UIView *infoCoupon;
     
+    IBOutlet UIButton *barcodeButton;
+    
     IBOutlet ColorPickerButton *backgroundColor;
     IBOutlet ColorPickerButton *labelColor;
     IBOutlet ColorPickerButton *valueColor;
@@ -68,11 +70,14 @@
     
     IBOutlet UISegmentedControl *segmentedPassType;
     
+    
     IBOutletCollection(UITextField) NSArray *labels;
     IBOutletCollection(UITextField) NSArray *values;
     
     enum TransitType transitType;
     enum PassType passType;
+    
+    NSString *barcode;
 }
 
 // Only to be used in viewDidLoad

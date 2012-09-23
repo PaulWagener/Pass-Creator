@@ -59,6 +59,7 @@
     [coder encodeObject:self.secondaryValue3 forKey:@"secondaryValue3"];
     [coder encodeObject:self.secondaryLabel4 forKey:@"secondaryLabel4"];
     [coder encodeObject:self.secondaryValue4 forKey:@"secondaryValue4"];
+    [coder encodeObject:self.barcode forKey:@"barcode"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -84,7 +85,7 @@
     self.secondaryValue3 = [decoder decodeObjectForKey:@"secondaryValue3"];
     self.secondaryLabel4 = [decoder decodeObjectForKey:@"secondaryLabel4"];
     self.secondaryValue4 = [decoder decodeObjectForKey:@"secondaryValue4"];
-    
+    self.barcode = [decoder decodeObjectForKey:@"barcode"];
     return self;
 }
 
@@ -173,7 +174,7 @@
     @"teamIdentifier" : @"37HYQWCA73",
     @"description": @"Pass Creator Pass",
     passTypeString: fieldsDictionary,
-    @"backFields": @[@{@"key": @"credits", @"label": @"Created By Pass Creator", @"value": @"Download at http://itunes.apple.com/nl/app/regenmelding/id492981382?mt=8&uo=4"}],
+    @"backFields": @[@{@"key": @"credits", @"label": @"Created By Pass Creator", @"value": @"Download at http://itunes.apple.com/us/app/pass-creator/id536894864?l=nl&ls=1&mt=8"}],
     }.mutableCopy;
     
     if(self.passType != EVENT) {
@@ -188,6 +189,14 @@
     
     if(self.title != nil && ![self.title isEqualToString:@""])
         [passDictionary setObject:self.title forKey:@"logoText"];
+    
+    if(![self.barcode isEqualToString:@""] && self.barcode != nil) {
+        [passDictionary setObject:@{
+            @"format": @"PKBarcodeFormatQR",
+            @"message": self.barcode,
+            @"messageEncoding": @"iso-8859-1"
+         } forKey:@"barcode"];
+    }
     
     [passBundle addFile:@"pass.json" :passDictionary.JSONData];
     

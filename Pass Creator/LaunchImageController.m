@@ -23,11 +23,11 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.4 animations:^{
         launchImage.alpha = 0.0;
-    } completion:^(BOOL g){
+    } completion:^(BOOL finished){
         [self performSegueWithIdentifier:@"next" sender:self];
-    }];
+    }];    
 }
 
 @end
