@@ -76,7 +76,7 @@
         
         
         Pass *pass;
-        int passIndex;
+        int passIndex = 0;
         if(path.section == ADD_PASS_SECTION) {
             
             // Load new pass

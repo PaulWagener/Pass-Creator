@@ -25,7 +25,7 @@
     self.circle.onColorChange = ^(UIColor* color) {
         
         // Show the color to the user as the background of the button
-        self.backgroundColor = color;
+        _self.backgroundColor = color;
         _self->_color = color;
         
         // Set the color of the button to white or black depending on the brightness
@@ -38,8 +38,8 @@
             [_self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
         // Notify listener of the color change
-        if(self.onColorChange)
-            self.onColorChange(color);
+        if(_self.onColorChange)
+            _self.onColorChange(color);
     };
     
     // Semi transparant background view that will dismiss when touched

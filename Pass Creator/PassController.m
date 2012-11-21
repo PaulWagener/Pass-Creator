@@ -30,7 +30,7 @@
     // Initialize the color picker buttons
     PassController *_self = self;
     backgroundColor.onColorChange = ^(UIColor *color) {
-        passView.backgroundColor = color;
+        _self->passView.backgroundColor = color;
     };
     labelColor.onColorChange = ^(UIColor *color){
         for(UITextField *label in _self->labels)
@@ -42,7 +42,7 @@
     };
     
     genericImage.onImageChanged = ^(UIImage* image) {
-        passBackground.image = image == nil ? nil : [image stackBlur:20];
+        _self->passBackground.image = image == nil ? nil : [image stackBlur:20];
     };
     self.navigationItem.rightBarButtonItems = @[sendButton, previewButton];
     

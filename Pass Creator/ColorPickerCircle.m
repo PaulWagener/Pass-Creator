@@ -49,7 +49,7 @@
     vector.y -= self.frame.size.height / 2;
     CGFloat distance = sqrt(vector.x*vector.x + vector.y*vector.y); // Distance from center
     
-    CGFloat wantedDistance;
+    CGFloat wantedDistance = 0.0;
     if(dragMode == HUE) {
         wantedDistance = (self.frame.size.width / 2) * CENTER_HUE_DISTANCE;
     } else if(dragMode == BRIGHTNESS) {
