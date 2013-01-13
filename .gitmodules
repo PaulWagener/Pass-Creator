@@ -1,0 +1,3 @@
+[submodule "ZipKit"]
+	path = ZipKit
+	url = git@github.com:mwaterfall/ZipKit.git
