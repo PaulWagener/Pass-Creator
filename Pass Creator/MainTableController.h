@@ -18,5 +18,4 @@
 @property IBOutlet UITableView *tableView;
 
 - (IBAction) edit :(id)sender;
-- (void) setCreditText;
 @end

@@ -17,9 +17,7 @@
 		D323EFD2158E012300E6A754 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D323EFD1158E012300E6A754 /* PassKit.framework */; };
 		D32525A616022C8D00CFFA18 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32525A516022C8D00CFFA18 /* Default-568h@2x.png */; };
 		D32525B916025D1700CFFA18 /* AppleWWDRCA.cer in Resources */ = {isa = PBXBuildFile; fileRef = D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */; };
-		D32E641A15FB84CD00F3F874 /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = D32E641915FB84CD00F3F874 /* Credits.m */; };
 		D34A27CF16A30E2B00459B57 /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D34A27CE16A30E2B00459B57 /* key.pem */; };
-		D3540E3915FBB89100801B49 /* BuyCreditsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3540E3815FBB89100801B49 /* BuyCreditsController.m */; };
 		D3540E3B15FBBE4900801B49 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3540E3A15FBBE4900801B49 /* StoreKit.framework */; };
 		D3540E3D15FCC30F00801B49 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3540E3C15FCC30F00801B49 /* Icon@2x.png */; };
 		D3540E3F15FCC31400801B49 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3540E3E15FCC31400801B49 /* Icon.png */; };
@@ -86,12 +84,8 @@
 		D323EFD1158E012300E6A754 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		D32525A516022C8D00CFFA18 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleWWDRCA.cer; sourceTree = "<group>"; };
-		D32E641815FB84CD00F3F874 /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credits.h; sourceTree = "<group>"; };
-		D32E641915FB84CD00F3F874 /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credits.m; sourceTree = "<group>"; };
 		D34A27CD16A30B8F00459B57 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		D34A27CE16A30E2B00459B57 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
-		D3540E3715FBB89100801B49 /* BuyCreditsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCreditsController.h; sourceTree = "<group>"; };
-		D3540E3815FBB89100801B49 /* BuyCreditsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCreditsController.m; sourceTree = "<group>"; };
 		D3540E3A15FBBE4900801B49 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D3540E3C15FCC30F00801B49 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		D3540E3E15FCC31400801B49 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -531,16 +525,12 @@
 				D312F4CA160E2F2800621EAF /* BarScannerController.m */,
 				D37D993415D7B3FB0086E0EC /* BorderTextField.h */,
 				D37D993515D7B3FB0086E0EC /* BorderTextField.m */,
-				D3540E3715FBB89100801B49 /* BuyCreditsController.h */,
-				D3540E3815FBB89100801B49 /* BuyCreditsController.m */,
 				D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */,
 				D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */,
 				D37D992815D6ADF30086E0EC /* ColorPickerCircle.h */,
 				D37D992915D6ADF30086E0EC /* ColorPickerCircle.m */,
 				D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */,
 				D34A27CD16A30B8F00459B57 /* Config.h */,
-				D32E641815FB84CD00F3F874 /* Credits.h */,
-				D32E641915FB84CD00F3F874 /* Credits.m */,
 				D392AB1A15DA8A7A0059FB02 /* ImagePickerButton.h */,
 				D392AB1815DA85620059FB02 /* ImagePickerButton.m */,
 				D392AAFC15D93BC70059FB02 /* JSONKit.h */,
@@ -684,8 +674,6 @@
 				D392AB1915DA85620059FB02 /* ImagePickerButton.m in Sources */,
 				D39ACFF615DBCE9A00FDBE69 /* UIImage+StackBlur.m in Sources */,
 				D3EA07AE15F372C4006B7283 /* MainTableController.m in Sources */,
-				D32E641A15FB84CD00F3F874 /* Credits.m in Sources */,
-				D3540E3915FBB89100801B49 /* BuyCreditsController.m in Sources */,
 				D35A4D20160DE81000C94625 /* LaunchImageController.m in Sources */,
 				D312F4CB160E2F2800621EAF /* BarScannerController.m in Sources */,
 			);

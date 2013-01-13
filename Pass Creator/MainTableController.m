@@ -8,8 +8,6 @@
 
 #import "MainTableController.h"
 #import "PassController.h"
-#import "Credits.h"
-#import "BuyCreditsController.h"
 
 #define ADD_PASS_SECTION 0
 
@@ -17,15 +15,6 @@
 
 - (void) viewDidLoad {
     passes = [[NSUserDefaults standardUserDefaults] arrayForKey:@"Passes"].mutableCopy;
-    
-    // Respond to changes in credits (for example the initial sync)
-    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSUbiquitousKeyValueStoreDidChangeExternallyNotification object:store queue:nil usingBlock:^(NSNotification *notification) {
-        [self setCreditText];
-    }];
-    
-    // get any changes since the last app launch right now (safer)
-    [store synchronize];
     
     self.tableView.alpha = 0.0;
     self.navigationController.navigationBar.alpha = 0.0;
@@ -36,14 +25,6 @@
         self.tableView.alpha = 1.0;
         self.navigationController.navigationBar.alpha = 1.0;
     }];
-}
-
-- (void) viewWillAppear:(BOOL)animated {
-    [self setCreditText];
-}
-
-- (void) setCreditText {
-    creditLabel.text = [NSString stringWithFormat:@"Credits: %d", [Credits getCredits]];
 }
 
 /**
@@ -65,11 +46,6 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"credits"]) {
-        BuyCreditsController *buyCredits = segue.destinationViewController;
-        buyCredits.parent = self;
-    }
-    
     if([segue.identifier hasPrefix:@"pass"]) {
         PassController *passController = segue.destinationViewController;
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
