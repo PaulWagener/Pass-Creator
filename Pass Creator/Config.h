@@ -1,0 +1,3 @@
+
+#define KEY_PEM_PASSPHRASE ""
+#define PASS_TYPE_IDENTIFIER ""

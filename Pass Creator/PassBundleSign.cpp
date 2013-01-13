@@ -6,6 +6,7 @@
 #include "openssl/err.h"
 
 #include "PassBundleSign.h"
+#include "Config.h"
 
 /**
  * Load certificates
@@ -20,7 +21,7 @@ PassBundleSign::PassBundleSign(const char *key_pem, const char *certificate_pem,
     BIO *wwdr_cer_io = BIO_new_file(wwdr_cer, "r");
     
 	scert = PEM_read_bio_X509(certificate_pem_bio, NULL, 0, NULL);
-    skey = PEM_read_bio_PrivateKey(key_pem_io, NULL, 0, (void*)"HPYEj7xS");
+    skey = PEM_read_bio_PrivateKey(key_pem_io, NULL, 0, (void*)KEY_PEM_PASSPHRASE);
     wwdrcert = d2i_X509_bio(wwdr_cer_io, NULL);
     
     BIO_free(certificate_pem_bio);
