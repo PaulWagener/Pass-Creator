@@ -1,3 +1,6 @@
+certificate.pem
+key.pem
+
 # Xcode
 .DS_Store
 build/
