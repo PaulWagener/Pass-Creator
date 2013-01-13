@@ -1,4 +1,4 @@
-#import "ZipKit/ZKDataArchive.h"
+#import "ZKDataArchive.h"
 
 @interface PassFile : NSObject {
     @public

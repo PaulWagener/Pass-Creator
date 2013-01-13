@@ -1,3 +1,0 @@
-[submodule "ZBarSDK"]
-	path = ZBarSDK
-	url = git@github.com:bmorton/ZBarSDK.git
