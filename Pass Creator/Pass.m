@@ -10,6 +10,7 @@
 #import "PassBundle.h"
 #import <PassKit/PassKit.h>
 #import "JSONKit.h"
+#import "Config.h"
 
 @implementation UIColor(UIColorWithCSS)
 
@@ -168,7 +169,7 @@
     NSMutableDictionary *passDictionary =
     @{
     @"formatVersion" : @1,
-    @"passTypeIdentifier" : @"pass.nl.paulwagener.passcreator",
+    @"passTypeIdentifier" : PASS_TYPE_IDENTIFIER,
     @"serialNumber" : serialNumber,
     @"organizationName" : @"Pass Creator",
     @"teamIdentifier" : @"37HYQWCA73",
@@ -197,7 +198,7 @@
             @"messageEncoding": @"iso-8859-1"
          } forKey:@"barcode"];
     }
-    
+
     [passBundle addFile:@"pass.json" :passDictionary.JSONData];
     
     /**

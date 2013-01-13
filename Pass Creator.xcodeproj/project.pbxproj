@@ -18,6 +18,7 @@
 		D32525A616022C8D00CFFA18 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32525A516022C8D00CFFA18 /* Default-568h@2x.png */; };
 		D32525B916025D1700CFFA18 /* AppleWWDRCA.cer in Resources */ = {isa = PBXBuildFile; fileRef = D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */; };
 		D32E641A15FB84CD00F3F874 /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = D32E641915FB84CD00F3F874 /* Credits.m */; };
+		D34A27CF16A30E2B00459B57 /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D34A27CE16A30E2B00459B57 /* key.pem */; };
 		D3540E3915FBB89100801B49 /* BuyCreditsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3540E3815FBB89100801B49 /* BuyCreditsController.m */; };
 		D3540E3B15FBBE4900801B49 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3540E3A15FBBE4900801B49 /* StoreKit.framework */; };
 		D3540E3D15FCC30F00801B49 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3540E3C15FCC30F00801B49 /* Icon@2x.png */; };
@@ -60,7 +61,6 @@
 		D3E057C716A2D6AB00B0DE19 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D3E057B116A2D6AB00B0DE19 /* .gitignore */; };
 		D3E057DB16A2D70100B0DE19 /* libzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E057DA16A2D70100B0DE19 /* libzipkit.a */; };
 		D3E7997A15909F18000A3E6C /* certificate.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997815909F18000A3E6C /* certificate.pem */; };
-		D3E7997B15909F18000A3E6C /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D3E7997915909F18000A3E6C /* key.pem */; };
 		D3EA07AE15F372C4006B7283 /* MainTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA07AD15F372C4006B7283 /* MainTableController.m */; };
 		D3EA07B115F37CB6006B7283 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3EA07B015F37CB6006B7283 /* Defaults.plist */; };
 		D3EA07B315F37DBE006B7283 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA07B215F37DBD006B7283 /* MessageUI.framework */; };
@@ -89,6 +89,7 @@
 		D32E641815FB84CD00F3F874 /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credits.h; sourceTree = "<group>"; };
 		D32E641915FB84CD00F3F874 /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credits.m; sourceTree = "<group>"; };
 		D34A27CD16A30B8F00459B57 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		D34A27CE16A30E2B00459B57 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
 		D3540E3715FBB89100801B49 /* BuyCreditsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCreditsController.h; sourceTree = "<group>"; };
 		D3540E3815FBB89100801B49 /* BuyCreditsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCreditsController.m; sourceTree = "<group>"; };
 		D3540E3A15FBBE4900801B49 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -97,7 +98,6 @@
 		D35A4D1E160DE81000C94625 /* LaunchImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchImageController.h; sourceTree = "<group>"; };
 		D35A4D1F160DE81000C94625 /* LaunchImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchImageController.m; sourceTree = "<group>"; };
 		D35A4D21160DE98C00C94625 /* table_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table_background.png; sourceTree = "<group>"; };
-		D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Pass Creator.entitlements"; sourceTree = "<group>"; };
 		D364BB38158FD2320031F0D4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		D364BB39158FD2320031F0D4 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
 		D364BB3A158FD2320031F0D4 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
@@ -257,7 +257,6 @@
 		D3E057D916A2D6B200B0DE19 /* ZKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLog.h; sourceTree = "<group>"; };
 		D3E057DA16A2D70100B0DE19 /* libzipkit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzipkit.a; sourceTree = "<group>"; };
 		D3E7997815909F18000A3E6C /* certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certificate.pem; sourceTree = "<group>"; };
-		D3E7997915909F18000A3E6C /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
 		D3EA07AC15F372C4006B7283 /* MainTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableController.h; sourceTree = "<group>"; };
 		D3EA07AD15F372C4006B7283 /* MainTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableController.m; sourceTree = "<group>"; };
 		D3EA07B015F37CB6006B7283 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
@@ -474,12 +473,11 @@
 		D3F58A30158CD6DA00A937D9 = {
 			isa = PBXGroup;
 			children = (
+				D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */,
+				D312F4E9160E368800621EAF /* AVFoundation.framework */,
+				D3E7997815909F18000A3E6C /* certificate.pem */,
 				D312F4ED160E36B200621EAF /* CoreMedia.framework */,
 				D312F4EB160E36A300621EAF /* CoreVideo.framework */,
-				D312F4E9160E368800621EAF /* AVFoundation.framework */,
-				D312F4E7160E35A700621EAF /* libiconv.dylib */,
-				D32525B816025BB600CFFA18 /* AppleWWDRCA.cer */,
-				D3E7997815909F18000A3E6C /* certificate.pem */,
 				D32525A516022C8D00CFFA18 /* Default-568h@2x.png */,
 				D3D33432158CE89900ACAA64 /* Default@2x.png */,
 				D3EA07B015F37CB6006B7283 /* Defaults.plist */,
@@ -487,7 +485,8 @@
 				D37D993F15D7E0E20086E0EC /* Graphics */,
 				D3540E3E15FCC31400801B49 /* Icon.png */,
 				D3540E3C15FCC30F00801B49 /* Icon@2x.png */,
-				D3E7997915909F18000A3E6C /* key.pem */,
+				D34A27CE16A30E2B00459B57 /* key.pem */,
+				D312F4E7160E35A700621EAF /* libiconv.dylib */,
 				D3EA07B215F37DBD006B7283 /* MessageUI.framework */,
 				D3F58A45158CD6DA00A937D9 /* Pass Creator */,
 				D3F58A3C158CD6DA00A937D9 /* Products */,
@@ -551,7 +550,6 @@
 				D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */,
 				D3EA07AC15F372C4006B7283 /* MainTableController.h */,
 				D3EA07AD15F372C4006B7283 /* MainTableController.m */,
-				D364BB10158FB9AF0031F0D4 /* Pass Creator.entitlements */,
 				D392AAF815D933500059FB02 /* Pass.h */,
 				D392AAF915D933500059FB02 /* Pass.m */,
 				D3B04E271592033A00836AD6 /* PassBundle.h */,
@@ -636,7 +634,6 @@
 				D3F58A53158CD6DA00A937D9 /* MainStoryboard.storyboard in Resources */,
 				D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */,
 				D3E7997A15909F18000A3E6C /* certificate.pem in Resources */,
-				D3E7997B15909F18000A3E6C /* key.pem in Resources */,
 				D3E04A4E15D6A18E00B4A959 /* ColorPickerCircle.xib in Resources */,
 				D37D994515D7E0E20086E0EC /* transit_boat@2x.png in Resources */,
 				D37D994615D7E0E20086E0EC /* transit_bus@2x.png in Resources */,
@@ -662,6 +659,7 @@
 				D32525A616022C8D00CFFA18 /* Default-568h@2x.png in Resources */,
 				D35A4D22160DE98C00C94625 /* table_background.png in Resources */,
 				D3E057C716A2D6AB00B0DE19 /* .gitignore in Resources */,
+				D34A27CF16A30E2B00459B57 /* key.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,7 +779,8 @@
 		D3F58A5D158CD6DA00A937D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pass Creator/Pass Creator-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
@@ -798,7 +797,8 @@
 		D3F58A5E158CD6DA00A937D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pass Creator/Pass Creator-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
