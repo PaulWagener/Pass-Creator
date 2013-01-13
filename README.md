@@ -24,6 +24,7 @@ follow the instructions to create a new pass type identifier.
    Copy both files to the root of the Pass Creator project.
 
 3. Change the bundle identifier of the app to the app id you chose for the Pass Type ID in step 1
+   Also change the Config.h file in the source folder to reflect your PEM passphrase and pass type identifier.
 
 4. Start the app and design some pretty passes. You can preview them on the phone itself
    and get the passes by e-mailing them to yourself.
