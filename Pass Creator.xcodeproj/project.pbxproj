@@ -50,22 +50,6 @@
 		D39ACFF615DBCE9A00FDBE69 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = D39ACFF515DBCE9A00FDBE69 /* UIImage+StackBlur.m */; };
 		D3B04E2B1592033A00836AD6 /* PassBundle.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E281592033A00836AD6 /* PassBundle.mm */; settings = {COMPILER_FLAGS = "-I."; }; };
 		D3B04E2C1592033A00836AD6 /* PassBundleSign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E291592033A00836AD6 /* PassBundleSign.cpp */; settings = {COMPILER_FLAGS = "-I."; }; };
-		D3B04E511592038100836AD6 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E311592038100836AD6 /* NSData+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E521592038100836AD6 /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E331592038100836AD6 /* NSDate+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E531592038100836AD6 /* NSDictionary+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E351592038100836AD6 /* NSDictionary+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E541592038100836AD6 /* NSFileHandle+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E371592038100836AD6 /* NSFileHandle+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E551592038100836AD6 /* NSFileManager+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E391592038100836AD6 /* NSFileManager+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E561592038100836AD6 /* NSString+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E3B1592038100836AD6 /* NSString+ZKAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E571592038100836AD6 /* ZKArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E3D1592038100836AD6 /* ZKArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E581592038100836AD6 /* ZKCDHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E3F1592038100836AD6 /* ZKCDHeader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E591592038100836AD6 /* ZKCDTrailer.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E411592038100836AD6 /* ZKCDTrailer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E5A1592038100836AD6 /* ZKCDTrailer64.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E431592038100836AD6 /* ZKCDTrailer64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E5B1592038100836AD6 /* ZKCDTrailer64Locator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E451592038100836AD6 /* ZKCDTrailer64Locator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E5C1592038100836AD6 /* ZKDataArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E471592038100836AD6 /* ZKDataArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E5D1592038100836AD6 /* ZKDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E491592038100836AD6 /* ZKDefs.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E5E1592038100836AD6 /* ZKFileArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4B1592038100836AD6 /* ZKFileArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E5F1592038100836AD6 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4D1592038100836AD6 /* ZKLFHeader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3B04E601592038100836AD6 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B04E4F1592038100836AD6 /* ZKLog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3BCEA5E15FCE4F7009989C5 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BCEA5C15FCE4F7009989C5 /* facebook.png */; };
 		D3BCEA5F15FCE4F7009989C5 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BCEA5D15FCE4F7009989C5 /* twitter.png */; };
 		D3D33433158CE89900ACAA64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D33432158CE89900ACAA64 /* Default@2x.png */; };
@@ -87,37 +71,6 @@
 		D3F58A50158CD6DA00A937D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F58A4F158CD6DA00A937D9 /* AppDelegate.m */; };
 		D3F58A53158CD6DA00A937D9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F58A51158CD6DA00A937D9 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D3E0572316A2C71900B0DE19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D3E0571D16A2C71800B0DE19 /* ZipKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = ZipKit;
-		};
-		D3E0572516A2C71900B0DE19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D3E0571D16A2C71800B0DE19 /* ZipKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CB9B9CB6109F665C003E3F8B;
-			remoteInfo = zipkit;
-		};
-		D3E0572716A2C71900B0DE19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D3E0571D16A2C71800B0DE19 /* ZipKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CB9B9CEE109F6769003E3F8B;
-			remoteInfo = touchzipkit;
-		};
-		D3E0572F16A2C76F00B0DE19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D3E0571D16A2C71800B0DE19 /* ZipKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CB9B9CED109F6769003E3F8B;
-			remoteInfo = touchzipkit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D304393E15DBD77E00AA342A /* sheen_event@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheen_event@2x.png"; sourceTree = "<group>"; };
@@ -315,7 +268,6 @@
 		D3E04A4A15D6952D00B4A959 /* ColorPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerButton.h; sourceTree = "<group>"; };
 		D3E04A4B15D6952D00B4A959 /* ColorPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerButton.m; sourceTree = "<group>"; };
 		D3E04A4D15D6A18E00B4A959 /* ColorPickerCircle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerCircle.xib; sourceTree = "<group>"; };
-		D3E0571D16A2C71800B0DE19 /* ZipKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZipKit.xcodeproj; path = ZipKit/ZipKit.xcodeproj; sourceTree = "<group>"; };
 		D3E7997815909F18000A3E6C /* certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certificate.pem; sourceTree = "<group>"; };
 		D3E7997915909F18000A3E6C /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
 		D3EA07AC15F372C4006B7283 /* MainTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableController.h; sourceTree = "<group>"; };
@@ -546,20 +498,9 @@
 			path = ZipKit;
 			sourceTree = "<group>";
 		};
-		D3E0571E16A2C71800B0DE19 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D3E0572416A2C71900B0DE19 /* ZipKit.framework */,
-				D3E0572616A2C71900B0DE19 /* libzipkit.a */,
-				D3E0572816A2C71900B0DE19 /* libtouchzipkit.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D3F58A30158CD6DA00A937D9 = {
 			isa = PBXGroup;
 			children = (
-				D3E0571D16A2C71800B0DE19 /* ZipKit.xcodeproj */,
 				D312F4ED160E36B200621EAF /* CoreMedia.framework */,
 				D312F4EB160E36A300621EAF /* CoreVideo.framework */,
 				D312F4E9160E368800621EAF /* AVFoundation.framework */,
@@ -678,7 +619,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D3E0573016A2C76F00B0DE19 /* PBXTargetDependency */,
 			);
 			name = "Pass Creator";
 			productName = "Pass Creator";
@@ -704,42 +644,12 @@
 			mainGroup = D3F58A30158CD6DA00A937D9;
 			productRefGroup = D3F58A3C158CD6DA00A937D9 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D3E0571E16A2C71800B0DE19 /* Products */;
-					ProjectRef = D3E0571D16A2C71800B0DE19 /* ZipKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D3F58A3A158CD6DA00A937D9 /* Pass Creator */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D3E0572416A2C71900B0DE19 /* ZipKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ZipKit.framework;
-			remoteRef = D3E0572316A2C71900B0DE19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D3E0572616A2C71900B0DE19 /* libzipkit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libzipkit.a;
-			remoteRef = D3E0572516A2C71900B0DE19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D3E0572816A2C71900B0DE19 /* libtouchzipkit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libtouchzipkit.a;
-			remoteRef = D3E0572716A2C71900B0DE19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D3F58A39158CD6DA00A937D9 /* Resources */ = {
@@ -790,22 +700,6 @@
 				D3F58A50158CD6DA00A937D9 /* AppDelegate.m in Sources */,
 				D3B04E2B1592033A00836AD6 /* PassBundle.mm in Sources */,
 				D3B04E2C1592033A00836AD6 /* PassBundleSign.cpp in Sources */,
-				D3B04E511592038100836AD6 /* NSData+ZKAdditions.m in Sources */,
-				D3B04E521592038100836AD6 /* NSDate+ZKAdditions.m in Sources */,
-				D3B04E531592038100836AD6 /* NSDictionary+ZKAdditions.m in Sources */,
-				D3B04E541592038100836AD6 /* NSFileHandle+ZKAdditions.m in Sources */,
-				D3B04E551592038100836AD6 /* NSFileManager+ZKAdditions.m in Sources */,
-				D3B04E561592038100836AD6 /* NSString+ZKAdditions.m in Sources */,
-				D3B04E571592038100836AD6 /* ZKArchive.m in Sources */,
-				D3B04E581592038100836AD6 /* ZKCDHeader.m in Sources */,
-				D3B04E591592038100836AD6 /* ZKCDTrailer.m in Sources */,
-				D3B04E5A1592038100836AD6 /* ZKCDTrailer64.m in Sources */,
-				D3B04E5B1592038100836AD6 /* ZKCDTrailer64Locator.m in Sources */,
-				D3B04E5C1592038100836AD6 /* ZKDataArchive.m in Sources */,
-				D3B04E5D1592038100836AD6 /* ZKDefs.m in Sources */,
-				D3B04E5E1592038100836AD6 /* ZKFileArchive.m in Sources */,
-				D3B04E5F1592038100836AD6 /* ZKLFHeader.m in Sources */,
-				D3B04E601592038100836AD6 /* ZKLog.m in Sources */,
 				D3E04A4415D68A5C00B4A959 /* PassController.m in Sources */,
 				D3E04A4C15D6952D00B4A959 /* ColorPickerButton.m in Sources */,
 				D37D992A15D6ADF30086E0EC /* ColorPickerCircle.m in Sources */,
@@ -824,14 +718,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D3E0573016A2C76F00B0DE19 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = touchzipkit;
-			targetProxy = D3E0572F16A2C76F00B0DE19 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D3F58A48158CD6DA00A937D9 /* InfoPlist.strings */ = {
@@ -865,6 +751,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = .;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -898,6 +785,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = .;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
